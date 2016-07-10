@@ -6,7 +6,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 %define src_name scribus
 
@@ -34,10 +33,10 @@ Requires:	SFElcms2-gnu
 
 BuildRequires: 	SFEcmake
 ##TODO## check dependency on python26 or if other versions do as well
-BuildRequires: 	%{pnm_buildrequires_python_default}
+BuildRequires: 	python_default
 
-BuildRequires:  %{pnm_buildrequires_SUNWfreetype2_devel}
-Requires:       %{pnm_buildrequires_SUNWfreetype2}
+BuildRequires:  SUNWfreetype2_devel
+Requires:       SUNWfreetype2
 
 ##TODO## 
 #BuildRequires:  SUNWcupsu

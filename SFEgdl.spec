@@ -11,7 +11,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %use gdl = gdl.spec
 
@@ -23,7 +22,7 @@ IPS_package_name:   library/desktop/gdl
 SUNW_BaseDir:       %{_basedir}
 BuildRoot:          %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:  %{pnm_buildrequires_SUNWgtk_doc}
+BuildRequires:  SUNWgtk_doc
 BuildRequires:      SUNWgnome-common-devel
 BuildRequires:      SUNWgawk
 Requires:           SUNWgnome-base-libs

@@ -10,7 +10,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 # TODO: write SMF manifest for rtmpsrv
 
@@ -26,8 +25,8 @@ Source:		http://rtmpdump.mplayerhq.hu/download/rtmpdump-%{version}.tar.gz
 SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:          %{pnm_buildrequires_SUNWopenssl_include}
-Requires:               %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires:          SUNWopenssl_include
+Requires:               SUNWopenssl_libraries
 
 
 %package devel

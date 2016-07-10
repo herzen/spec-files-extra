@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -38,11 +37,11 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-build
 
 %include default-depend.inc
 
-BuildRequires:  %{pnm_buildrequires_SFEorc_devel}
-Requires:       %{pnm_requires_SFEorc}
-BuildRequires:  %{pnm_buildrequires_SUNWgtk_doc}
-BuildRequires:  %{pnm_buildrequires_SUNWliboil}
-BuildRequires:  %{pnm_buildrequires_SUNWgnome_media_devel}
+BuildRequires:  SFEorc_devel
+Requires:       SFEorc
+BuildRequires:  SUNWgtk_doc
+BuildRequires:  SUNWliboil
+BuildRequires:  SUNWgnome_media_devel
 
 %package devel
 Summary:                 %{summary} - development files

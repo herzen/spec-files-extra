@@ -27,7 +27,6 @@
 %define srcname qt-everywhere-opensource-src
 %define run_autotests 0
 
-%include packagenamemacros.inc
 
 %define _use_internal_dependency_generator 0
 
@@ -85,19 +84,19 @@ Requires:		SFEgccruntime-46
 # Guarantee X/freetype environment concisely (hopefully):
 BuildRequires: SFEgtk2-gpp-devel
 Requires:      SFEgtk2-gpp
-BuildRequires: %{pnm_buildrequires_SUNWxwplt}
-Requires:      %{pnm_requires_SUNWxwplt}
+BuildRequires: SUNWxwplt
+Requires:      SUNWxwplt
 # The above bring in many things, including SUNWxwice and SUNWzlib
-BuildRequires: %{pnm_buildrequires_SUNWxwxft_devel}
-Requires:      %{pnm_requires_SUNWxwxft}
+BuildRequires: SUNWxwxft_devel
+Requires:      SUNWxwxft
 # The above also pulls in SUNWfreetype2
 # This package only provides libraries
-BuildRequires: %{pnm_buildrequires_mysql_default}
-Requires:      %{pnm_requires_mysql_default}
+BuildRequires: mysql_default
+Requires:      mysql_default
 BuildRequires: database/sqlite-3
 Requires:      database/sqlite-3
-BuildRequires: %{pnm_buildrequires_SUNWdbus_devel}
-Requires:      %{pnm_requires_SUNWdbus}
+BuildRequires: SUNWdbus_devel
+Requires:      SUNWdbus
 
 # Follow example of developer/icu for IPS package name
 %package devel

@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 1.13
 %define tarball_name    XML-XPath

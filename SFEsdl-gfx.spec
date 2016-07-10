@@ -4,7 +4,6 @@
 # includes module(s): SDL
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %ifarch amd64 sparcv9
 %include arch64.inc
 %define mmx_option --disable-mmx
@@ -32,8 +31,8 @@ SUNW_BaseDir:		%{_basedir}
 BuildRoot:		%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
 
 %package devel
 Summary:                 %{summary} - development files

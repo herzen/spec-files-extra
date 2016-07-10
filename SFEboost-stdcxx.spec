@@ -8,7 +8,6 @@
 #
 %define _basedir /usr/stdcxx
 %include Solaris.inc
-%include packagenamemacros.inc
 %define stl_is_stdcxx 1
 %use boost = boost.spec
 
@@ -30,10 +29,10 @@ SUNW_BaseDir:	%_basedir
 BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 BuildRequires: SFEicu-stdcxx-devel
-BuildRequires: %{pnm_buildrequires_python_default}
+BuildRequires: python_default
 Requires:      SFEicu-stdcxx
-BuildRequires: %{pnm_buildrequires_SUNWlibstdcxx4}
-Requires:      %{pnm_requires_SUNWlibstdcxx4}
+BuildRequires: SUNWlibstdcxx4
+Requires:      SUNWlibstdcxx4
 
 %package -n %name-devel
 IPS_package_name:	system/library/stdcxx/boost/header-boost

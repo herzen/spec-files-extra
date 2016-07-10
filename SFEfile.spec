@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-gnu.inc
 %include base.inc
 
@@ -20,8 +19,8 @@ Source:		ftp://ftp.astron.com/pub/file/file-%version.tar.gz
 SUNW_BaseDir:        %{_basedir}
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_library_zlib}
-Requires:      %{pnm_requires_library_zlib}
+BuildRequires: library_zlib
+Requires:      library_zlib
 
 %prep
 %setup -q -n file-%version

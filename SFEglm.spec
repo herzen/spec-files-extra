@@ -9,7 +9,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define src_name glm
@@ -55,9 +54,9 @@ SUNW_BaseDir:   %_basedir
 %include default-depend.inc
 Requires: %name
 
-BuildRequires: %{pnm_buildrequires_developer_build_cmake}
+BuildRequires: developer_build_cmake
 #to auto-resolve by pkgtool
-Requires:      %{pnm_requires_developer_build_cmake}
+Requires:      developer_build_cmake
 
 
 %prep

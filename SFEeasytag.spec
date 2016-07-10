@@ -4,7 +4,6 @@
 
 %include Solaris.inc
 
-%include packagenamemacros.inc
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 # Software specific variable definitions
@@ -45,16 +44,16 @@ Requires: SUNWgnu-gettext
 Requires: SUNWuiu8
 %endif
 
-BuildRequires: %{pnm_buildrequires_SUNWgtk2_devel}
-Requires:      %{pnm_requires_SUNWgtk2}
-BuildRequires: %{pnm_buildrequires_SUNWpango_devel}
-Requires:      %{pnm_requires_SUNWpango}
-BuildRequires: %{pnm_buildrequires_SUNWglib2_devel}
-Requires:      %{pnm_requires_SUNWglib2}
-BuildRequires: %{pnm_buildrequires_SUNWflac_devel}
-Requires:      %{pnm_requires_SUNWflac}
-BuildRequires: %{pnm_buildrequires_SUNWspeex_devel}
-Requires:      %{pnm_requires_SUNWspeex}
+BuildRequires: SUNWgtk2_devel
+Requires:      SUNWgtk2
+BuildRequires: SUNWpango_devel
+Requires:      SUNWpango
+BuildRequires: SUNWglib2_devel
+Requires:      SUNWglib2
+BuildRequires: SUNWflac_devel
+Requires:      SUNWflac
+BuildRequires: SUNWspeex_devel
+Requires:      SUNWspeex
 BuildRequires: SFElibid3tag-devel
 Requires:      SFElibid3tag
 #C++ by studio compilers:

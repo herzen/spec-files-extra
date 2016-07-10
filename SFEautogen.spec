@@ -8,7 +8,6 @@ exit 1
 %endif
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %ifarch amd64 sparcv9
 %include arch64.inc
 %use autogen_64 = autogen.spec
@@ -34,8 +33,8 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 
 
 #Requires: SUNWbash
-BuildRequires: %{pnm_buildrequires_SUNWlxml_devel}
-Requires:      %{pnm_requires_SUNWlxml}
+BuildRequires: SUNWlxml_devel
+Requires:      SUNWlxml
 #too old. needs 2.x BuildRequires: %{pnm_buildrequires_SUNWguile_devel}
 #too old. needs 2.x Requires:      %{pnm_requires_SUNWguile}
 #autogen 5.18 needs guild 2.x BuildRequires:  SFEguile

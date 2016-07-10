@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name tumbler
 %define src_url http://archive.xfce.org/src/xfce/%{src_name}/0.1/
@@ -27,7 +26,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:	SUNWgnome-base-libs-devel
 Requires:	SUNWgnome-base-libs
 BuildRequires: 	SUNWdbus
-BuildRequires: %{pnm_buildrequires_SUNWgtk_doc}
+BuildRequires: SUNWgtk_doc
 BuildRequires:	SUNWgnome-xml-share
 %if %{with_ffmpeg}
 BuildRequires:	SFEffmpeg-devel

@@ -4,7 +4,6 @@
 # includes module(s): libmtp
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 # There is no 64bit libusb :(
 
 %define cc_is_gcc 1
@@ -20,7 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 Requires: SFElibiconv
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 
 %package devel
 Summary:         %{summary} - development files

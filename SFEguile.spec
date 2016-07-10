@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %if %( expr %{omnios} '=' 0 )
 echo "Only to be used on OmniOS, other OS-distro use distro provided guile"
@@ -24,12 +23,12 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SFEgmp
 Requires: SFEgmp
-BuildRequires: %{pnm_buildrequires_SUNWlibtool_devel}
-Requires:      %{pnm_requires_SUNWlibtool}
-BuildRequires: %{pnm_buildrequires_SUNWltdl_devel}
-Requires:      %{pnm_requires_SUNWltdl}
-BuildRequires: %{pnm_buildrequires_SUNWlibm}
-Requires:      %{pnm_requires_SUNWlibm}
+BuildRequires: SUNWlibtool_devel
+Requires:      SUNWlibtool
+BuildRequires: SUNWltdl_devel
+Requires:      SUNWltdl
+BuildRequires: SUNWlibm
+Requires:      SUNWlibm
 
 %package devel
 Summary:       %{summary} - development files

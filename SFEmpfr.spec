@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include osdistro.inc
 
 ##TODO## need propper integration of arch64.inc
 %ifarch amd64

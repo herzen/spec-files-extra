@@ -32,7 +32,7 @@ SUNW_BaseDir:            %{_basedir}
 License:                 %{gdkpixbuf.license}
 
 %include default-depend.inc
-BuildRequires:  %{pnm_buildrequires_SFEautomake_115}
+BuildRequires:  SFEautomake_115
 BuildRequires:	SFEglib2
 Requires:	SFEglib2
 

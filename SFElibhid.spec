@@ -4,7 +4,6 @@
 # includes module(s): libhid
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.4
 
@@ -22,7 +21,7 @@ BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 BuildRequires: SUNWPython-devel
 BuildRequires: SUNWPython
 BuildRequires: SUNWswig
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 
 %package devel
 Summary:                 %{summary} - development files

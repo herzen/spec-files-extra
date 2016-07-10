@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.6
 
@@ -18,9 +17,9 @@ Source:		https://github.com/overviewer/Minecraft-Overviewer/archive/v%{version}.
 SUNW_BaseDir:	%{_basedir}
 SUNW_Copyright: %{license}.copyright
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
-BuildRequires:	%{pnm_buildrequires_python_default}
+BuildRequires:	python_default
 BuildRequires:	SFEpython26-imaging-header
-Requires:		%{pnm_requires_python_default}
+Requires:		python_default
 
 %include default-depend.inc
 

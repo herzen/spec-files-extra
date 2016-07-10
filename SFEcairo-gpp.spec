@@ -8,7 +8,6 @@
 %include usr-g++.inc
 # g++ packages are built with gcc
 %define cc_is_gcc 1
-%include packagenamemacros.inc
 %include base.inc
 %include pkgbuild-features.inc
 
@@ -44,7 +43,7 @@ BuildRequires: system/library/fontconfig
 BuildRequires: image/library/libpng
 BuildRequires: x11/compatibility/links-svid
 BuildRequires: x11/server/xorg
-BuildRequires:  %{pnm_buildrequires_SFEautomake_115}
+BuildRequires:  SFEautomake_115
 ##TODO## runtime requires, go read from pkgdepend's results and put it into "Requires:"
 
 %package devel		

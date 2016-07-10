@@ -2,7 +2,6 @@
 # spec file for package SFEopenttd.spec
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 
@@ -41,8 +40,8 @@ Requires:  SUNWfreetype2
 BuildRequires: SUNWdoxygen
 Requires: SFElzo
 BuildRequires: SFElzo
-Requires: 	%{pnm_requires_SFExz_gnu}
-BuildRequires:	%{pnm_buildrequires_SFExz_gnu}
+Requires: 	SFExz_gnu
+BuildRequires:	SFExz_gnu
 BuildRequires:	SUNWgsed
 BuildRequires:	SUNWgnome-desktop-prefs
 

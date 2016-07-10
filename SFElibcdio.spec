@@ -15,7 +15,6 @@
 # we suggest you applying the patch above.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define with_hal %(pkginfo -q SUNWhal && echo 1 || echo 0)
 
@@ -34,24 +33,24 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 Requires: SUNWlexpt
-BuildRequires: %{pnm_buildrequires_SUNWlibC}
-Requires: %{pnm_buildrequires_SUNWlibC}
+BuildRequires: SUNWlibC
+Requires: SUNWlibC
 BuildRequires: SUNWlibms
 Requires: SUNWlibms
-Requires:      %{pnm_requires_SUNWdbus}
+Requires:      SUNWdbus
 Requires: SFElibcddb
 BuildRequires: SFElibcddb
 Requires: SFElibiconv
 
-BuildRequires: %{pnm_buildrequires_SUNWncurses_devel}
-Requires:      %{pnm_requires_SUNWncurses}
+BuildRequires: SUNWncurses_devel
+Requires:      SUNWncurses
 
 %if %with_hal
 Requires: SUNWhal
 %endif
 BuildRequires:	SUNWlexpt
-BuildRequires:	%{pnm_buildrequires_SUNWdbus_devel}
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:	SUNWdbus_devel
+BuildRequires:	SUNWgnome_common_devel
 BuildRequires:	SFElibcddb-devel
 BuildRequires:	SFElibiconv-devel
 

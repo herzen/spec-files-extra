@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc
@@ -22,7 +21,7 @@ Source:		http://dl.matroska.org/downloads/%srcname/%srcname-%version.tar.bz2
 SUNW_BaseDir:	%{_basedir}
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWgnu_coreutils}
+BuildRequires:	SUNWgnu_coreutils
 BuildRequires:	SUNWloc
 
 BuildRequires:	SFEgcc

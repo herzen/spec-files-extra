@@ -9,7 +9,6 @@
 # SFE-webstack
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define php_version   5.4
 ##not defined %define php_major_version   5

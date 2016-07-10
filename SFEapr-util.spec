@@ -15,7 +15,6 @@
 %define  _prefix %{_basedir}/apr-util/%{local_apr_util_major_minor_version}
 %include base.inc
 
-%include packagenamemacros.inc
 
 Name:			SFEapr-util
 License:		Apache,LGPL,BSD
@@ -39,10 +38,10 @@ SUNW_BaseDir:		%{_prefix}
 #Requires: SFEgawk
 BuildRequires:	SFElibapr-devel
 Requires:	SFElibapr
-BuildRequires:	%{pnm_buildrequires_SUNWsqlite3}
-Requires:	%{pnm_requires_SUNWsqlite3}
-BuildRequires:	%{pnm_buildrequires_SUNWsfwhea}
-BuildRequires:  %{pnm_buildrequires_SUNWlexpt_devel}
+BuildRequires:	SUNWsqlite3
+Requires:	SUNWsqlite3
+BuildRequires:	SUNWsfwhea
+BuildRequires:  SUNWlexpt_devel
 
 
 #Note: Installs into /usr/gnu directories.
@@ -60,9 +59,9 @@ Summary:	%{summary} - development files
 SUNW_BaseDir:	%{_basedir}
 %include default-depend.inc
 Requires:	%{name}
-Requires:	%{pnm_buildrequires_SUNWsfwhea}
+Requires:	SUNWsfwhea
 Requires:	SFElibapr-devel
-Requires:	%{pnm_requires_SUNWsqlite3}    
+Requires:	SUNWsqlite3    
 
 %prep
 %setup -q -n apr-util-%{version}

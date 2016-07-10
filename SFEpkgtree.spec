@@ -5,7 +5,6 @@
 %define _use_internal_dependency_generator 0
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #description of this download method:
 #https://fedorahosted.org/fpc/attachment/ticket/233/slask

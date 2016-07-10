@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -27,8 +26,8 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
 BuildRequires:  SUNWaudh
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
-Requires:      %{pnm_requires_SFElibsndfile}
+BuildRequires: SFElibsndfile_devel
+Requires:      SFElibsndfile
 
 %package devel
 Summary:                 %{summary} - development files

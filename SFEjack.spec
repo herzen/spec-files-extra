@@ -4,7 +4,6 @@
 # includes module(s): jack
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -29,7 +28,7 @@ Requires:	SFElibsndfile
 BuildRequires:	SUNWlibsndfile
 Requires:	SUNWlibsndfile
 %endif
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 
 %package devel
 Summary:         %{summary} - development files

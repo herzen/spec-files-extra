@@ -21,7 +21,6 @@
 
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 %define src_name lcms2
 
@@ -47,17 +46,17 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWzlib}
-Requires:	%{pnm_requires_SUNWzlib}
+BuildRequires:	SUNWzlib
+Requires:	SUNWzlib
 
-BuildRequires:  %{pnm_buildrequires_SUNWlibms}
-Requires:       %{pnm_requires_SUNWlibms}
+BuildRequires:  SUNWlibms
+Requires:       SUNWlibms
 
-BuildRequires:	%{pnm_buildrequires_SUNWTiff_devel}
-Requires:	%{pnm_requires_SUNWTiff}
+BuildRequires:	SUNWTiff_devel
+Requires:	SUNWTiff
 
-BuildRequires:	%{pnm_buildrequires_SUNWjpg_devel}
-Requires:	%{pnm_requires_SUNWjpg}
+BuildRequires:	SUNWjpg_devel
+Requires:	SUNWjpg
 
 
 %prep

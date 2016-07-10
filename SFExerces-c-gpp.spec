@@ -7,7 +7,6 @@
 %include Solaris.inc
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 
 # don't build the sample code, it's built in the no-gpp spec file
 %define no_samples 1
@@ -35,7 +34,7 @@ SUNW_Copyright: SFExerces-c.copyright
 SUNW_BaseDir: %{_basedir}
 Autoreqprov:  on
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 #BuildRequires: SFEfindutils
 BuildRequires: SUNWgnu-coreutils
 

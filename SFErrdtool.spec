@@ -12,7 +12,6 @@
 %include usr-gnu.inc
 %include base.inc
 
-%include packagenamemacros.inc
 
 %define src_name rrdtool
 
@@ -53,8 +52,8 @@ Source:                  http://oss.oetiker.ch/rrdtool/pub/rrdtool-%{version}.ta
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 ##TODO##     Libraries: -lxml2 -lglib-2.0 -lcairo -lcairo -lcairo -lm  -lsocket -lcairo -lpng12   -lpangocairo-1.0 -lpango-1.0 -lcairo -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lpthread -lglib-2.0
 
 ##TODO###use if they are installed

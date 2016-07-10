@@ -9,7 +9,6 @@
 %define cc_is_gcc 1
 %include base.inc
 %define srcname evince
-%include osdistro.inc
 
 Name:			SFEevince
 IPS_package_name:	desktop/g++/pdf-viewer/evince

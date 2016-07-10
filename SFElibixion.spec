@@ -10,7 +10,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define src_name libixion
@@ -69,18 +68,18 @@ Requires:	SFEgccruntime
 #BuildRequires:  runtime/python-26 >= 2.6.0
 #try pnm macro BuildRequires:  runtime/python-26
 ##TODO## OI requires python 2.6
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires:      %{pnm_requires_python_default}
+BuildRequires: python_default
+Requires:      python_default
 
 
 ##TODO## check dependency
-BuildRequires:	%{pnm_buildrequires_boost_gpp_default}
-Requires:	%{pnm_requires_boost_gpp_default}
+BuildRequires:	boost_gpp_default
+Requires:	boost_gpp_default
 
-BuildRequires:	%{pnm_buildrequires_system_library_math_header_math}
-Requires:	%{pnm_requires_system_library_math_header_math}
+BuildRequires:	system_library_math_header_math
+Requires:	system_library_math_header_math
 
-BuildRequires:  %{pnm_buildrequires_SFExz_gnu}
+BuildRequires:  SFExz_gnu
 
 BuildRequires:  SFEmdds
 #no runtime dependency, but pkgtool can't resolve that depenency

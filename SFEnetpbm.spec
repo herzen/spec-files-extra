@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 # use the --with-svn-code option to use svn co instead of the stable tarball
 %define svn_url https://netpbm.svn.sourceforge.net/svnroot/netpbm/advanced
 
@@ -60,8 +59,8 @@ Requires: SUNWlibC
 Requires:       FOSSghostscript
 %else
 BuildRequires:  SUNWgnu-coreutils
-BuildRequires:  %{pnm_buildrequires_SUNWwget}
-Requires:       %{pnm_requires_SUNWghostscript}
+BuildRequires:  SUNWwget
+Requires:       SUNWghostscript
 %endif
 
 # OpenSolaris IPS Manifest Fields

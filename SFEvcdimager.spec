@@ -4,7 +4,6 @@
 # includes module(s): vcdimager
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define	src_url	ftp://mirrors.kernel.org/gnu/vcdimager
 
@@ -29,12 +28,12 @@ Requires: SFElibcdio
 
 BuildRequires: SUNWlibms
 Requires: SUNWlibms
-BuildRequires: %{pnm_buildrequires_SUNWlibpopt_devel}
-Requires:      %{pnm_requires_SUNWlibpopt}
-BuildRequires: %{pnm_buildrequires_SUNWlxml_devel}
-Requires:      %{pnm_requires_SUNWlxml}
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
+BuildRequires: SUNWlibpopt_devel
+Requires:      SUNWlibpopt
+BuildRequires: SUNWlxml_devel
+Requires:      SUNWlxml
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
 
 
 %prep

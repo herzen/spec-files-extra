@@ -8,7 +8,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 
 Name:                    SFEid3lib-gpp
 IPS_package_name:	 library/audio/g++/id3lib
@@ -25,8 +24,8 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SFEgcc
 Requires: SFEgccruntime
-BuildRequires:  %{pnm_buildrequires_SUNWzlib}
-Requires:       %{pnm_requires_SUNWzlib}
+BuildRequires:  SUNWzlib
+Requires:       SUNWzlib
 Requires: SUNWlibms
 
 %package devel

@@ -10,7 +10,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 #until we recorded the dependencies manually
 %define _use_internal_dependency_generator 1
 
@@ -38,8 +37,8 @@ SUNW_BaseDir:		%_basedir
 BuildRequires:	SFEgraphite2-gpp-devel
 Requires:	SFEgraphite2-gpp
 
-BuildRequires:  %{pnm_buildrequires_SUNWfreetype2}
-Requires:       %{pnm_buildrequires_SUNWfreetype2}
+BuildRequires:  SUNWfreetype2
+Requires:       SUNWfreetype2
 
 BuildRequires:  SFEicu-gpp-devel
 Requires:       SFEicu-gpp

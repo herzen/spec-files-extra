@@ -10,7 +10,6 @@
 
 %include Solaris.inc
 
-%include packagenamemacros.inc
 
 %define as_optional %{?_with_optional_sshd:1}%{?!_with_optional_sshd:0}
 
@@ -43,10 +42,10 @@ BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 
 BuildRequires:	SFEldns-devel
 Requires:	SFEldns
-BuildRequires:  %{pnm_buildrequires_SUNWopenssl_include}
-Requires:	%{pnm_requires_SUNWopenssl_libraries}
-BuildRequires:	%{pnm_buildrequires_SUNWopenssl_fips_140_devel}
-Requires:	%{pnm_requires_SUNWopenssl_fips_140}
+BuildRequires:  SUNWopenssl_include
+Requires:	SUNWopenssl_libraries
+BuildRequires:	SUNWopenssl_fips_140_devel
+Requires:	SUNWopenssl_fips_140
 %if %{os2nnn}
 BuildRequires:	library/libedit
 Requires:	library/libedit
@@ -65,10 +64,10 @@ SUNW_BaseDir:	/
 %include default-depend.inc
 BuildRequires:	SFEldns-devel
 Requires:	SFEldns
-BuildRequires:  %{pnm_buildrequires_SUNWopenssl_include}
-Requires:	%{pnm_requires_SUNWopenssl_libraries}
-BuildRequires:	%{pnm_buildrequires_SUNWopenssl_fips_140_devel}
-Requires:	%{pnm_requires_SUNWopenssl_fips_140}
+BuildRequires:  SUNWopenssl_include
+Requires:	SUNWopenssl_libraries
+BuildRequires:	SUNWopenssl_fips_140_devel
+Requires:	SUNWopenssl_fips_140
 
 %package -n SFEopenssh-common
 IPS_package_name:	network/openssh/ssh-key

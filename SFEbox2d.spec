@@ -3,7 +3,6 @@
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -18,8 +17,8 @@ SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_x11_library_freeglut}
-Requires:      %{pnm_requires_x11_library_freeglut}
+BuildRequires: x11_library_freeglut
+Requires:      x11_library_freeglut
 BuildRequires: SUNWcmake
 
 

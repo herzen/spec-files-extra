@@ -6,7 +6,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 Name:         SFEnmap
 Summary:      Network Mapper
@@ -22,8 +21,8 @@ URL:          http://insecure.org/nmap/index.html
 
 %include default-depend.inc
 
-BuildRequires: 	         %{pnm_buildrequires_python_default}
-Requires: 	         %{pnm_requires_python_default}
+BuildRequires: 	         python_default
+Requires: 	         python_default
 
 %description
 Nmap ("Network Mapper") is a free open source utility for network exploration or security auditing.

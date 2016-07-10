@@ -4,7 +4,6 @@
 # includes module(s): xmlto
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFExmlto
 IPS_Package_Name:	 developer/documentation-tool/xmlto
@@ -20,10 +19,10 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlxsl_devel}
-Requires:      %{pnm_requires_SUNWlxsl_devel}
-BuildRequires: %{pnm_buildrequires_SUNWlxml_devel}
-Requires:      %{pnm_requires_SUNWlxml_devel}
+BuildRequires: SUNWlxsl_devel
+Requires:      SUNWlxsl_devel
+BuildRequires: SUNWlxml_devel
+Requires:      SUNWlxml_devel
 
 ##%if %( expr %{osbuild} '>=' 175 )
 # Note: this is temporary since tom wants to rework the package macros
@@ -39,11 +38,11 @@ Requires:      %{pnm_requires_SUNWlxml_devel}
 ##Requires: SUNWgnome-xml-share
 ##Requires: SUNWgnome-xml-root
 ##%endif
-BuildRequires: %{pnm_buildrequires_data_docbook}
-Requires:      %{pnm_requires_data_docbook}
-Requires:      %{pnm_requires_web_browser_w3m}
-BuildRequires: %{pnm_buildrequires_SFEgnugetopt}
-Requires:      %{pnm_requires_SFEgnugetopt}
+BuildRequires: data_docbook
+Requires:      data_docbook
+Requires:      web_browser_w3m
+BuildRequires: SFEgnugetopt
+Requires:      SFEgnugetopt
 
 %prep
 rm -rf %name-%version

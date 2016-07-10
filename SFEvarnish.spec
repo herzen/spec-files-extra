@@ -21,7 +21,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 %define src_name varnish
 
@@ -56,16 +55,16 @@ SUNW_Copyright: %{src_name}.copyright
 %include default-depend.inc
 BuildRequires:	SFEgcc
 Requires:	SFEgccruntime
-BuildRequires:	%{pnm_buildrequires_SUNWopenssl}
-Requires:	%{pnm_requires_SUNWopenssl}
-BuildRequires:	%{pnm_buildrequires_SUNWlibms}
-Requires:	%{pnm_requires_SUNWlibms}
-BuildRequires:	%{pnm_buildrequires_library_pcre}
-Requires: 	%{pnm_requires_library_pcre}
-BuildRequires:	%{pnm_buildrequires_SUNWzlib}
-Requires:	%{pnm_requires_SUNWzlib}
-BuildRequires:	%{pnm_buildrequires_SUNWbzip}
-Requires:	%{pnm_requires_SUNWbzip}
+BuildRequires:	SUNWopenssl
+Requires:	SUNWopenssl
+BuildRequires:	SUNWlibms
+Requires:	SUNWlibms
+BuildRequires:	library_pcre
+Requires: 	library_pcre
+BuildRequires:	SUNWzlib
+Requires:	SUNWzlib
+BuildRequires:	SUNWbzip
+Requires:	SUNWbzip
 
 
 %description

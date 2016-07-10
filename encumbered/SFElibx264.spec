@@ -20,7 +20,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1 
 %ifarch amd64 sparcv9
@@ -54,7 +53,7 @@ BuildRequires: SFEyasm
 #BuildRequires: SFEgpac-devel
 #Requires: SFEgpac
 
-BuildRequires: %{pnm_buildrequires_SUNWgawk_devel}
+BuildRequires: SUNWgawk_devel
 
 %description
 x264 is a free software library and application for encoding video streams into

@@ -9,7 +9,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define _use_internal_dependency_generator 0
 
@@ -32,15 +31,15 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 ##%include desktop-incorporation.inc
 ##TODO## re-visit (Build)Requires and make sure to catch the right ones
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires: %{pnm_requires_python_default}
+BuildRequires: python_default
+Requires: python_default
 ##TODO## on python_default update, might need better fix for marjorminor number in pkg name
 #TESTING with a constructed package name. Does not cover older OS disto versions where /python-2/ is in the name
 BuildRequires: library/python/setuptools-%{python_version_package_string}
 BuildRequires: library/python/pygtk2-%{python_version_package_string}
 Requires:      library/python/pygtk2-%{python_version_package_string}
-Requires:      %{pnm_buildrequires_service_gnome_desktop_cache}
-Requires:      %{pnm_requires_library_gnome_gnome_libs}
+Requires:      service_gnome_desktop_cache
+Requires:      library_gnome_gnome_libs
 
 %description
 This is a project to produce an efficient way of filling a

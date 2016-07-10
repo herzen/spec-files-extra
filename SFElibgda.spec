@@ -11,7 +11,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %use libgda = libgda.spec
 
@@ -28,7 +27,7 @@ Requires:           SUNWgnome-libs
 Requires:           SUNWgnome-vfs
 Requires:           SUNWlxml
 BuildRequires:      SUNWgnome-common-devel
-BuildRequires:      %{pnm_buildrequires_SUNWgtk_doc}
+BuildRequires:      SUNWgtk_doc
 BuildRequires:      SUNWgnome-doc-utils
 
 %package devel

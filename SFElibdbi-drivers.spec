@@ -3,7 +3,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_version 0.8.3-1
 #just in case, use for 0.8.3-1 -> 0.8.3.1

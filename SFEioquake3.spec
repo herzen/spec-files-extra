@@ -4,7 +4,6 @@
 # includes module(s): ioquake3
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc       1
 
@@ -21,8 +20,8 @@ Patch1:                 ioquake3-01-solaris.diff
 SUNW_BaseDir:           %{_basedir}
 BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
 %ifarch i386 amd64
 BuildRequires: SUNWxorg-mesa
 %endif

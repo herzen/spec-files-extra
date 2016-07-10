@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %define _gpp g++
 %include base.inc

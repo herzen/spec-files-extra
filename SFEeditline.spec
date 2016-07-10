@@ -14,7 +14,6 @@
 %include base.inc
 %use libedit = libedit.spec
 
-%include packagenamemacros.inc
 
 Name:		SFEeditline
 IPS_package_name:	library/libedit

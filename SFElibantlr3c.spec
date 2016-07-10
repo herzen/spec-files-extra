@@ -4,7 +4,6 @@
 # includes module(s): libantlr3c
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	libantlr3c
 %define src_url		http://www.antlr.org/download/C
@@ -38,7 +37,7 @@ Summary:                 %{summary} - Documentation
 SUNW_BaseDir:            %{_prefix}
 %include default-depend.inc
 Requires:      %name
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 %if %{FOSSgraphviz}
 BuildRequires: FOSSgraphviz
 %else

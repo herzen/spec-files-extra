@@ -11,7 +11,6 @@
 
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 %include base.inc
 
 %ifarch amd64 sparcv9

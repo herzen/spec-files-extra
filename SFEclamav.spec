@@ -4,7 +4,6 @@
 # includes module(s): clamav
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 %define	src_name clamav
@@ -24,8 +23,8 @@ Group:               Applications/System Utilities
 SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWncurses_devel}
-Requires:      %{pnm_requires_SUNWncurses}
+BuildRequires: SUNWncurses_devel
+Requires:      SUNWncurses
 BuildRequires:	SUNWsndmu
 Requires:	SUNWsndmu
 

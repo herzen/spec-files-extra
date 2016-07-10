@@ -4,7 +4,6 @@
 # includes module(s): feedgenerator
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name feedgenerator
 

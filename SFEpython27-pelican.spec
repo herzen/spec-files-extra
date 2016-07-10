@@ -4,7 +4,6 @@
 # includes module(s): pelican
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version  2.7
 %define src_name pelican

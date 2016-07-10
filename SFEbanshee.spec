@@ -7,7 +7,6 @@
 # TODO: Migrate to Banshee 2.2.1
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:         SFEbanshee
 Version:      0.13.2
@@ -28,7 +27,7 @@ BuildRequires: SUNWgnome-cd-burner-devel
 BuildRequires: SFEmono-devel
 BuildRequires: SFEgtk-sharp
 BuildRequires: SUNWsqlite3
-BuildRequires: %{pnm_buildrequires_SUNWmusicbrainz_devel}
+BuildRequires: SUNWmusicbrainz_devel
 BuildRequires: SFEmonodoc
 BuildRequires: SFEavahi-sharp
 Requires: SUNWgnome-base-libs
@@ -39,7 +38,7 @@ Requires: SUNWhal
 Requires: SFEmono
 Requires: SFEgtk-sharp
 Requires: SUNWsqlite3
-Requires:      %{pnm_requires_SUNWmusicbrainz}
+Requires:      SUNWmusicbrainz
 Requires: SFEdbus-sharp
 Requires: SFEavahi-sharp
 

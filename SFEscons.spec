@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEscons
 %if %( expr %{solaris12} '&' %{osbuild} '>=' 79 )
@@ -22,8 +21,8 @@ SUNW_copyright:          scons.copyright
 Source:                  %{sf_download}/scons/scons-%{version}.tar.gz
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-Requires: 	         %{pnm_requires_python_default}
-BuildRequires: 	         %{pnm_buildrequires_python_default}
+Requires: 	         python_default
+BuildRequires: 	         python_default
 
 %include default-depend.inc
 

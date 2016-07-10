@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 6.46
 %define tarball_name    Date-Manip
@@ -25,8 +24,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: perl.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SB/SBECK/Date-Manip-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Sullivan Beck <sbeck@cpan.org>

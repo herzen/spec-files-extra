@@ -4,7 +4,6 @@
 # includes module(s): afterstep
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %include base.inc
 %use afterstep = afterstep.spec
@@ -19,8 +18,8 @@ BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
 Requires: SFEfltk
-BuildRequires:  %{pnm_buildrequires_library_readline}
-Requires:       %{pnm_requires_library_readline}
+BuildRequires:  library_readline
+Requires:       library_readline
 
 %package devel
 Summary:                 %{summary} - development files

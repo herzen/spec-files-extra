@@ -10,7 +10,6 @@
 %include base.inc
 %define _infodir %_datadir/info
 
-%include packagenamemacros.inc
 
 Name:                    SFEemacs
 IPS_Package_Name:	 sfe/editor/gnu-emacs

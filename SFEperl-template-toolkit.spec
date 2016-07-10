@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEperl-template-toolkit
 IPS_package_name: library/perl-5/template-toolkit
@@ -21,8 +20,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: %{name}.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/Template-Toolkit-%{version}.tar.gz
 
-BuildRequires:  %{pnm_buildrequires_perl_default}
-Requires:  	%{pnm_requires_perl_default}
+BuildRequires:  perl_default
+Requires:  	perl_default
 BuildRequires:  SFEperl-appconfig
 Requires:  	SFEperl-appconfig
 

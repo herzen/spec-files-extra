@@ -9,7 +9,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 Name:		SFEnagios
 IPS_package_name: system/management/nagios
@@ -25,16 +24,16 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 SUNW_BaseDir:   %{_basedir}
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires: 	%{pnm_buildrequires_perl_default}
+BuildRequires:	perl_default
+Requires: 	perl_default
 
-BuildRequires:	%{pnm_buildrequires_SUNWsndm_devel}
-Requires:	%{pnm_requires_SUNWsndm}
+BuildRequires:	SUNWsndm_devel
+Requires:	SUNWsndm
 BuildRequires:	SUNWjpg-devel
 Requires:	SUNWjpg
-BuildRequires:	%{pnm_buildrequires_SUNWgd2}
-Requires:	%{pnm_requires_SUNWgd2}
-Requires:	%{pnm_requires_SUNWapch22}
+BuildRequires:	SUNWgd2
+Requires:	SUNWgd2
+Requires:	SUNWapch22
 
 Requires:	%{name}-common
 

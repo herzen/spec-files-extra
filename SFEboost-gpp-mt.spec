@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %define boost_with_mt 1
@@ -22,7 +21,7 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 BuildRequires: SUNWicud
-BuildRequires: %{pnm_buildrequires_python_default}
+BuildRequires: python_default
 Requires: SUNWicu
 
 %package devel

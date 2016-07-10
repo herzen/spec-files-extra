@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.6
 

@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEtransmageddon
 IPS_Package_Name:	gnome/media/transmageddon
@@ -23,10 +22,10 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-Requires:	%{pnm_requires_python_default}
+Requires:	python_default
 ##TODO## re-visit dependencies (runtime)
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
-BuildRequires:	%{pnm_buildrequires_perl_xml_parser}
+BuildRequires:	SUNWgnome_common_devel
+BuildRequires:	perl_xml_parser
 %if %build_l10n
 %package l10n
 Summary:                 %{summary} - l10n files

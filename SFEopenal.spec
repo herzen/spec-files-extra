@@ -6,7 +6,6 @@
 # of me must work or not needed. Gilles Dauphin
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 
@@ -32,7 +31,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires: SFEcmake
 BuildRequires: SUNWlibms
 Requires: SUNWlibms
-BuildRequires: %{pnm_buildrequires_SUNWaudh}
+BuildRequires: SUNWaudh
 
 %if %with_libaudioio
 BuildRequires: SFElibaudioio-devel

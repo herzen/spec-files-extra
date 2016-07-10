@@ -4,7 +4,6 @@
 # includes module(s): sdl-perl
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEsdl-perl
 IPS_Package_Name:	library/perl-5/sdl

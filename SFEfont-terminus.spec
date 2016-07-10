@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include osdistro.inc
 
 Name:                    SFEfont-terminus
 Summary:                 terminus - font terminus

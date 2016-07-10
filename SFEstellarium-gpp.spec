@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -36,8 +35,8 @@ SUNW_BaseDir:	%{_basedir}
 ##TODO## make a pnm_macro for sdl-mixer / SFEsdl-mixer
 BuildRequires: library/audio/sdl-mixer
 Requires:      library/audio/sdl-mixer
-BuildRequires: %{pnm_buildrequires_SUNWimagick_devel}
-Requires:      %{pnm_buildrequires_SUNWimagick}
+BuildRequires: SUNWimagick_devel
+Requires:      SUNWimagick
 BuildRequires: SFEcmake
 ##TODO## update stellarium to 0.13.x 0.14.x once SFEqt5-gpp is available!
 BuildRequires: SFEqt-gpp-devel

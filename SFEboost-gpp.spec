@@ -7,7 +7,6 @@
 
 %include Solaris.inc
 %include usr-g++.inc
-%include packagenamemacros.inc
 %include buildparameter.inc
 %define cc_is_gcc 1
 %include base.inc
@@ -55,7 +54,7 @@ SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_python_default}
+BuildRequires: python_default
 
 #currently suspended, *may* be tested later if osdistro fits *and* changes in version can be managed good enough
 #need icu compiled with GXX/gpp/g++ and only oihipster has it in osdistro

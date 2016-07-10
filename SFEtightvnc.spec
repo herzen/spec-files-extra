@@ -7,7 +7,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 Name:                    SFEtightvnc
 IPS_Package_Name:	desktop/remote-desktop/tightvnc
@@ -24,10 +23,10 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires: SUNWjpg
 Requires: SUNWlibmsr
-Requires: %{pnm_requires_perl_default}
+Requires: perl_default
 Requires: SUNWxwplt
 Requires: SUNWzlib
-BuildRequires: %{pnm_buildrequires_SUNWxwopt}
+BuildRequires: SUNWxwopt
 
 %prep
 %setup -q -n vnc_unixsrc

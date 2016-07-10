@@ -2,7 +2,6 @@
 # spec file for package SFEbacula 
 # 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name bacula
 
@@ -19,9 +18,9 @@ SUNW_Copyright:      bacula.copyright
 Group:		    	 Applications/System
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_mysql_default}
-Requires: %{pnm_requires_mysql_default}
-Requires: %{pnm_requires_SUNWmtx}
+BuildRequires: mysql_default
+Requires: mysql_default
+Requires: SUNWmtx
 
 %prep
 echo %{_sysconfdir}

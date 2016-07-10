@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 1.01
 %define tarball_name    Encode-Detect
@@ -26,13 +25,13 @@ SUNW_Copyright: mozilla1.1.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JG/JGMYERS/Encode-Detect-%{tarball_version}.tar.gz
 Patch1:	                 encode-detect-01-sunpro.diff
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 #from former spec file
-BuildRequires:           %{pnm_buildrequires_SUNWsfwhea}
-BuildRequires:           %{pnm_buildrequires_SFEperl_extutils_cbuilder}
+BuildRequires:           SUNWsfwhea
+BuildRequires:           SFEperl_extutils_cbuilder
 #pkgtool doesn't detect this otherwise
-Requires:                %{pnm_requires_SFEperl_extutils_cbuilder}
+Requires:                SFEperl_extutils_cbuilder
 BuildRequires:           SFEperl-module-build
 
 Meta(info.upstream):            John Gardiner Myers <jgmyers@proofpoint.com>

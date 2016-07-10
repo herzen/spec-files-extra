@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-gnu.inc
 %include base.inc
 #studio not gcc %define cc_is_gcc 1
@@ -34,13 +33,13 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires:      SUNWgnome-libs
 Requires:      SUNWgnome-vfs
-Requires:      %{pnm_requires_SUNWlibsdl}
+Requires:      SUNWlibsdl
 BuildRequires: SUNWgnome-libs-devel
 BuildRequires: SUNWgnome-vfs-devel
 %ifarch i386 amd64
 BuildRequires: SUNWxorg-mesa
 %endif
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
+BuildRequires: SUNWlibsdl_devel
 
 
 %package devel

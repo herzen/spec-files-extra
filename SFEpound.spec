@@ -9,7 +9,6 @@
 ##TODO## make SMF manifest more nice, check for /etc/pound.cfg present
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:           SFEpound
 IPS_Package_Name: web/proxy/pound
@@ -43,16 +42,16 @@ SUNW_Copyright: %{name}.copyright
 %include default-depend.inc
 BuildRequires: SUNWbtool
 BuildRequires: SUNWggrp
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl
+Requires: SUNWopenssl
 Requires: SUNWlibms
 Requires: SUNWpcre
 Requires: SUNWzlib
 Requires: SUNWbzip
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWbzip}
-Requires:      %{pnm_requires_SUNWbzip}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
+BuildRequires: SUNWbzip
+Requires:      SUNWbzip
 
 
 

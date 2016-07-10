@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 

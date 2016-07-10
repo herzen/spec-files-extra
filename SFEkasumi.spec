@@ -3,7 +3,6 @@
 # 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                SFEkasumi
 IPS_Package_Name:	 system/input-method/ibus/anthy/kasumi
@@ -18,8 +17,8 @@ Group:		     	 System/Internationalization
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires:		%{pnm_buildrequires_SUNWlibanthy_devel}
-Requires:			%{pnm_requires_SUNWlibanthy}
+BuildRequires:		SUNWlibanthy_devel
+Requires:			SUNWlibanthy
 
 %description
 A dictionary management tool for Anthy.

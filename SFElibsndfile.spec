@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 %include pkgbuild-features.inc
 
 %ifarch amd64 sparcv9
@@ -32,10 +31,10 @@ BuildRequires: SFEogg-vorbis-devel
 %endif
 BuildRequires: SUNWogg-vorbis-devel
 Requires: SUNWogg-vorbis
-BuildRequires: %{pnm_buildrequires_SUNWflac_devel}
-Requires:      %{pnm_requires_SUNWflac}
+BuildRequires: SUNWflac_devel
+Requires:      SUNWflac
 Requires: SUNWlibms
-BuildRequires: %{pnm_buildrequires_SUNWaudh}
+BuildRequires: SUNWaudh
 
 %package devel
 Summary:                 %{summary} - development files

@@ -7,7 +7,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEnagios-plugins
 IPS_package_name: system/management/nagios/plugins
@@ -21,20 +20,20 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 SUNW_BaseDir:   %{_basedir}
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWsndm_devel}
-Requires:	%{pnm_requires_SUNWsndm}
+BuildRequires:	SUNWsndm_devel
+Requires:	SUNWsndm
 BuildRequires:	SFEnagios-devel
 Requires:	SFEnagios
-BuildRequires:	%{pnm_buildrequires_SUNWntp_devel}
-Requires:	%{pnm_requires_SUNWntp}
+BuildRequires:	SUNWntp_devel
+Requires:	SUNWntp
 BuildRequires:	SUNWbip
 Requires:	SUNWbip
-BuildRequires:	%{pnm_buildrequires_SUNWbindc_devel}
-Requires:	%{pnm_requires_SUNWbindc}
-BuildRequires:	%{pnm_buildrequires_system_management_snmp_net_snmp}
-Requires:	%{pnm_requires_system_management_snmp_net_snmp}
-BuildRequires:	%{pnm_buildrequires_SUNWsmba_devel}
-Requires:	%{pnm_requires_SUNWsmbau}
+BuildRequires:	SUNWbindc_devel
+Requires:	SUNWbindc
+BuildRequires:	system_management_snmp_net_snmp
+Requires:	system_management_snmp_net_snmp
+BuildRequires:	SUNWsmba_devel
+Requires:	SUNWsmbau
 BuildRequires:	SFEperl-net-snmp
 Requires:	SFEperl-net-snmp
 

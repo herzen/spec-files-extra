@@ -13,7 +13,6 @@
 
 %define src_url		%{sf_download}/%{sname}
 
-%include packagenamemacros.inc
 
 # To attempt building a certain wine version, as opposed to the latest
 # Wine version available from Sourceforge, pass the version as an argument.
@@ -87,14 +86,14 @@ BuildRequires:	SUNWpng-devel
 Requires:	SUNWpng
 Requires:	SUNWlxml
 Requires:	SUNWlxsl
-BuildRequires:	%{pnm_buildrequires_SUNWcups}
-Requires:	%{pnm_requires_SUNWcups}
-BuildRequires:  %{pnm_buildrequires_SUNWsane_backend_devel}
-Requires:       %{pnm_requires_SUNWsane_backend}
-BuildRequires:  %{pnm_buildrequires_SUNWncurses_devel}
-Requires:       %{pnm_requires_SUNWncurses}
-BuildRequires:  %{pnm_buildrequires_SUNWopenssl_include}
-Requires:       %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires:	SUNWcups
+Requires:	SUNWcups
+BuildRequires:  SUNWsane_backend_devel
+Requires:       SUNWsane_backend
+BuildRequires:  SUNWncurses_devel
+Requires:       SUNWncurses
+BuildRequires:  SUNWopenssl_include
+Requires:       SUNWopenssl_libraries
 #BuildRequires:	SUNWgnutls-devel
 #Requires:	SUNWgnutls
 #use uptodate SFEgnutls

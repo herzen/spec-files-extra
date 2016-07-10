@@ -7,7 +7,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define major 8
 %define minor 0

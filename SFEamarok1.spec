@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define kde_version 3.5.10
 %define ruby_bin /usr/ruby/1.8/bin
@@ -34,13 +33,13 @@ BuildRequires: SUNWpostgr-devel
 Requires: SUNWgnome-media
 BuildRequires: SUNWgnome-media-devel
 BuildRequires: SUNWgnome-common-devel
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 Requires: SFEgraphviz
 BuildRequires: SFEgraphviz-devel
 Requires: SUNWsqlite3
 BuildRequires: SUNWsqlite3
-Requires:      %{pnm_requires_SUNWmusicbrainz}
-BuildRequires: %{pnm_buildrequires_SUNWmusicbrainz_devel}
+Requires:      SUNWmusicbrainz
+BuildRequires: SUNWmusicbrainz_devel
 Requires: SFElibtunepimp
 BuildRequires: SFElibtunepimp-devel
 BuildRequires: SFElibnjb

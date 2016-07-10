@@ -9,7 +9,6 @@
 %include perditionparentversion.inc
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFElibvanessa-socket
 IPS_Package_Name:	library/vanessa/socket
@@ -23,9 +22,9 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlibpopt_devel}
+BuildRequires: SUNWlibpopt_devel
 BuildRequires: SFElibvanessa-logger
-Requires: %{pnm_requires_SUNWlibpopt}
+Requires: SUNWlibpopt
 Requires: SFElibvanessa-logger
 
 %prep

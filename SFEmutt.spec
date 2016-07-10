@@ -6,7 +6,6 @@
 ##TODO## verify that TLS 1.1 TLS 1.2 works/is compiled in
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 Name:                SFEmutt
@@ -30,17 +29,17 @@ Requires: %{name}-root
 ##TODO## openssl libraries!
 #check dependencies on e.g. S11 or OI151a8, add new deps here
 
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
-Requires:      %{pnm_requires_SUNWgnu_dbm}
+BuildRequires: SUNWgnu_dbm
+Requires:      SUNWgnu_dbm
 
-BuildRequires: %{pnm_buildrequires_SUNWslang}
-Requires:      %{pnm_buildrequires_SUNWslang}
+BuildRequires: SUNWslang
+Requires:      SUNWslang
 
 BuildRequires: SFElibiconv-devel
 Requires: SFElibiconv
 
-BuildRequires: %{pnm_buildrequires_SUNWgnu_idn}
-Requires:      %{pnm_requires_SUNWgnu_idn}
+BuildRequires: SUNWgnu_idn
+Requires:      SUNWgnu_idn
 
 #headers for sasl in SUNWhea/
 #  dependency discovered: system/library/security/libsasl@0.5.11-0.175.0.0.0.2.1
@@ -48,8 +47,8 @@ BuildRequires: SUNWlibsasl
 Requires:      SUNWlibsasl
 
 #  dependency discovered: library/security/openssl@1.0.0.5-0.175.0.0.0.2.537
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_devel}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl_devel
+Requires:      SUNWopenssl
 
 #  dependency discovered: system/library/security/gss@0.5.11-0.175.0.0.0.2.1
 BuildRequires: SUNWgss

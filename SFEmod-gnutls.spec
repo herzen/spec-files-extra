@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -31,9 +30,9 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires:	SUNWgawk
 BuildRequires:	SUNWgnome-common-devel
-BuildRequires:	%{pnm_buildrequires_SUNWapch22_devel}
+BuildRequires:	SUNWapch22_devel
 BuildRequires:	SUNWgnutls-devel
-Requires:	%{pnm_buildrequires_SUNWapch22}
+Requires:	SUNWapch22
 Requires:	SUNWgnutls
 
 %description

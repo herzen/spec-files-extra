@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -28,8 +27,8 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 
-BuildRequires:          %{pnm_buildrequires_SUNWopenssl_include}
-Requires:               %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires:          SUNWopenssl_include
+Requires:               SUNWopenssl_libraries
 
 Requires: %name-root
 %package root

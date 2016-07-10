@@ -9,7 +9,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define src_name liborcus
@@ -43,34 +42,34 @@ Requires:	SFEgccruntime
 
 # BuildRequires aclocal-1.14 (part of automake)
 
-BuildRequires:	%{pnm_buildrequires_boost_gpp_default}
-Requires:	%{pnm_requires_boost_gpp_default}
+BuildRequires:	boost_gpp_default
+Requires:	boost_gpp_default
 
-BuildRequires:	%{pnm_buildrequires_icu_gpp_default}
-Requires:	%{pnm_requires_icu_gpp_default}
+BuildRequires:	icu_gpp_default
+Requires:	icu_gpp_default
 
 ##TODO## check this dependency. Is it a hard 2.7 or just a default module needed for 2.6?
 # probably a fib but 0.9.2 requires python >= 2.7.1
 ##BuildRequires:	runtime/python-27 >= 2.7.1
 ##Requires:	runtime/python-27 >= 2.7.1
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires:      %{pnm_requires_python_default}
+BuildRequires: python_default
+Requires:      python_default
 
-BuildRequires:	%{pnm_buildrequires_system_library_math_header_math}
-Requires:	%{pnm_requires_system_library_math_header_math}
+BuildRequires:	system_library_math_header_math
+Requires:	system_library_math_header_math
 
 
-BuildRequires:  %{pnm_buildrequires_SUNWzlib}
-Requires:       %{pnm_requires_SUNWzlib}
+BuildRequires:  SUNWzlib
+Requires:       SUNWzlib
 
 %if %( expr %{solaris11} '+' %{solaris12}  '+' %{openindiana} '>=' 1 )
 #S11 S12 openindiana need zlib.pc (should not bother oihipster, which probably already has a propper zlib.pc)
-BuildRequires:  %{pnm_buildrequires_SFEzlib_pkgconfig} 
+BuildRequires:  SFEzlib_pkgconfig 
 #for pkgtool's dependency resoultion
-Requires:       %{pnm_buildrequires_SFEzlib_pkgconfig} 
+Requires:       SFEzlib_pkgconfig 
 %endif
 
-BuildRequires:  %{pnm_buildrequires_SFExz_gnu}
+BuildRequires:  SFExz_gnu
 
 BuildRequires:  SFElibrevenge
 Requires:       SFElibrevenge

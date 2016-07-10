@@ -4,7 +4,6 @@
 # includes module(s): GNU bc
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEbc
 Summary:                 GNU bc - arbitrary precision numeric processing language
@@ -17,9 +16,9 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires: SUNWlibms
 Requires: SUNWpostrun
-Requires: %{pnm_requires_library_readline}
+Requires: library_readline
 Requires: SUNWtexi
-BuildRequires:  %{pnm_buildrequires_library_readline}
+BuildRequires:  library_readline
 
 %prep
 %setup -q -n bc-%version

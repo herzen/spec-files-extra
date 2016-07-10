@@ -9,7 +9,6 @@
 %include Solaris.inc
 
 %include base.inc
-%include packagenamemacros.inc
 
 %define srcname gerrit
 %define runuser gerrit

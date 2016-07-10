@@ -6,7 +6,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEperl-net-snmp
 IPS_package_name: library/perl-5/net-snmp

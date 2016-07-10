@@ -4,7 +4,6 @@
 # includes module(s): libmpcdec
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 Name:                    SFElibmpcdec
@@ -19,8 +18,8 @@ Patch1:			 libmpcdec-01-configure.diff
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
-Requires:      %{pnm_requires_SFElibsndfile}
+BuildRequires: SFElibsndfile_devel
+Requires:      SFElibsndfile
 
 %include default-depend.inc
 

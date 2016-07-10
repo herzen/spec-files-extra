@@ -8,7 +8,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define src_name mdds
@@ -42,7 +41,7 @@ BuildRoot:		%_tmppath/%name-%version-build
 BuildRequires:	SFEgcc
 Requires:	SFEgccruntime
 
-BuildRequires:	%{pnm_buildrequires_boost_gpp_default}
+BuildRequires:	boost_gpp_default
 #no runtime present Requires:	%{pnm_requires_boost_gpp_default}
 
 

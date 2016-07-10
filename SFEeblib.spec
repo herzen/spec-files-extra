@@ -6,7 +6,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 
@@ -29,15 +28,15 @@ SUNW_Basedir:		 /
 SUNW_Copyright:          %{name}.copyright
 BuildRoot:               %{_tmppath}/%{tarball_name}-%{version}-build
 
-BuildRequires: %{pnm_buildrequires_SUNWbtool}
-BuildRequires: %{pnm_buildrequires_SUNWbinutils}
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWgnu_gettext}
-BuildRequires: %{pnm_buildrequires_SUNWxcu4}
-BuildRequires: %{pnm_buildrequires_SUNWgmake}
+BuildRequires: SUNWbtool
+BuildRequires: SUNWbinutils
+BuildRequires: SUNWzlib
+BuildRequires: SUNWgnu_gettext
+BuildRequires: SUNWxcu4
+BuildRequires: SUNWgmake
 
-Requires: %{pnm_requires_SUNWzlib}
-Requires: %{pnm_requires_SUNWgnu_gettext}
+Requires: SUNWzlib
+Requires: SUNWgnu_gettext
 
 # OpenSolaris IPS Package Manifest Fields
 Meta(info.maintainer):	 	pkglabo.justplayer.com <pkgadmin@justplayer.com>

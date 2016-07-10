@@ -6,7 +6,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 
@@ -38,30 +37,30 @@ Meta(info.upstream):	 	Kenichi Suto <deep_blue@users.sourceforge.net> , Hironori
 Meta(info.classification):	Applications
 
 Requires: library/eb
-Requires: %{pnm_requires_SUNWhea}
-Requires: %{pnm_requires_SUNWgnome_base_libs}
-Requires: %{pnm_requires_SUNWxwrtl}
+Requires: SUNWhea
+Requires: SUNWgnome_base_libs
+Requires: SUNWxwrtl
 # Requires: %{pnm_requires_SUNWxwplt}
-Requires: %{pnm_requires_SUNWlibms}
-Requires: %{pnm_requires_SUNWmlib}
+Requires: SUNWlibms
+Requires: SUNWmlib
 # Requires: %{pnm_requires_SUNWxorg_clientlibs}
-Requires: %{pnm_requires_SUNWfontconfig}
-Requires: %{pnm_requires_SUNWfreetype2}
+Requires: SUNWfontconfig
+Requires: SUNWfreetype2
 
 BuildRequires: library/eb
-BuildRequires: %{pnm_buildrequires_SUNWhea}
-BuildRequires: %{pnm_buildrequires_SUNWgnome_base_libs}
-BuildRequires: %{pnm_buildrequires_SUNWxwrtl}
+BuildRequires: SUNWhea
+BuildRequires: SUNWgnome_base_libs
+BuildRequires: SUNWxwrtl
 # BuildRequires: %{pnm_buildrequires_SUNWxwplt}
-BuildRequires: %{pnm_buildrequires_SUNWlibms}
-BuildRequires: %{pnm_buildrequires_SUNWmlib}
+BuildRequires: SUNWlibms
+BuildRequires: SUNWmlib
 # BuildRequires: %{pnm_buildrequires_SUNWxorg_clientlibs}
-BuildRequires: %{pnm_buildrequires_SUNWfontconfig}
-BuildRequires: %{pnm_buildrequires_SUNWfreetype2}
-BuildRequires: %{pnm_buildrequires_SUNWbtool}
-BuildRequires: %{pnm_buildrequires_SUNWbinutils}
-BuildRequires: %{pnm_buildrequires_SUNWxcu4}
-BuildRequires: %{pnm_buildrequires_SUNWgmake}
+BuildRequires: SUNWfontconfig
+BuildRequires: SUNWfreetype2
+BuildRequires: SUNWbtool
+BuildRequires: SUNWbinutils
+BuildRequires: SUNWxcu4
+BuildRequires: SUNWgmake
 BuildRequires: x11/library/libpthread-stubs
 
 %description

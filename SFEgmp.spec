@@ -9,7 +9,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -35,8 +34,8 @@ SUNW_BaseDir:	%{_basedir}/%{_subdir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlibm}
-Requires:      %{pnm_buildrequires_SUNWlibm}
+BuildRequires: SUNWlibm
+Requires:      SUNWlibm
 
 %if %{os2nnn}
 #no need for postrun

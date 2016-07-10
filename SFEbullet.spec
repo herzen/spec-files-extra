@@ -4,7 +4,6 @@
 # includes module(s): bullet
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	bullet
 %define src_url		http://bullet.googlecode.com/files
@@ -23,8 +22,8 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}b-build
 %include default-depend.inc
 BuildRequires: SFEjam
-BuildRequires: %{pnm_buildrequires_x11_library_freeglut}
-Requires:      %{pnm_requires_x11_library_freeglut}
+BuildRequires: x11_library_freeglut
+Requires:      x11_library_freeglut
 BuildRequires: SFEcmake
 BuildRequires: SFEgcc
 Requires: SFEgccruntime

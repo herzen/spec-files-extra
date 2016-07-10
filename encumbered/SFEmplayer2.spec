@@ -22,7 +22,6 @@ https://www.illumos.org/issues/3092
 %define rename %{?_with_rename:1}%{?!_with_rename:0}
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -70,8 +69,8 @@ Requires: SUNWjpg
 Requires: SUNWpng
 Requires: SUNWogg-vorbis
 Requires: SUNWlibtheora
-BuildRequires: %{pnm_buildrequires_SUNWsmba}
-Requires: %{pnm_requires_SUNWsmba}
+BuildRequires: SUNWsmba
+Requires: SUNWsmba
 BuildRequires: SFEffmpeg-devel
 Requires: SFEffmpeg
 Requires: SFElibcdio
@@ -83,7 +82,7 @@ BuildRequires: SFEyasm
 %endif
 BuildRequires: SFElibcdio-devel
 BuildRequires: SFElibdvdnav-devel
-BuildRequires: %{pnm_buildrequires_SUNWgroff}
+BuildRequires: SUNWgroff
 BuildRequires: SUNWesu
 Requires: driver/graphics/nvidia
 BuildRequires: driver/graphics/nvidia
@@ -112,8 +111,8 @@ BuildRequires: SFEliba52-devel
 Requires: SFEopenal
 BuildRequires: SFEopenal-devel
 %endif
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 %if %with_giflib
 Requires: SFEgiflib
 BuildRequires: SFEgiflib-devel

@@ -37,7 +37,6 @@
 # %define cc_is_gcc 1
 # %include base.inc
 
-%include packagenamemacros.inc
 %include usr-gnu.inc
 
 %define _use_internal_dependency_generator 0
@@ -75,22 +74,22 @@ Requires:       SFElibtasn1-gnu
 BuildRequires:  SFEicu-gpp
 Requires:       SFEicu-gpp
 
-BuildRequires:  %{pnm_buildrequires_library_guile}
-Requires:       %{pnm_requires_library_guile}
-BuildRequires:  %{pnm_buildrequires_library_libidn}
-Requires:       %{pnm_requires_library_libidn}
+BuildRequires:  library_guile
+Requires:       library_guile
+BuildRequires:  library_libidn
+Requires:       library_libidn
 
 ##TODO## obsolete, we use nettle BuildRequires:           %{pnm_buildrequires_SUNWlibgcrypt_devel}
 ##TODO## obsolete, we use nettle Requires:                %{pnm_buildrequires_SUNWlibgcrypt}
 
-BuildRequires:           %{pnm_buildrequires_SUNWzlib_devel}
-Requires:                %{pnm_buildrequires_SUNWzlib}
+BuildRequires:           SUNWzlib_devel
+Requires:                SUNWzlib
 
 
 #only S12 and OIH has fresh enough autogen (>=5.16.2)
 # or get "missing sourcecode files" 
 %if %( expr %{solaris12} '+' %{oihipster} '>=' 1 )
-BuildRequires:  %{pnm_buildrequires_developer_build_autogen}
+BuildRequires:  developer_build_autogen
 %else
 BuildRequires:  SFEautogen
 %endif

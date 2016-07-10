@@ -11,7 +11,6 @@
 
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %use handbrake = handbrake.spec
 
@@ -34,8 +33,8 @@ Requires: SFEffmpeg
 Requires: SFElibmp4v2
 Requires: SFElibdvdnav
 Requires: SFElibiconv
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 BuildRequires: SFEgcc
 BuildRequires: SFEffmpeg-devel
 BuildRequires: SFElibx264-devel
@@ -43,8 +42,8 @@ BuildRequires: SFElibao-devel
 BuildRequires: SFElibiconv-devel
 BuildRequires: SFEyasm
 
-Requires:       %{pnm_requires_SUNWlibmikmod}
-BuildRequires:  %{pnm_buildrequires_SUNWlibmikmod}
+Requires:       SUNWlibmikmod
+BuildRequires:  SUNWlibmikmod
 
 BuildRequires:	SUNWaudh
 

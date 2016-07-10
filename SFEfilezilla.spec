@@ -11,7 +11,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 %use filezilla = filezilla.spec
@@ -32,7 +31,7 @@ Requires: SUNWgnome-vfs
 Requires: SUNWgnome-component
 Requires: SUNWgnome-config
 Requires: SUNWgnutls
-Requires:      %{pnm_buildrequires_SUNWgnu_idn}
+Requires:      SUNWgnu_idn
 Requires: SFEwxwidgets-gpp
 Requires: SUNWxdg-utils
 BuildRequires: SUNWgnome-libs-devel
@@ -41,7 +40,7 @@ BuildRequires: SUNWgnome-vfs-devel
 BuildRequires: SUNWgnome-component-devel
 BuildRequires: SUNWgnome-config-devel
 BuildRequires: SUNWgnutls-devel
-BuildRequires: %{pnm_buildrequires_SUNWgnu_idn}
+BuildRequires: SUNWgnu_idn
 BuildRequires: SFEwxwidgets-gpp-devel
 BuildRequires: SUNWxdg-utils
 

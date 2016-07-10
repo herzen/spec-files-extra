@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version v2.8.0
 %define tarball_name    Mail-SPF
@@ -25,8 +24,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: %{license}license.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JM/JMEHNLE/mail-spf/Mail-SPF-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 BuildRequires:           SFEperl-module-build
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>

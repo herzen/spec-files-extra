@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc

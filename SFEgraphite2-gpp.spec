@@ -8,7 +8,6 @@
 %include usr-g++.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define	src_name	graphite2

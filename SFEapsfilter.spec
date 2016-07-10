@@ -13,7 +13,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEapsfilter
 IPS_Package_Name:	print/lp/filter/apsfilter
@@ -26,8 +25,8 @@ Source:		http://www.apsfilter.org/download/apsfilter-%{version}.tar.gz
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:	%{pnm_buildrequires_SUNWsndm}
-Requires:	%{pnm_requires_SUNWsndm}
+BuildRequires:	SUNWsndm
+Requires:	SUNWsndm
 
 %package root
 Summary:	%{summary} - / filesystem

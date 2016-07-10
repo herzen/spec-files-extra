@@ -9,7 +9,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEperl-gettext
 IPS_Package_Name:	library/perl-5/gettext

@@ -34,7 +34,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define _use_internal_dependency_generator 0
 
@@ -153,23 +152,23 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 #TODO: BuildReqires:
 #BuildRequires: SFEcpio
 #BuildRequires: SUNWrpm
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWbash}
-Requires:      %{pnm_requires_SUNWbash}
-BuildRequires: %{pnm_buildrequires_perl_default}
-Requires:      %{pnm_requires_perl_default}
-BuildRequires: %{pnm_buildrequires_SUNWpcre}
-Requires:      %{pnm_requires_SUNWpcre}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
+BuildRequires: SUNWbash
+Requires:      SUNWbash
+BuildRequires: perl_default
+Requires:      perl_default
+BuildRequires: SUNWpcre
+Requires:      SUNWpcre
+BuildRequires: SUNWopenssl
+Requires:      SUNWopenssl
 
-BuildRequires: %{pnm_buildrequires_SUNWggrp}
+BuildRequires: SUNWggrp
 
 #SASL
 %if %(test %{with_sasl} -eq 1 && echo 1 || echo 0)
-BuildRequires: %{pnm_buildrequires_SUNWlibsasl}
-Requires: %{pnm_buildrequires_SUNWlibsasl}
+BuildRequires: SUNWlibsasl
+Requires: SUNWlibsasl
 %endif
 #SASL2 
 ##TODO## untested, needs the /gnu/ include and libdir below to get found and adjusments to %files section

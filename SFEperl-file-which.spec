@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 1.09
 %define tarball_name    File-Which
@@ -25,8 +24,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: %{name}.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/File-Which-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 BuildRequires:	SFEperl-test-simple
 Requires:	SFEperl-test-simple
 

@@ -10,7 +10,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	libshout
 %define src_url		http://downloads.xiph.org/releases/libshout
@@ -28,16 +27,16 @@ BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
 #BuildRequires: SFWoggl
-BuildRequires: %{pnm_buildrequires_SUNWlibtheora_devel}
-BuildRequires: %{pnm_buildrequires_SUNWlxml_devel}
-BuildRequires: %{pnm_buildrequires_SUNWlxsl_devel}
-BuildRequires: %{pnm_buildrequires_SUNWogg_vorbis_devel}
+BuildRequires: SUNWlibtheora_devel
+BuildRequires: SUNWlxml_devel
+BuildRequires: SUNWlxsl_devel
+BuildRequires: SUNWogg_vorbis_devel
 # TODO needed? BuildRequires: SUNWspeex-devel
 #Requires: SFWoggl
-Requires: %{pnm_requires_SUNWlibtheora}
-Requires: %{pnm_requires_SUNWlxml}
-Requires: %{pnm_requires_SUNWlxsl}
-Requires: %{pnm_requires_SUNWogg_vorbis}
+Requires: SUNWlibtheora
+Requires: SUNWlxml
+Requires: SUNWlxsl
+Requires: SUNWogg_vorbis
 # TODO needed? Requires: SUNWspeex
 
 %package devel

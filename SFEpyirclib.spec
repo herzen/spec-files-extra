@@ -18,7 +18,6 @@
 # please don't do version bumps without testing against SFEirker.spec ! 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEpyirclib
 IPS_Package_Name:	 library/python-2/irclib
@@ -31,8 +30,8 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-Requires:                  %{pnm_requires_python_default}
-BuildRequires:             %{pnm_buildrequires_python_default}
+Requires:                  python_default
+BuildRequires:             python_default
 
 
 %prep

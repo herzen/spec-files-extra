@@ -32,7 +32,6 @@
 %define  daemonlogingid   65534
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %if %{with_clucene}
 %define cc_is_gcc 1
@@ -59,18 +58,18 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:      SFEgcc
 Requires:           SFEgccruntime
 %endif
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWbzip}
-Requires:      %{pnm_requires_SUNWbzip}
-BuildRequires: %{pnm_buildrequires_SUNWlexpt}
-Requires:      %{pnm_requires_SUNWlexpt}
-BuildRequires: %{pnm_buildrequires_SUNWgnu_idn}
-Requires:      %{pnm_requires_SUNWgnu_idn}
-BuildRequires: %{pnm_buildrequires_SUNWcurl}
-Requires:      %{pnm_requires_SUNWcurl}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_include}
-Requires:      %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
+BuildRequires: SUNWbzip
+Requires:      SUNWbzip
+BuildRequires: SUNWlexpt
+Requires:      SUNWlexpt
+BuildRequires: SUNWgnu_idn
+Requires:      SUNWgnu_idn
+BuildRequires: SUNWcurl
+Requires:      SUNWcurl
+BuildRequires: SUNWopenssl_include
+Requires:      SUNWopenssl_libraries
 %if %{with_clucene}
 BuildRequires: SFElibstemmer-devel
 Requires: SFElibstemmer

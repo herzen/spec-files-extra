@@ -170,7 +170,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %if %arch_sse2
@@ -182,8 +181,8 @@
 
 
 #new with 2.x.x source comes compressed in xz
-BuildRequires:	%{pnm_buildrequires_SFExz_gnu}
-BuildRequires:	%{pnm_buildrequires_SUNWgsed}
+BuildRequires:	SFExz_gnu
+BuildRequires:	SUNWgsed
 
 #new with 2.1.x we need autoconf >= 2.65
 ##paused## BuildRequires: SFEautoconf-gnu
@@ -265,21 +264,21 @@ BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 
 #BuildRequires:  %{pnm_buildrequires_SUNWautomake_111}
 BuildRequires:  SFEautomake-114
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
 
 Requires:       SUNWhal
-BuildRequires: %{pnm_buildrequires_SUNWdbus_devel}
-Requires:      %{pnm_requires_SUNWdbus}
+BuildRequires: SUNWdbus_devel
+Requires:      SUNWdbus
 Requires:       SUNWxorg-clientlibs
 %if %{enable_samba}
-BuildRequires:  %{pnm_buildrequires_SUNWsmba}
-Requires:  %{pnm_requires_SUNWsmba}
+BuildRequires:  SUNWsmba
+Requires:  SUNWsmba
 %endif
 BuildRequires:  SFElibfribidi-devel
 Requires:       SFElibfribidi
-BuildRequires:  %{pnm_buildrequires_SUNWfreetype2}
-Requires:       %{pnm_requires_SUNWfreetype2}
+BuildRequires:  SUNWfreetype2
+Requires:       SUNWfreetype2
 BuildRequires:  SFEliba52-devel
 Requires:       SFEliba52
 #BuildRequires:  SFEffmpeg-08-devel
@@ -314,27 +313,27 @@ BuildRequires:  SFElibx264-devel
 Requires:       SFElibx264
 BuildRequires:  SFElibtar-devel
 Requires:       SFElibtar
-BuildRequires:	%{pnm_buildrequires_SUNWlua}
-Requires:	%{pnm_buildrequires_SUNWlua}
-BuildRequires: %{pnm_buildrequires_SUNWlibgcrypt}
+BuildRequires:	SUNWlua
+Requires:	SUNWlua
+BuildRequires: SUNWlibgcrypt
 BuildRequires: SUNWlibproxy
 BuildRequires: SUNWgnome-vfs
-BuildRequires: %{pnm_buildrequires_SUNWlibrsvg}
+BuildRequires: SUNWlibrsvg
 BuildRequires: SFEtwolame
 #BuildRequires: SFEgcc
 BuildRequires: SFEgcc
-BuildRequires: %{pnm_buildrequires_SUNWavahi_bridge_dsd_devel}
-BuildRequires: %{pnm_buildrequires_SUNWlibgpg_error_devel}
-Requires: %{pnm_requires_SUNWlibgcrypt}
+BuildRequires: SUNWavahi_bridge_dsd_devel
+BuildRequires: SUNWlibgpg_error_devel
+Requires: SUNWlibgcrypt
 Requires: SUNWlibproxy
 Requires: SUNWgnome-vfs
-Requires: %{pnm_requires_SUNWlibrsvg}
+Requires: SUNWlibrsvg
 Requires: SFEtwolame
 Requires: SFEgccruntime
 #Requires: SFEgccruntime-46
 #Requires: SFEgccruntime-48
-Requires: %{pnm_requires_SUNWavahi_bridge_dsd}
-Requires: %{pnm_requires_SUNWlibgpg_error}
+Requires: SUNWavahi_bridge_dsd
+Requires: SUNWlibgpg_error
 BuildRequires: SFEtwolame-devel
 Requires: SFEtwolame
 %if %{enable_taglib}
@@ -355,12 +354,12 @@ BuildRequires: SFElivemedia
 Requires: SFElivemedia
 
 %if %{enable_pulseaudio}
-BuildRequires: %{pnm_buildrequires_pulseaudio}
-Requires:      %{pnm_requires_pulseaudio}
+BuildRequires: pulseaudio
+Requires:      pulseaudio
 %endif
 
-BuildRequires: %{pnm_buildrequires_SUNWltdl}
-Requires: %{pnm_requires_SUNWltdl}
+BuildRequires: SUNWltdl
+Requires: SUNWltdl
 
 ##TODO## make this a pnm macro
 #%if %{os2nnn}

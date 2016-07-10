@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name xmms2
 %define src_url	 %{sf_download}/%{src_name}
@@ -28,8 +27,8 @@ BuildRequires: SFElibmpcdec-devel
 Requires: SFElibmpcdec
 BuildRequires: SFEfaad2-devel
 Requires: SFEfaad2
-BuildRequires: %{pnm_buildrequires_SUNWlibdiscid_devel}
-Requires:      %{pnm_requires_SUNWlibdiscid}
+BuildRequires: SUNWlibdiscid_devel
+Requires:      SUNWlibdiscid
 BuildRequires: SFEffmpeg-devel
 Requires: SFEffmpeg
 BuildRequires: SFElibmad-devel

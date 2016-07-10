@@ -12,7 +12,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define makeinstall make install DESTDIR=$RPM_BUILD_ROOT
 %use libggz = libggz.spec
@@ -29,7 +28,7 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SUNWgtk2-devel
 BuildRequires: SUNWlibrsvg-devel
-BuildRequires: %{pnm_buildrequires_python_default}
+BuildRequires: python_default
 BuildRequires: SUNWgnome-libs-devel
 BuildRequires: SUNWgnome-vfs-devel
 BuildRequires: SUNWgnome-config-devel
@@ -40,7 +39,7 @@ Requires: SUNWgnome-libs
 Requires: SUNWgnome-config
 Requires: SUNWlibms
 Requires: SUNWlibrsvg
-Requires: %{pnm_requires_python_default}
+Requires: python_default
 Requires: SUNWdesktop-cache
 Requires: SUNWgnome-media
 Requires: %{name}-root

@@ -4,7 +4,6 @@
 # includes module(s): zgv
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define	src_name zgv
 %define	src_url	ftp://metalab.unc.edu/pub/Linux/apps/graphics/viewers/svga
@@ -24,8 +23,8 @@ BuildRequires: SUNWjpg-devel
 Requires: SUNWjpg
 BuildRequires: SUNWTiff-devel
 Requires: SUNWTiff
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
 BuildRequires: SUNWgawk
 BuildRequires: SUNWtexi
 

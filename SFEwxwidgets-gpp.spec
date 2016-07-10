@@ -6,7 +6,6 @@
 
 #%define _basedir /usr/g++
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-g++.inc
 %define cc_is_gcc 1
 %include base.inc
@@ -33,14 +32,14 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires:      SUNWgnome-vfs
-Requires:      %{pnm_requires_SUNWlibsdl}
-BuildRequires: %{pnm_buildrequires_SUNWgnome_libs_devel}
-Requires:      %{pnm_requires_SUNWgnome_libs}
+Requires:      SUNWlibsdl
+BuildRequires: SUNWgnome_libs_devel
+Requires:      SUNWgnome_libs
 BuildRequires: SUNWgnome-vfs-devel
 %ifarch i386 amd64
-BuildRequires:  %{pnm_buildrequires_SUNWxorg_mesa_devel}
+BuildRequires:  SUNWxorg_mesa_devel
 %endif
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
+BuildRequires: SUNWlibsdl_devel
 BuildRequires: SFEgcc
 Requires:      SFEgccruntime
 

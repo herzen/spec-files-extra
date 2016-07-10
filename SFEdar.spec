@@ -8,7 +8,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 Name:                    SFEdar
 IPS_package_name:	 compress/dar
@@ -26,7 +25,7 @@ BuildRequires: SFEgcc
 BuildRequires: SUNWbzip
 BuildRequires: SFElzo
 Requires: SFEgccruntime
-Requires:      %{pnm_requires_perl_default}
+Requires:      perl_default
 Requires: SUNWbash
 Requires: SUNWbzip
 

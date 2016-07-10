@@ -5,7 +5,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #consider switching off dependency_generator to speed up packaging step
 #if there are no binary objects in the package which link to external binaries
@@ -29,8 +28,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: %{license}.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/IO-Compress-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Paul Marquess <pmqs@cpan.org>

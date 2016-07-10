@@ -11,7 +11,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %use libmms = libmms.spec
 
@@ -26,12 +25,12 @@ Version:	%{libmms.version}
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-Requires:	%{pnm_buildrequires_SUNWgnome_base_libs}
-BuildRequires:	%{pnm_buildrequires_SUNWlibm}
-Requires:	%{pnm_buildrequires_SUNWlibm}
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_base_libs_devel}
+Requires:	SUNWgnome_base_libs
+BuildRequires:	SUNWlibm
+Requires:	SUNWlibm
+BuildRequires:	SUNWgnome_base_libs_devel
 Conflicts:	SUNWmmsu
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:	SUNWgnome_common_devel
 
 %package devel
 Summary:	%{summary} - development files

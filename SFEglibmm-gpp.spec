@@ -8,7 +8,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc
@@ -27,8 +26,8 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires:   %{pnm_buildrequires_SUNWgnome_base_libs_devel}
-Requires:        %{pnm_requires_SUNWgnome_base_libs}
+BuildRequires:   SUNWgnome_base_libs_devel
+Requires:        SUNWgnome_base_libs
 BuildRequires:   SFEsigcpp-gpp-devel
 Requires:        SFEsigcpp-gpp
 
@@ -37,7 +36,7 @@ Summary:                 %{summary} - development files
 SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 Requires: %name
-Requires: %{pnm_buildrequires_SUNWgnome_base_libs_devel}
+Requires: SUNWgnome_base_libs_devel
 
 %prep
 rm -rf %name-%version

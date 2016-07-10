@@ -6,7 +6,6 @@
 %define _use_internal_dependency_generator 0
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #description of this download method:
 #https://fedorahosted.org/fpc/attachment/ticket/233/slask
@@ -40,8 +39,8 @@ BuildRoot:               %{_tmppath}/%{name}-%{src_version}-build
 
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_python_default}
-Requires:	%{pnm_requires_python_default}
+BuildRequires:	python_default
+Requires:	python_default
 
 Requires: %name-root
 %package root

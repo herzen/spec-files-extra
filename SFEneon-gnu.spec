@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 Name:			SFEneon-gnu
 IPS_package_name:	library/gnu/neon
@@ -24,9 +23,9 @@ SUNW_BaseDir:		%{_prefix}
 Requires: SUNWlibms
 Requires: SUNWzlib
 Requires: SUNWlexpt
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_include}
-Requires:      %{pnm_requires_SUNWopenssl_libraries}
-BuildRequires: %{pnm_buildrequires_SUNWsfwhea}
+BuildRequires: SUNWopenssl_include
+Requires:      SUNWopenssl_libraries
+BuildRequires: SUNWsfwhea
 
 %package devel
 Summary:                 %{summary} - development files

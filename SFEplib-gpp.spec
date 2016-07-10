@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-g++.inc
 %define cc_is_gcc 1
 %include base.inc
@@ -27,7 +26,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %include	default-depend.inc
 Requires: 	SUNWxorg-mesa
 Requires: 	SUNWxwice
-BuildRequires:	%{pnm_buildrequires_SUNWaudh}
+BuildRequires:	SUNWaudh
 
 %package devel
 Summary:	%summary - developer files

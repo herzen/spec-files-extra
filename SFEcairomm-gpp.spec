@@ -9,7 +9,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-g++.inc
 
 %define cc_is_gcc 1
@@ -44,10 +43,10 @@ SUNW_Copyright:          cairomm.copyright
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWgnome_base_libs_devel}
-Requires:      %{pnm_requires_SUNWgnome_base_libs}
-BuildRequires: %{pnm_buildrequires_SUNWcairo_devel}
-Requires:      %{pnm_requires_SUNWcairo}
+BuildRequires: SUNWgnome_base_libs_devel
+Requires:      SUNWgnome_base_libs
+BuildRequires: SUNWcairo_devel
+Requires:      SUNWcairo
 BuildRequires: SFEsigcpp-gpp-devel
 Requires:      SFEsigcpp-gpp
 
@@ -56,7 +55,7 @@ Summary:                 %{summary} - development files
 SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 Requires: %name
-Requires: %{pnm_buildrequires_SUNWcairo_devel}
+Requires: SUNWcairo_devel
 Requires: SFEsigcpp-gpp-devel
 
 %prep

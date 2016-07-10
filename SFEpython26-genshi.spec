@@ -4,7 +4,6 @@
 # includes module(s): genshi
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_url         http://ftp.edgewall.com/pub/genshi
 %define src_name        Genshi
@@ -20,9 +19,9 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWgnome_python26_libs}
+BuildRequires: SUNWgnome_python26_libs
 Requires: SUNWPython26
-BuildRequires: %{pnm_buildrequires_SUNWgnome_python26_libs_devel}
+BuildRequires: SUNWgnome_python26_libs_devel
 BuildRequires: SUNWPython26-devel
 
 

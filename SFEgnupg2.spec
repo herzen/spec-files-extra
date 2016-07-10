@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-gnu.inc
 
 %use gnupg = gnupg2.spec
@@ -24,8 +23,8 @@ BuildRoot:     %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires: SUNWbzip
 Requires: SUNWzlib
-Requires: %{pnm_requires_library_readline}
-BuildRequires: %{pnm_buildrequires_library_readline}
+Requires: library_readline
+BuildRequires: library_readline
 BuildRequires: SFElibksba
 #BuildRequires: SFEpth
 BuildRequires: SUNWpth

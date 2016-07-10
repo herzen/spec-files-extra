@@ -30,7 +30,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc
@@ -51,15 +50,15 @@ SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 BuildRequires: SUNWgnome-base-libs-devel
 Requires:      SUNWgnome-base-libs
-BuildRequires: %{pnm_buildrequires_SUNWgtk2_devel}
-Requires:      %{pnm_requires_SUNWgtk2}
-BuildRequires: %{pnm_buildrequires_SFExz_gnu}
+BuildRequires: SUNWgtk2_devel
+Requires:      SUNWgtk2
+BuildRequires: SFExz_gnu
 
 BuildRequires: SFEsigcpp-gpp
 Requires:      SFEsigcpp-gpp
 
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 
 BuildRequires: SFEpoppler-data-gpp
 Requires:      SFEpoppler-data-gpp

@@ -4,7 +4,6 @@
 # includes module(s): libgeda
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define	src_ver 20070526
 %define	src_name libgeda
@@ -18,7 +17,7 @@ Source:		%{src_url}/%{src_name}-%{version}.tar.gz
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:	SFEindent
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 BuildRequires:	SFEguile-devel
 Requires:	SFEguile
 BuildRequires:	SFElibgdgeda-devel

@@ -4,7 +4,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:         SFEruby
 IPS_Package_Name:	runtime/ruby-21
@@ -16,7 +15,7 @@ Patch1:       ruby-01-endian.diff
 SUNW_BaseDir: %{_basedir}
 %include default-depend.inc
 Requires:     SUNWlibmsr
-Requires:     %{pnm_requires_openssl}
+Requires:     openssl
 Requires:     SUNWzlib
 Conflicts:    SUNWruby18u
 BuildRequires:     SFElibyaml

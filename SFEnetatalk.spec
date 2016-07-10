@@ -7,7 +7,6 @@
 # include module(s): 
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:           SFEnetatalk
 IPS_package_name:       service/network/netatalk
@@ -24,19 +23,19 @@ Vendor:         OpenSolaris Community
 %include default-depend.inc
 
 BuildRequires: SFEbdb
-BuildRequires: %{pnm_buildrequires_SUNWlibgcrypt}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-BuildRequires: %{pnm_buildrequires_system_network_avahi}
-BuildRequires: %{pnm_buildrequires_SUNWavahi_bridge_dsd}
-BuildRequires: %{pnm_buildrequires_SUNWavahi_bridge_dsd_devel}
-BuildRequires: %{pnm_buildrequires_avahi_bridge_dsd}
-BuildRequires: %{pnm_buildrequires_developer_build_make}
+BuildRequires: SUNWlibgcrypt
+BuildRequires: SUNWopenssl
+BuildRequires: system_network_avahi
+BuildRequires: SUNWavahi_bridge_dsd
+BuildRequires: SUNWavahi_bridge_dsd_devel
+BuildRequires: avahi_bridge_dsd
+BuildRequires: developer_build_make
 Requires: SFEbdb
-Requires: %{pnm_requires_SUNWlibgcrypt}
-Requires: %{pnm_requires_SUNWopenssl}
-Requires: %{pnm_requires_system_network_avahi}
-Requires: %{pnm_requires_SUNWavahi_bridge_dsd}
-Requires: %{pnm_requires_avahi_bridge_dsd}
+Requires: SUNWlibgcrypt
+Requires: SUNWopenssl
+Requires: system_network_avahi
+Requires: SUNWavahi_bridge_dsd
+Requires: avahi_bridge_dsd
 
 #make the root package to be installed first
 Requires: %name-root

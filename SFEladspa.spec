@@ -4,7 +4,6 @@
 # includes module(s): ladspa
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	ladspa_sdk
 %define src_url		http://www.ladspa.org/download
@@ -21,14 +20,14 @@ SUNW_BaseDir:           %{_basedir}
 BuildRoot:              %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlibms}
-Requires: %{pnm_requires_SUNWlibms}
+BuildRequires: SUNWlibms
+Requires: SUNWlibms
 
 %if %cc_is_gcc
 # don't include suncc libs
 %else
-BuildRequires: %{pnm_buildrequires_SUNWlibC}
-Requires: %{pnm_requires_SUNWlibC}
+BuildRequires: SUNWlibC
+Requires: SUNWlibC
 %endif
 
 %package devel

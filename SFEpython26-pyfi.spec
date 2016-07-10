@@ -6,7 +6,6 @@
 # includes module(s): Django
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #https://pypi.python.org/packages/source/P/PyFi/PyFi-0.1.6.tar.gz#md5=522cbfdbf689d4e7cf9bcffbc424522f
 #https://github.com/project-fifo/pyfi/archive/0.1.18.tar.gz
@@ -32,8 +31,8 @@ Source:		%{src_url}/%{src_name}-%{src_version_major_minor}.tar.gz
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:	%{pnm_buildrequires_python_default}
-Requires:	%{pnm_requires_python_default}
+BuildRequires:	python_default
+Requires:	python_default
 #python26 has already BuildRequires:	SFEpython26-setuptools.spec
 #python26 has already Requires:	SFEpython26-setuptools.spec
 BuildRequires:	SFEpython26-configparser.spec

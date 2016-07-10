@@ -16,7 +16,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %define src_name mpd
 
@@ -34,8 +33,8 @@ URL:		     http://www.musicpd.org/
 SUNW_BaseDir:        %{_basedir}
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_system_header_header_audio}
-BuildRequires: %{pnm_buildrequires_SFExz_gnu}
+BuildRequires: system_header_header_audio
+BuildRequires: SFExz_gnu
 BuildRequires: SFElibao-devel
 BuildRequires: SFElibsamplerate-devel
 BuildRequires: SUNWogg-vorbis-devel
@@ -47,10 +46,10 @@ BuildRequires: SFElibmms-devel
 BuildRequires: SFElibshout
 BuildRequires: SFElibcdio
 BuildRequires: SFElibmpdclient-devel
-BuildRequires: %{pnm_buildrequires_SUNWsqlite3}
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
+BuildRequires: SUNWsqlite3
+BuildRequires: SFElibsndfile_devel
 BuildRequires: SUNWglib2
-BuildRequires: %{pnm_buildrequires_SUNWcurl_devel}
+BuildRequires: SUNWcurl_devel
 BuildRequires: SUNWlibsoup-devel
 #TODO# BuildRequires: SFElibpulse-devel
 BuildRequires: SUNWavahi-bridge-dsd-devel
@@ -67,10 +66,10 @@ Requires: SFElibmms
 Requires: SFElibshout
 Requires: SFElibcdio
 Requires: SFElibmpdclient
-Requires: %{pnm_requires_SUNWsqlite3}
-Requires: %{pnm_requires_SFElibsndfile}
+Requires: SUNWsqlite3
+Requires: SFElibsndfile
 Requires: SUNWglib2
-Requires: %{pnm_requires_SUNWcurl}
+Requires: SUNWcurl
 Requires: SUNWlibsoup
 #TODO# Requires: SFElibpulse
 Requires: SUNWavahi-bridge-dsd
@@ -105,8 +104,8 @@ BuildRequires:  SFExvid
 Requires:       SFExvid
 %endif
 
-BuildRequires:  %{pnm_buildrequires_boost_gpp_default}
-Requires:       %{pnm_requires_boost_gpp_default}
+BuildRequires:  boost_gpp_default
+Requires:       boost_gpp_default
 BuildRequires:  SFEicu-gpp
 Requires:       SFEicu-gpp
 
@@ -120,8 +119,8 @@ BuildRequires:  SFEorc
 Requires:       SFEorc
 BuildRequires:  SFElibschroedinger
 Requires:       SFElibschroedinger
-BuildRequires:  %{pnm_buildrequires_SUNWlibtheora_devel}
-Requires:       %{pnm_requires_SUNWlibtheora}
+BuildRequires:  SUNWlibtheora_devel
+Requires:       SUNWlibtheora
 BuildRequires:  SFElibvpx
 Requires:       SFElibvpx
 

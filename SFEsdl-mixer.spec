@@ -4,7 +4,6 @@
 # includes module(s): SDL
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %ifarch amd64 sparcv9
 %include arch64.inc
 %use sdl_64 = sdl-mixer.spec
@@ -30,10 +29,10 @@ SUNW_Copyright:		sdl-mixer.copyright
 SUNW_BaseDir:		%{_basedir}
 BuildRoot:		%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
-BuildRequires:  %{pnm_buildrequires_SUNWlibmikmod_devel}
-Requires:       %{pnm_requires_SUNWlibmikmod}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
+BuildRequires:  SUNWlibmikmod_devel
+Requires:       SUNWlibmikmod
 BuildRequires: SUNWogg-vorbis-devel
 Requires: SUNWogg-vorbis
 BuildRequires: SUNWflac-devel

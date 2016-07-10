@@ -5,7 +5,6 @@
 # includes module(s): fusefs
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name fusefs
 %define src_url http://sfe.opencsw.org/files
@@ -28,7 +27,7 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWonbld}
+BuildRequires:	SUNWonbld
 
 %description
 FUSE stands for 'File system in User Space'. It provides a simple

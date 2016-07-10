@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 1.44
 %define tarball_name    Log-Log4perl
@@ -25,8 +24,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: perl.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHILLI/Log-Log4perl-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Michael Schilli <m@perlmeister.com>

@@ -13,7 +13,6 @@
 ##TODO## test sparc version of gcc-05-LINK_LIBGCC_SPEC-sparcv9.diff
 
 %include Solaris.inc
-%include osdistro.inc
 %include buildparameter.inc
 %if %( expr %{solaris12} '|' %{oihipster} '|' %{omnios} )
 %define cc_is_gcc 1

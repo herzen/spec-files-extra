@@ -8,7 +8,6 @@
 %define automaticversion 0
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #note: cc_is_gcc is used below to trick the call to "cc" end in "gcc"
 

@@ -7,7 +7,6 @@
 %define cc_is_gcc 1
 %include base.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 #Attention!
 %define _prefix %{_basedir}/gnu/squid

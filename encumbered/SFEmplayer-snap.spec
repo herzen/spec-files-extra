@@ -29,7 +29,6 @@
 %define build_gui %{?_with_gui:1}%{?!_with_gui:0}
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1 
 %include base.inc
@@ -94,10 +93,10 @@ Requires: SUNWogg-vorbis
 Requires: SUNWlibtheora
 Requires: SFEgccruntime
 Requires: SUNWgnome-base-libs
-Requires: %{pnm_requires_SUNWlibmng}
+Requires: SUNWlibmng
 Requires: SFElzo
-BuildRequires: %{pnm_buildrequires_SUNWsmba}
-Requires: %{pnm_requires_SUNWsmba}
+BuildRequires: SUNWsmba
+Requires: SUNWsmba
 Requires: SFElivemedia
 Requires: SFElibcdio
 Requires: SFElibvpx
@@ -106,12 +105,12 @@ BuildRequires: SFElibvpx-devel
 BuildRequires: SFEyasm
 %endif
 BuildRequires: SFElibcdio-devel
-BuildRequires: %{pnm_buildrequires_SUNWgroff}
+BuildRequires: SUNWgroff
 BuildRequires: SUNWesu
-BuildRequires: %{pnm_buildrequires_SUNWlibmng_devel}
+BuildRequires: SUNWlibmng_devel
 BuildRequires: SFElzo-devel
 %if %with_constant_tarball
-BuildRequires: %{pnm_buildrequires_SFExz_gnu}
+BuildRequires: SFExz_gnu
 %endif
 
 %if %SFElibsndfile
@@ -155,14 +154,14 @@ BuildRequires: SFExvid-devel
 Requires: SFElibx264
 BuildRequires: SFElibx264-devel
 %endif
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 %if %with_giflib
 Requires: SFEgiflib
 BuildRequires: SFEgiflib-devel
 %endif
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 %if %with_alsa
 BuildRequires: SFEalsa-lib
 Requires: SFEalsa-lib

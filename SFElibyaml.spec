@@ -4,7 +4,6 @@
 # includes module(s): libyaml
 #
 %include Solaris.inc
-%include osdistro.inc
 
 %define	tarball_version	0.1.6
 %define	tarball_name yaml

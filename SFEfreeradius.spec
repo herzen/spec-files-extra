@@ -7,7 +7,6 @@
 #        svc script do the initialization once if usefull criteria is met
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define  radiususer  freerad
 %define  radiusuid   110
 %define  radiusgroup freerad
@@ -50,22 +49,22 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 #      /usr/lib/libpython2.4.so.1.0 which is found in SUNWPython, but that is
 #      not listed as a package dependency.
 
-BuildRequires: %{pnm_buildrequires_SUNWkrb}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_include}
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
+BuildRequires: SUNWkrb
+BuildRequires: SUNWopenssl_include
+BuildRequires: SUNWgnu_dbm
 #BuildRequires: %{pnm_buildrequires_SUNWmysql_base_devel}
 %define PERLpath /usr/perl%{perl_major_version}/bin/perl
 
-BuildRequires: %{pnm_buildrequires_perl_default}
-BuildRequires: %{pnm_buildrequires_SUNWltdl_devel}
-BuildRequires: %{pnm_buildrequires_library_readline}
-Requires: %{pnm_requires_SUNWkrb}
-Requires: %{pnm_requires_SUNWopenssl_libraries}
-Requires: %{pnm_requires_SUNWgnu_dbm}
+BuildRequires: perl_default
+BuildRequires: SUNWltdl_devel
+BuildRequires: library_readline
+Requires: SUNWkrb
+Requires: SUNWopenssl_libraries
+Requires: SUNWgnu_dbm
 #Requires: %{pnm_requires_SUNWmysql_base}
-Requires: %{pnm_buildrequires_perl_default}
-Requires: %{pnm_requires_SUNWltdl}
-Requires: %{pnm_requires_library_readline}
+Requires: perl_default
+Requires: SUNWltdl
+Requires: library_readline
 
 Requires: %name-root
 %package root

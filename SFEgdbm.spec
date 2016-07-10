@@ -9,7 +9,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 
-%include packagenamemacros.inc
 #%if %( expr %{omnios} '|' %{openindiana} '|' %{oihipster} '|' %{solaris12} '&' %{osbuild} '>=' 63 '|' %{solaris11} '&' %{osdistro_entire_padded_number4}.0 '>=' 0000017500030000000000120001.0 )
 %if %( test %{pnm_buildrequires_SUNWgnu_dbm} != SFEgdbm && echo 1 )
 %include usr-gnu.inc

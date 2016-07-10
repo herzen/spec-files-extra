@@ -11,7 +11,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 
@@ -38,16 +37,16 @@ BuildRoot:		%_tmppath/%name-%version-build
 BuildRequires:	SFEgcc
 Requires:	SFEgccruntime
 
-BuildRequires:	%{pnm_buildrequires_boost_gpp_default}
-Requires:	%{pnm_requires_boost_gpp_default}
-BuildRequires:  %{pnm_buildrequires_developer_cppunit}
-Requires:       %{pnm_requires_developer_cppunit}
-BuildRequires:  %{pnm_buildrequires_SUNWzlib}
-Requires:       %{pnm_requires_SUNWzlib}
+BuildRequires:	boost_gpp_default
+Requires:	boost_gpp_default
+BuildRequires:  developer_cppunit
+Requires:       developer_cppunit
+BuildRequires:  SUNWzlib
+Requires:       SUNWzlib
 
-BuildRequires:  %{pnm_buildrequires_SFExz_gnu}
+BuildRequires:  SFExz_gnu
 
-BuildRequires:	%{pnm_buildrequires_developer_documentation_tool_doxygen}
+BuildRequires:	developer_documentation_tool_doxygen
 
 # Copied from Wikipedia
 %description

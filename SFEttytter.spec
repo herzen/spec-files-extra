@@ -3,7 +3,6 @@
 # 
 %include Solaris.inc
 %include base.inc
-%include packagenamemacros.inc
 
 Name:                SFEttytter
 IPS_Package_Name:	communication/twitter/ttytter
@@ -17,8 +16,8 @@ SUNW_Copyright:      %{license}.copyright
 Group:		     Applications/Internet
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:		 %{pnm_buildrequires_perl_default}
-Requires:			 %{pnm_requires_perl_default}
+BuildRequires:		 perl_default
+Requires:			 perl_default
 
 %description
 A multi-functional, command-line twitter client

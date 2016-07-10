@@ -13,7 +13,6 @@
 
 %define _basedir /usr/stdcxx
 %include Solaris.inc
-%include packagenamemacros.inc
 %ifarch amd64 sparcv9
 %include arch64.inc
 %use icu_64 = icu.spec
@@ -31,8 +30,8 @@ SUNW_Copyright:		icu.copyright
 SUNW_BaseDir:		%_basedir
 BuildRoot:		%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWlibstdcxx4}
-Requires:      %{pnm_requires_SUNWlibstdcxx4}
+BuildRequires: SUNWlibstdcxx4
+Requires:      SUNWlibstdcxx4
 
 %package devel
 Summary:		%{summary} - development files

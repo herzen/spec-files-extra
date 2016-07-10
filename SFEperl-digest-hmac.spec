@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 1.03
 %define tarball_name    Digest-HMAC
@@ -25,8 +24,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: perl.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Digest-HMAC-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Gisle Aas <gisle@ActiveState.com>

@@ -4,7 +4,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                SFEnasm
 IPS_Package_Name:	developer/nasm 
@@ -21,9 +20,9 @@ SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWghostscript}
-BuildRequires: %{pnm_buildrequires_SUNWtexi}
-BuildRequires: %{pnm_buildrequires_SUNWdoc}
+BuildRequires: SUNWghostscript
+BuildRequires: SUNWtexi
+BuildRequires: SUNWdoc
 
 
 %prep

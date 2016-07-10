@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include osdistro.inc
 
 # No sparcv9 target
 

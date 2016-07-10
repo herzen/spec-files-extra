@@ -60,7 +60,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %define _gpp g++
@@ -94,55 +93,55 @@ BuildRoot:	%{_tmppath}/%{name}-%{tarball_version}-build
 
 %include default-depend.inc
 BuildRequires: SFEyasm
-BuildRequires: %{pnm_buildrequires_SUNWsmba}
+BuildRequires: SUNWsmba
 ##TODO## check if it is sufficient to install "libsmb" or something on a recent build to get the smbclient features
-Requires: %{pnm_requires_SUNWsmba}
+Requires: SUNWsmba
 Requires: SUNWgnome-audio
 BuildRequires: SUNWgnome-audio-devel
 Requires: SUNWxorg-clientlibs
 Requires: SUNWfontconfig
-BuildRequires:  %{pnm_buildrequires_SUNWfreetype2}
-Requires:       %{pnm_requires_SUNWfreetype2}
-BuildRequires: %{pnm_buildrequires_SUNWspeex_devel}
-Requires:      %{pnm_requires_SUNWspeex}
+BuildRequires:  SUNWfreetype2
+Requires:       SUNWfreetype2
+BuildRequires: SUNWspeex_devel
+Requires:      SUNWspeex
 Requires: SUNWjpg
 Requires: SUNWpng
 Requires: SUNWogg-vorbis
 Requires: SUNWlibtheora
 BuildRequires: SFEgcc
 Requires: SFEgccruntime
-BuildRequires: %{pnm_buildrequires_SUNWgnome_base_libs}
-Requires: %{pnm_requires_SUNWgnome_base_libs}
-BuildRequires: %{pnm_buildrequires_SUNWfontconfig}
-Requires: %{pnm_requires_SUNWfontconfig}
+BuildRequires: SUNWgnome_base_libs
+Requires: SUNWgnome_base_libs
+BuildRequires: SUNWfontconfig
+Requires: SUNWfontconfig
 BuildRequires: SUNWxwrtl
 Requires: SUNWxwrtl
 BuildRequires: SUNWxorg-mesa
 Requires: SUNWxorg-mesa
-BuildRequires: %{pnm_buildrequires_SUNWaalib_devel}
-Requires:      %{pnm_buildrequires_SUNWaalib}
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
-BuildRequires: %{pnm_buildrequires_SUNWlibm}
-Requires:      %{pnm_buildrequires_SUNWlibm}
+BuildRequires: SUNWaalib_devel
+Requires:      SUNWaalib
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
+BuildRequires: SUNWlibm
+Requires:      SUNWlibm
 Requires: SFElivemedia
 BuildRequires: SFElivemedia
 Requires: SFElibcdio
 BuildRequires: SFElibcdio-devel
 BuildRequires: SUNWaudh
-BuildRequires: %{pnm_buildrequires_SUNWlibmng_devel}
-Requires:      %{pnm_requires_SUNWlibmng}
+BuildRequires: SUNWlibmng_devel
+Requires:      SUNWlibmng
 BuildRequires: SFElzo-devel
 Requires:      SFElzo
 
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
-Requires:      %{pnm_requires_SFElibsndfile}
+BuildRequires: SFElibsndfile_devel
+Requires:      SFElibsndfile
 
 Requires: SFElame
 BuildRequires: SFElame-devel
 Requires: SFEtwolame
 BuildRequires: SFEtwolame-devel
-BuildRequires: %{pnm_buildrequires_SUNWgawk_devel}
+BuildRequires: SUNWgawk_devel
 Requires: SFElibmpcdec
 BuildRequires: SFElibmpcdec-devel
 Requires: SFElibfribidi
@@ -163,8 +162,8 @@ Requires: SFElibgsm
 BuildRequires: SFElibgsm-devel
 Requires: SFEopencore-amr 
 BuildRequires: SFEopencore-amr-devel
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 %if %with_openal
 Requires: SFEopenal
 BuildRequires: SFEopenal-devel
@@ -179,14 +178,14 @@ BuildRequires: SFElibx264-devel
 Requires: SFEgiflib
 BuildRequires: SFEgiflib-devel
 %endif
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 %if %with_faac
 Requires: SFEfaac
 BuildRequires: SFEfaac-devel
 %endif
-BuildRequires: %{pnm_buildrequires_SUNWunrar}
-Requires: %{pnm_requires_SUNWunrar}
+BuildRequires: SUNWunrar
+Requires: SUNWunrar
 
 %define x11	/usr/openwin
 %ifarch i386 amd64

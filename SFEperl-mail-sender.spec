@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #exception: download filename contains "0.8.22" but version of th emodule is 008022 or so
 %define tarball_version 0.8.22
@@ -26,8 +25,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: perl.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JE/JENDA/Mail-Sender-0.8.22.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Jan Krynicky <Jenda@Krynicky.cz>

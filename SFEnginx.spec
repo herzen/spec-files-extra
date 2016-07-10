@@ -33,7 +33,6 @@
 ### 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEnginx
 IPS_Package_Name:	web/server/nginx
@@ -55,16 +54,16 @@ Meta(info.upstream):		Igor Sysoev <http://sysoev.ru/en/>
 
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWgsed_devel}
-BuildRequires:	%{pnm_buildrequires_SUNWopenssl_include}
-Requires:		%{pnm_requires_SUNWopenssl_libraries}
-Requires:		%{pnm_requires_SUNWpcre}
-Requires:		%{pnm_requires_SUNWzlib}
-Requires:		%{pnm_requires_SUNWlxsl}
-BuildRequires:	%{pnm_buildrequires_SUNWgd2_devel}
-Requires:		%{pnm_requires_SUNWgd2}
-Requires:		%{pnm_requires_SUNWlxml}
-Requires:		%{pnm_requires_SUNWlxsl}
+BuildRequires:	SUNWgsed_devel
+BuildRequires:	SUNWopenssl_include
+Requires:		SUNWopenssl_libraries
+Requires:		SUNWpcre
+Requires:		SUNWzlib
+Requires:		SUNWlxsl
+BuildRequires:	SUNWgd2_devel
+Requires:		SUNWgd2
+Requires:		SUNWlxml
+Requires:		SUNWlxsl
 
 %package root
 Summary:		%{name} - root filesystem files, /

@@ -2,7 +2,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_version 2.49b
 %define src_url http://download.blender.org/source
@@ -32,7 +31,7 @@ Requires: 	SUNWpng
 BuildRequires: 	SUNWTiff
 BuildRequires: 	SUNWopensslr
 BuildRequires: 	SUNWlibsdl-devel
-BuildRequires: 	%{pnm_buildrequires_python_default}
+BuildRequires: 	python_default
 
 %package root
 Summary:         %summary - platform dependent files, / filesystem

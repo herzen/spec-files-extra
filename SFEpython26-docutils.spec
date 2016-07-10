@@ -4,7 +4,6 @@
 # includes module(s): docutils
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:			SFEpython26-docutils
 IPS_Package_Name:	library/python-2/docutils-26
@@ -14,7 +13,7 @@ Version:		0.12
 Source:			%sf_download/project/docutils/docutils/%version/docutils-%version.tar.gz
 SUNW_BaseDir:		%_basedir
 BuildRoot:		%_tmppath/%name-%version-build
-Requires:		%{pnm_requires_python_default}
+Requires:		python_default
 
 %include default-depend.inc
 

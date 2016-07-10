@@ -6,7 +6,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #note: download file version differs from package version (for IPS not accepting "015" / leading zero)
 %define module_version 2.15
@@ -20,9 +19,9 @@ Version:                 %{perl_version}.%{module_version}
 Source:                  http://www.cpan.org/modules/by-module/Compress/Compress-Zlib-%{module_version_download}.tar.gz
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-BuildRequires:           %{pnm_buildrequires_perl_default}
-Requires:                %{pnm_requires_perl_default}
-BuildRequires:           %{pnm_buildrequires_SUNWsfwhea}
+BuildRequires:           perl_default
+Requires:                perl_default
+BuildRequires:           SUNWsfwhea
 Requires:                SFEperl-io-compress-base
 Requires:                SFEperl-io-compress-zlib
 Requires:                SFEperl-compress-raw-zlib

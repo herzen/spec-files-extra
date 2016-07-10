@@ -4,7 +4,6 @@
 # includes module(s): jinja
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version  2.7
 %define src_name Jinja2

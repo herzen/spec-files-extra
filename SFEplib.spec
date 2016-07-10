@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name plib
 
@@ -24,7 +23,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Requires: 	SUNWxorg-mesa
 Requires: 	SUNWxwice
 
-BuildRequires:	%{pnm_buildrequires_SUNWaudh}
+BuildRequires:	SUNWaudh
 
 %package devel
 Summary:		 %summary - developer files

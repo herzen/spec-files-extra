@@ -5,7 +5,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 #change version number only here.
 %define ffmpeg_version 3.0.2
@@ -45,8 +44,8 @@ BuildRequires: %pnm_buildrequires_perl_default
 BuildRequires: SUNWxwinc
 Requires: SUNWxwrtl
 Requires: SUNWzlib
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
 BuildRequires: SFElibgsm-devel
 Requires: SFElibgsm
 BuildRequires: SFExvid-devel
@@ -65,7 +64,7 @@ BuildRequires: SUNWspeex-devel
 Requires: SUNWspeex
 BuildRequires: SFEopencore-amr-devel
 Requires: SFEopencore-amr
-BuildRequires: %{pnm_buildrequires_SUNWgsed}
+BuildRequires: SUNWgsed
 BuildRequires: SFEopenjpeg-devel
 Requires: SFEopenjpeg
 BuildRequires: SFElibschroedinger-devel

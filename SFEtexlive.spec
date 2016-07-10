@@ -13,7 +13,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include osdistro.inc
 
 %define texlive_ver	20160523b
 %define texlive_src_ver 20160523

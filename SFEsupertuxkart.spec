@@ -2,7 +2,6 @@
 # spec file for package SFEsupertuxkart.spec
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name supertuxkart
 %define src_version 0.8
@@ -38,8 +37,8 @@ BuildRequires:  SFEplib-devel
 
 BuildRequires:  SUNWlibsdl-devel
 Requires:       SUNWlibsdl
-BuildRequires:  %{pnm_buildrequires_SUNWlibmikmod_devel}
-Requires:       %{pnm_requires_SUNWlibmikmod}
+BuildRequires:  SUNWlibmikmod_devel
+Requires:       SUNWlibmikmod
 BuildRequires:  SUNWogg-vorbis-devel
 Requires:       SUNWogg-vorbis
 BuildRequires:  SFEfreeglut-devel

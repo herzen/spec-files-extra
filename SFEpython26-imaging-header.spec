@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.6
 
@@ -18,8 +17,8 @@ URL:		http://www.pythonware.com/products/pil/
 Source:		http://effbot.org/downloads/Imaging-%{version}.tar.gz
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
-BuildRequires:	%{pnm_buildrequires_python_default}
-Requires:		%{pnm_requires_python_default}
+BuildRequires:	python_default
+Requires:		python_default
 
 %include default-depend.inc
 

@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include stdcxx.inc
 
 
@@ -38,15 +37,15 @@ Requires: SUNWjpg
 BuildRequires: SUNWjpg-devel
 Requires: SUNWgnome-libs
 BuildRequires: SUNWgnome-libs-devel
-Requires:      %{pnm_requires_SUNWlibstdcxx4}
-BuildRequires: %{pnm_buildrequires_SUNWlibstdcxx4}
+Requires:      SUNWlibstdcxx4
+BuildRequires: SUNWlibstdcxx4
 Requires: SUNWlexpt
 BuildRequires: SUNWlexpt
 BuildRequires: SUNWgnome-common-devel
-BuildRequires:  %{pnm_buildrequires_SUNWlxsl}
-Requires:       %{pnm_requires_SUNWlxsl}
-BuildRequires:	%{pnm_buildrequires_SUNWgraphviz}
-Requires:	%{pnm_requires_SUNWgraphviz}
+BuildRequires:  SUNWlxsl
+Requires:       SUNWlxsl
+BuildRequires:	SUNWgraphviz
+Requires:	SUNWgraphviz
 
 %package devel
 Summary:                 %{summary} - development files

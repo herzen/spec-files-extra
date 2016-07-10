@@ -6,7 +6,6 @@
 
 %include Solaris.inc
 %include stdcxx.inc
-%include packagenamemacros.inc
 
 Name:		SFEufraw
 IPS_Package_Name:	image/ufraw
@@ -52,8 +51,8 @@ BuildRequires: SUNWesu
 # pod2man:
 BuildRequires: %pnm_buildrequires_perl_default
 BuildRequires: SUNWgnome-common-devel
-BuildRequires: %{pnm_buildrequires_SUNWlibstdcxx4}
-Requires:      %{pnm_requires_SUNWlibstdcxx4}
+BuildRequires: SUNWlibstdcxx4
+Requires:      SUNWlibstdcxx4
 
 %if %build_l10n
 %package l10n

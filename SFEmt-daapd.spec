@@ -8,7 +8,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -25,8 +24,8 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 Source1:                 mt-daapd.xml
  
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
-Requires: %{pnm_requires_SUNWgnu_dbm}
+BuildRequires: SUNWgnu_dbm
+Requires: SUNWgnu_dbm
 Requires: SFElibid3tag
 Requires: SFElibmad
 BuildRequires: SUNWgmake

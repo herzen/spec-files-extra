@@ -7,7 +7,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-gnu.inc
 %include base.inc
 
@@ -25,8 +24,8 @@ SUNW_Copyright:          %{name}.copyright
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:           %{pnm_buildrequires_SUNWlibgcrypt_devel}
-Requires:                %{pnm_buildrequires_SUNWlibgcrypt}
+BuildRequires:           SUNWlibgcrypt_devel
+Requires:                SUNWlibgcrypt
 
 
 %description

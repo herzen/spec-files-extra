@@ -14,7 +14,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 %define SFErrdtool	%(/usr/bin/pkginfo -q SFErrdtool && echo 1 || echo 0)
 
@@ -43,10 +42,10 @@ BuildConflicts: SFEgeiop
 Conflicts: SFEgeiop
 
 BuildRequires: SUNWlibpcap
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
+BuildRequires: SUNWgnu_dbm
 BuildRequires: SUNWgd2
 Requires: SUNWlibpcap
-Requires: %{pnm_requires_SUNWgnu_dbm}
+Requires: SUNWgnu_dbm
 Requires: SUNWgd2
 BuildRequires: SFElibevent
 Requires: SFElibevent
@@ -56,7 +55,7 @@ Requires: %name-root
 BuildRequires: SUNWgzip
 BuildRequires: SUNWgawk
 BuildRequires: SUNWgsed
-BuildRequires: %{pnm_buildrequires_compatibility_ucb}
+BuildRequires: compatibility_ucb
 BuildRequires: SUNWperl584usr
 Requires: SUNWperl584usr
 

@@ -7,7 +7,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define     src_name drupal
 %define     targetdirname drupal
@@ -34,10 +33,10 @@ SUNW_Copyright:      %{name}.copyright
 BuildRoot:           %{_tmppath}/%{name}-%{version}%{src_name_minor_extra}-build
 %include default-depend.inc
 
-Requires:            %{pnm_requires_SUNWapch22}
-Requires:            %{pnm_requires_SUNWapch22m_php52}
-Requires:            %{pnm_requires_SUNWphp52_mysql}
-Requires:            %{pnm_requires_SUNWphp52}
+Requires:            SUNWapch22
+Requires:            SUNWapch22m_php52
+Requires:            SUNWphp52_mysql
+Requires:            SUNWphp52
 Meta(info.upstream):            http://www.drupal.org/
 Meta(info.maintainer):          Thomas Wagner <tom68@users.sourceforge.net>
 Meta(info.classification):      org.opensolaris.category.2008:Social Applications

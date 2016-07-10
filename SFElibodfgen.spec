@@ -10,7 +10,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 %define _use_internal_dependency_generator 0
 
 %define src_name libodfgen
@@ -36,19 +35,19 @@ BuildRoot:		%_tmppath/%name-%version-build
 BuildRequires:	SFEgcc
 Requires:	SFEgccruntime
 
-BuildRequires:	%{pnm_buildrequires_boost_gpp_default}
-Requires:	%{pnm_requires_boost_gpp_default}
+BuildRequires:	boost_gpp_default
+Requires:	boost_gpp_default
 
-BuildRequires:  %{pnm_buildrequires_developer_cppunit}
-Requires:       %{pnm_requires_developer_cppunit}
+BuildRequires:  developer_cppunit
+Requires:       developer_cppunit
 
-BuildRequires:	%{pnm_buildrequires_system_library_math_header_math}
-Requires:	%{pnm_requires_system_library_math_header_math}
+BuildRequires:	system_library_math_header_math
+Requires:	system_library_math_header_math
 
 BuildRequires:  SFElibrevenge
 Requires:       SFElibrevenge
 
-BuildRequires:  %{pnm_buildrequires_SFExz_gnu}
+BuildRequires:  SFExz_gnu
 
 %description
 Library that handles Open Document Files.

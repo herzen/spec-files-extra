@@ -7,7 +7,6 @@
 #	So do not bump this spec to earlier than 1.18.0.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:           SFEmpg123
 IPS_package_name: audio/mpg123
@@ -22,13 +21,13 @@ SUNW_BaseDir:   %{_basedir}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires:       %{pnm_buildrequires_SUNWltdl}
-Requires:       %{pnm_requires_SUNWltdl}
-BuildRequires:  %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:       %{pnm_requires_SUNWlibsdl}
+BuildRequires:       SUNWltdl
+Requires:       SUNWltdl
+BuildRequires:  SUNWlibsdl_devel
+Requires:       SUNWlibsdl
 Requires:       SUNWlibms
 BuildRequires:	SUNWaudh
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:	SUNWgnome_common_devel
 Requires:       %{name}-devel
 
 %description

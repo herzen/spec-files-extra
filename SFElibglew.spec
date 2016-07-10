@@ -10,7 +10,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 #%define major_version 1.12
 #%define major_version 1.10

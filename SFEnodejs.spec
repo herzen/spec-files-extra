@@ -10,7 +10,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 Summary:	Asynchronous JavaScript Engine  
 Name:		SFEnodejs  
@@ -36,8 +35,8 @@ Requires: SFEgccruntime
 BuildRequires: library/security/openssl/openssl-fips-140
 Requires:      library/security/openssl/openssl-fips-140
 %else
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl
+Requires:      SUNWopenssl
 %endif
 
 %description  

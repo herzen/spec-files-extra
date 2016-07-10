@@ -10,7 +10,6 @@
 # Owner: jedy
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %use aspell = aspell.spec
 

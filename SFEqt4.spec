@@ -6,7 +6,6 @@
 # NOTE: If you want to build Qt against stdcxx, use SFEqt47.spec
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define srcname qt-everywhere-opensource-src
 
 Name:                SFEqt4
@@ -26,8 +25,8 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 #Requires: %{pnm_requires_SUNWGtk} 
 BuildRequires: SUNWgtk2
 Requires:      SUNWgtk2
-BuildRequires: %{pnm_buildrequires_SUNWxwplt}
-Requires: %{pnm_requires_SUNWxwplt}
+BuildRequires: SUNWxwplt
+Requires: SUNWxwplt
 # The above bring in many things, including SUNWxwice and SUNWzlib
 Requires: SUNWxwxft
 # The above also pulls in SUNWfreetype2

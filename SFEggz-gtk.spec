@@ -11,7 +11,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %use ggzgtk = ggz-gtk-client.spec
 
@@ -26,8 +25,8 @@ BuildRoot:          %{_tmppath}/%{name}-%{version}-build
 Requires: SUNWgnome-base-libs
 BuildRequires: SUNWgnome-base-libs-devel
 BuildRequires: SUNWgnome-common-devel
-BuildRequires:	%{pnm_buildrequires_SFElibggz_devel}
-Requires:	%{pnm_requires_SFElibggz}
+BuildRequires:	SFElibggz_devel
+Requires:	SFElibggz
 
 %package devel
 Summary:       %{summary} - development files

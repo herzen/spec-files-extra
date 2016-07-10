@@ -7,7 +7,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:               SFEanjuta
 Version:            2.30.1.0
@@ -40,7 +39,7 @@ Requires: SUNWlibC
 Requires: SUNWlibms
 Requires: SUNWlxml
 Requires: SUNWlxsl
-Requires: %{pnm_buildrequires_perl_default}
+Requires: perl_default
 Requires: SUNWpcre
 Requires: SUNWapch22u
 Requires: SUNWsvn

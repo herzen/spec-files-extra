@@ -14,7 +14,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEperl-%{module_package_name}
 IPS_Package_Name:	library/perl-5/razor-agents
@@ -26,9 +25,9 @@ Source:                  http://downloads.sourceforge.net/razor/razor-agents-%{m
 Group:		Development/Perl
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-BuildRequires:           %{pnm_buildrequires_perl_default}
-Requires:                %{pnm_requires_perl_default}
-BuildRequires:           %{pnm_buildrequires_SUNWsfwhea}
+BuildRequires:           perl_default
+Requires:                perl_default
+BuildRequires:           SUNWsfwhea
 
 
 %ifarch sparc

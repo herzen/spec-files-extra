@@ -4,7 +4,6 @@
 # includes module(s): frozen-bubble
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEfrozen-bubble
 IPS_Package_Name:	games/frozen-bubble

@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define srcname Unreal
 
@@ -37,10 +36,10 @@ SUNW_BaseDir:	/
 BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_devel}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
+BuildRequires: SUNWopenssl_devel
+Requires:      SUNWopenssl
 
 %description
 Unreal IRCd - the next generation ircd

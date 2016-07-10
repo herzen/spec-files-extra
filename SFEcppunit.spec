@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 
-%include packagenamemacros.inc
 
 %define src_name	cppunit
 
@@ -24,8 +23,8 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
-BuildRequires: %{pnm_buildrequires_SUNWgraphviz}
+BuildRequires: SUNWdoxygen
+BuildRequires: SUNWgraphviz
 
 %package devel
 Summary:	%{summary} - development files

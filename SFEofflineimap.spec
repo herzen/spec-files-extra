@@ -4,7 +4,6 @@
 # includes module(s): offlineimap
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define build_dir_suffix b1bff15
 
@@ -20,8 +19,8 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires:  %{pnm_buildrequires_python_default}
-Requires:       %{pnm_requires_python_default}
+BuildRequires:  python_default
+Requires:       python_default
 
 %prep
 %setup -q -n nicolas33-offlineimap-%{build_dir_suffix}

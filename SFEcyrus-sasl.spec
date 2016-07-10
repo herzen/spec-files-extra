@@ -5,7 +5,6 @@
 
 %include Solaris.inc
 %include usr-gnu.inc
-%include packagenamemacros.inc
 
 Name:		SFEcyrus-sasl
 IPS_Package_Name:	library/security/cyrus-sasl
@@ -20,8 +19,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 Requires: SUNWsqlite3
 BuildRequires: SUNWsqlite3
-Requires: %{pnm_requires_openssl}
-BuildRequires: %{pnm_buildrequires_openssl}
+Requires: openssl
+BuildRequires: openssl
 # Requires: SFElibntlm
 # BuildRequires: SFElibntlm-devel
 

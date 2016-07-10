@@ -8,7 +8,6 @@
 %define cc_is_gcc 1
 %include base.inc
 %define _prefix /usr/g++
-%include osdistro.inc
 
 
 Name:                SFEbinutils-gpp

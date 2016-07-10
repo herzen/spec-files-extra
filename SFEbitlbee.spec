@@ -7,7 +7,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %include pkgbuild-features.inc
 
 %define srcname bitlbee
@@ -49,10 +48,10 @@ SUNW_Copyright:          %{name}.copyright
 SUNW_BaseDir:            /
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:          %{pnm_buildrequires_SUNWopenssl_include}
-Requires:               %{pnm_requires_SUNWopenssl_libraries}
-BuildRequires:		%{pnm_buildrequires_SUNWglib2_devel}
-Requires:		%{pnm_requires_SUNWglib2}
+BuildRequires:          SUNWopenssl_include
+Requires:               SUNWopenssl_libraries
+BuildRequires:		SUNWglib2_devel
+Requires:		SUNWglib2
 BuildRequires:		SFElibotr
 Requires:		SFElibotr
 #build docs

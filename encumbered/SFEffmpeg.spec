@@ -7,7 +7,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 #change version number only here.
 #%define ffmpeg_version 2.2
@@ -56,17 +55,17 @@ BuildRequires: SFEgcc
 Requires:      SFEgccruntime
 BuildRequires: SFEyasm
 BuildRequires: SUNWtexi
-BuildRequires: %{pnm_buildrequires_perl_default}
-BuildRequires: %{pnm_buildrequires_SUNWxwinc}
+BuildRequires: perl_default
+BuildRequires: SUNWxwinc
 Requires: SUNWxwrtl
-BuildRequires:  %{pnm_buildrequires_SUNWzlib}
-Requires:       %{pnm_requires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWbzip}
-Requires:      %{pnm_requires_SUNWbzip}
-BuildRequires: %{pnm_buildrequires_SUNWlibsdl_devel}
-Requires:      %{pnm_requires_SUNWlibsdl}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWopenssl}
+BuildRequires:  SUNWzlib
+Requires:       SUNWzlib
+BuildRequires: SUNWbzip
+Requires:      SUNWbzip
+BuildRequires: SUNWlibsdl_devel
+Requires:      SUNWlibsdl
+BuildRequires: SUNWopenssl
+Requires: SUNWopenssl
 BuildRequires: SFElibgsm-devel
 Requires: SFElibgsm
 BuildRequires: SFExvid-devel
@@ -83,15 +82,15 @@ BuildRequires: SUNWogg-vorbis-devel
 Requires: SUNWogg-vorbis
 BuildRequires: SUNWlibtheora-devel
 Requires: SUNWlibtheora
-BuildRequires: %{pnm_buildrequires_SUNWspeex_devel}
-Requires:      %{pnm_requires_SUNWspeex}
+BuildRequires: SUNWspeex_devel
+Requires:      SUNWspeex
 BuildRequires: SFEopencore-amr-devel
 Requires: SFEopencore-amr
-BuildRequires: %{pnm_buildrequires_SUNWgsed}
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SUNWgsed
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 BuildRequires: SFErtmpdump-devel
 Requires: SFErtmpdump
 BuildRequires: SFElibass-devel

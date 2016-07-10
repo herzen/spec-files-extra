@@ -4,7 +4,6 @@
 # includes module(s): smf-grey
 #
 %include Solaris.inc
-%include osdistro.inc
 
 %define src_name	smf-grey
 

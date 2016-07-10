@@ -6,7 +6,6 @@
 %define standard_prefix /usr
 %include Solaris.inc
 %define srcname qt-everywhere-opensource-src
-%include packagenamemacros.inc
 
 Name:                SFEqt
 IPS_Package_Name:	library/desktop/qt
@@ -27,14 +26,14 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 # Guarantee X/freetype environment concisely (hopefully):
 BuildRequires: SUNWgtk2
 Requires:      SUNWgtk2
-BuildRequires: %{pnm_buildrequires_SUNWxwplt}
-Requires: %{pnm_requires_SUNWxwplt}
+BuildRequires: SUNWxwplt
+Requires: SUNWxwplt
 # The above bring in many things, including SUNWxwice and SUNWzlib
 Requires: SUNWxwxft
 # The above also pulls in SUNWfreetype2
 # This package only provides libraries
-BuildRequires: %{pnm_buildrequires_mysql_default}
-Requires: %{pnm_requires_mysql_default}
+BuildRequires: mysql_default
+Requires: mysql_default
 BuildRequires: SUNWdbus
 Requires: SUNWdbus
 

@@ -4,7 +4,6 @@
 # includes module(s): imagemagick
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	ImageMagick
 %define major		6.8.5
@@ -34,8 +33,8 @@ BuildRequires:	SFElibwebp-devel
 Requires:	SFElibwebp
 BuildRequires:	SUNWlibrsvg-devel
 Requires:	SUNWlibrsvg
-BuildRequires:	%{pnm_buildrequires_SUNWfftw3}
-Requires:	%{pnm_requires_SUNWfftw3}
+BuildRequires:	SUNWfftw3
+Requires:	SUNWfftw3
 BuildRequires:	SUNWpango-devel
 Requires:	SUNWpango
 BuildRequires:  SUNWpng-devel

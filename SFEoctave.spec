@@ -4,7 +4,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:           SFEoctave
 IPS_Package_Name:	math/octave
@@ -18,22 +17,22 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %include	default-depend.inc
 #Requires:	%name-root
 
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
-Requires:      %{pnm_requires_SFElibsndfile}
+BuildRequires: SFElibsndfile_devel
+Requires:      SFElibsndfile
 
-BuildRequires: 	%{pnm_buildrequires_SUNWgsed}
+BuildRequires: 	SUNWgsed
 Requires: 	SUNWgmake
 Requires: 	SUNWgnu-gperf
 Requires: 	SFEgnuplot
-BuildRequires: %{pnm_buildrequires_SUNWncurses_devel}
-Requires:      %{pnm_requires_SUNWncurses}
-BuildRequires:  %{pnm_buildrequires_SUNWfftw3_devel}
-Requires:	%{pnm_buildrequires_SUNWfftw3}
+BuildRequires: SUNWncurses_devel
+Requires:      SUNWncurses
+BuildRequires:  SUNWfftw3_devel
+Requires:	SUNWfftw3
 Requires:	SFExblas
 Requires:	SFElapack
 Requires:	SUNWzlib
-Requires:       %{pnm_requires_library_readline}
-BuildRequires:  %{pnm_buildrequires_library_readline}
+Requires:       library_readline
+BuildRequires:  library_readline
 ##TODO## go for pnm_macros for python
 #try pnm_requires_python_default
 BuildRequires: 	runtime/python-26

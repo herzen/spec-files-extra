@@ -10,7 +10,6 @@
 
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %define srcname ejabberd
 %define runuser ejabberd
@@ -31,8 +30,8 @@ SUNW_BaseDir:            /
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SFEgcc
-BuildRequires:          %{pnm_buildrequires_SUNWopenssl_include}
-Requires:               %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires:          SUNWopenssl_include
+Requires:               SUNWopenssl_libraries
 BuildRequires: SFEerlang
 Requires: SFEerlang
 BuildRequires: SUNWlexpt

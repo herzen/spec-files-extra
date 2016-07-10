@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:           SFEcrrcsim
 Summary:        crrcsim flight simulator
@@ -27,8 +26,8 @@ SUNW_Copyright:	%{name}.copyright
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %include	default-depend.inc
 #Requires:	%name-root
-BuildRequires: %{pnm_buildrequires_x11_library_freeglut}
-Requires:      %{pnm_requires_x11_library_freeglut}
+BuildRequires: x11_library_freeglut
+Requires:      x11_library_freeglut
 Requires: 	SUNWxorg-mesa
 Requires: 	SUNWxwice
 Requires: 	SFEplib

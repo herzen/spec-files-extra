@@ -15,7 +15,6 @@
 %include base.inc
 %use xslt = xslt.spec
 
-%include packagenamemacros.inc
 
 %define src_name libxslt
 
@@ -35,12 +34,12 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: SFElxml-gnu-devel
 Requires:      SFElxml-gnu
-BuildRequires: %{pnm_buildrequires_SFElibgpg_error_devel}
-Requires:      %{pnm_buildrequires_SFElibgpg_error}
-BuildRequires: %{pnm_buildrequires_SUNWlibgcrypt_devel}
-Requires:      %{pnm_buildrequires_SUNWlibgcrypt}
-BuildRequires: %{pnm_buildrequires_SUNWzlib_devel}
-Requires:      %{pnm_buildrequires_SUNWzlib}
+BuildRequires: SFElibgpg_error_devel
+Requires:      SFElibgpg_error
+BuildRequires: SUNWlibgcrypt_devel
+Requires:      SUNWlibgcrypt
+BuildRequires: SUNWzlib_devel
+Requires:      SUNWzlib
 
 
 
@@ -49,8 +48,8 @@ Summary:                 Python bindings for libxslt (32-bit only)
 SUNW_BaseDir:            %{_prefix}
 %include default-depend.inc
 Requires: 		 %{name}
-BuildRequires:           %{pnm_buildrequires_python_default}
-Requires:                %{pnm_requires_python_default}
+BuildRequires:           python_default
+Requires:                python_default
 
 
 %package devel
@@ -58,7 +57,7 @@ Summary:                 %{summary} - development files
 SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 Requires: 		 %{name}
-Requires:                %{pnm_requires_python_default}
+Requires:                python_default
 
 %prep
 rm -rf %{name}-%{version}

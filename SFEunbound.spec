@@ -4,7 +4,6 @@
 # includes module(s): unbound
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Summary:	Validating, recursive, and caching DNS resolver
 IPS_Package_Name:	service/network/dns/unbound
@@ -19,11 +18,11 @@ BuildRoot:	%{_tmppath}/unbound-%{version}-build
 SUNW_Copyright:	unbound.copyright
 SUNW_BaseDir:	/
 
-BuildRequires:  %{pnm_buildrequires_SUNWflexlex_devel}
-BuildRequires:  %{pnm_buildrequires_SUNWopenssl}
-Requires:       %{pnm_requires_SUNWopenssl}
-BuildRequires:  %{pnm_buildrequires_SUNWlexpt_devel}
-Requires:       %{pnm_buildrequires_SUNWlexpt_devel}
+BuildRequires:  SUNWflexlex_devel
+BuildRequires:  SUNWopenssl
+Requires:       SUNWopenssl
+BuildRequires:  SUNWlexpt_devel
+Requires:       SUNWlexpt_devel
 BuildRequires:  SFEldns-devel
 Requires:       SFEldns
 

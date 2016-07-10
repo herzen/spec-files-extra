@@ -4,7 +4,6 @@
 # includes module(s): libdts
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	 libdca 
 
@@ -22,7 +21,7 @@ Patch4:                  libdts-04-tweaks-to-fix-trivial-compiler-errors.diff
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{src_name}-%{version}-build
 %include default-depend.inc
-Requires:	%{pnm_buildrequires_SUNWlibms}
+Requires:	SUNWlibms
 Requires:	SFEliba52
 
 %package devel

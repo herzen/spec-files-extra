@@ -6,7 +6,6 @@
 %define cc_is_gcc 1
 %include usr-gnu.inc
 %include base.inc
-%include packagenamemacros.inc
 %define source_name transmission
 
 Name:			SFEtransmission
@@ -20,21 +19,21 @@ SUNW_Copyright:		transmission.copyright
 SUNW_BaseDir:		%_basedir
 %include default-depend.inc
 BuildRequires: SFEgtk3-gpp-devel
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_include}
-BuildRequires: %{pnm_buildrequires_SUNWgnome_panel_devel}
-BuildRequires: %{pnm_buildrequires_SUNWdbus_glib_devel}
-BuildRequires: %{pnm_buildrequires_SUNWcurl}
+BuildRequires: SUNWopenssl_include
+BuildRequires: SUNWgnome_panel_devel
+BuildRequires: SUNWdbus_glib_devel
+BuildRequires: SUNWcurl
 BuildRequires: SFElibevent2
 BuildRequires: SFElibiconv-devel
-BuildRequires: %{pnm_buildrequires_SUNWgnu_gettext}
+BuildRequires: SUNWgnu_gettext
 Requires: SFEgtk3-gpp
-Requires: %{pnm_requires_SUNWgnome_panel}
-Requires: %{pnm_requires_SUNWdbus_glib}
-Requires: %{pnm_requires_SUNWopenssl_libraries}
-Requires: %{pnm_requires_SUNWcurl}
+Requires: SUNWgnome_panel
+Requires: SUNWdbus_glib
+Requires: SUNWopenssl_libraries
+Requires: SUNWcurl
 Requires: SFElibevent2
 Requires: SFElibiconv
-Requires: %{pnm_requires_SUNWgnu_gettext}
+Requires: SUNWgnu_gettext
 
 
 %if %build_l10n

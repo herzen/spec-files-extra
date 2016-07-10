@@ -7,7 +7,6 @@
 # package are under the same license as the package itself.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define major 7
 %define minor 80
@@ -31,18 +30,18 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_java_runtime_default}
-BuildRequires: %{pnm_buildrequires_SUNWant}
-BuildRequires: %{pnm_buildrequires_SUNWcups_devel}
-Requires:      %{pnm_requires_SUNWcups}
-BuildRequires: %{pnm_buildrequires_SUNWmercurial}
-BuildRequires: %{pnm_buildrequires_SUNWfreetype2}
-Requires:      %{pnm_requires_SUNWfreetype2}
+BuildRequires: java_runtime_default
+BuildRequires: SUNWant
+BuildRequires: SUNWcups_devel
+Requires:      SUNWcups
+BuildRequires: SUNWmercurial
+BuildRequires: SUNWfreetype2
+Requires:      SUNWfreetype2
 # OpenJDK's AWT uses deja vu as the default font for latin character set languages
 ##TODO## use pnm_macros for dejavu package
 BuildRequires: system/font/truetype/dejavu
 Requires:      system/font/truetype/dejavu
-BuildRequires: %{pnm_buildrequires_SUNWaudh}
+BuildRequires: SUNWaudh
 BuildRequires: SUNWxorg-headers
 
 %define jdkroot %{_prefix}/jdk/instances/openjdk1.%{major}.0

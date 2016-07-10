@@ -11,7 +11,6 @@
 %define CC gcc
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEputty
 Summary:                 putty - A graphical SSH Client
@@ -26,10 +25,10 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SUNWGtk}
-BuildRequires:	%{pnm_buildrequires_SUNWGlib}
-Requires:	%{pnm_requires_SUNWGtk}
-Requires:	%{pnm_requires_SUNWGlib}
+BuildRequires:	SUNWGtk
+BuildRequires:	SUNWGlib
+Requires:	SUNWGtk
+Requires:	SUNWGlib
 
 
 %prep

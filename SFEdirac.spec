@@ -4,7 +4,6 @@
 # includes module(s): dirac
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	dirac
 %define src_url		http://nchc.dl.sourceforge.net/sourceforge/dirac
@@ -28,7 +27,7 @@ Summary:                 %{summary} - Documentation
 SUNW_BaseDir:            %{_prefix}
 %include default-depend.inc
 Requires: %name
-BuildRequires: %{pnm_buildrequires_SUNWdoxygen}
+BuildRequires: SUNWdoxygen
 
 %prep
 %setup -q -n %{src_name}-%{version}

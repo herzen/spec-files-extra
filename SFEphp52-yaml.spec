@@ -6,7 +6,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define _prefix /usr
 %define tarball_version  1.0.1
@@ -26,10 +25,10 @@ SUNW_Basedir:            /
 SUNW_Copyright:          %{name}.copyright
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: %{pnm_buildrequires_SUNWphp52}
-BuildRequires: %{pnm_buildrequires_SUNWgsed_devel}
+BuildRequires: SUNWphp52
+BuildRequires: SUNWgsed_devel
 
-Requires: %{pnm_requires_SUNWphp52}
+Requires: SUNWphp52
 Requires: SFElibyaml
 
 # OpenSolaris IPS Package Manifest Fields

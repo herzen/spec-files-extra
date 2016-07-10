@@ -4,7 +4,6 @@
 # includes module(s): fetchmail
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEfetchmail
 IPS_Package_Name:	 sfe/mail/fetchmail
@@ -16,8 +15,8 @@ URL:                     http://fetchmail.berlios.de/
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:          %{pnm_buildrequires_SUNWopenssl_include}
-Requires:               %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires:          SUNWopenssl_include
+Requires:               SUNWopenssl_libraries
 
 %if %build_l10n
 %package l10n

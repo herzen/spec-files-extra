@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc 
 %define cc_is_gcc 1
 
 %ifarch amd64 sparcv9
@@ -42,14 +41,14 @@ Requires: SFEgccruntime
 BuildRequires: SUNWlibms
 Requires: SUNWlibms
 
-BuildRequires:	%{pnm_buildrequires_SFElibsndfile_devel}
-Requires:	%{pnm_requires_SFElibsndfile}
+BuildRequires:	SFElibsndfile_devel
+Requires:	SFElibsndfile
 
-BuildRequires: %{pnm_buildrequires_SUNWncurses_devel}
-Requires:      %{pnm_requires_SUNWncurses}
+BuildRequires: SUNWncurses_devel
+Requires:      SUNWncurses
 
 # we don't build the GTK frontend but autotools needs the macros
-BuildRequires:  %{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:  SUNWgnome_common_devel
 
 
 %package devel

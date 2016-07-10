@@ -2,7 +2,6 @@
 # 
 # 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #%define tcl_version 8.4
 #%define tcl_8_3 %(pkgchk -l SUNWTcl 2>/dev/null | grep /usr/sfw/bin/tclsh8.3 >/dev/null && echo 1 || echo 0)
@@ -21,12 +20,12 @@ SUNW_Copyright:      %{name}.copyright
 Group:		     Office/Email
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_openssl}
-Requires: %{pnm_requires_openssl}
+BuildRequires: openssl
+Requires: openssl
 BuildRequires: SUNWhea
 Requires: SUNWcsl
 #BuildRequires: SUNWTcl
-BuildRequires: %{pnm_buildrequires_SUNWgawk}
+BuildRequires: SUNWgawk
 
 %prep
 %setup -q -n alpine-%{version}

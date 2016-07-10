@@ -15,7 +15,6 @@
 %include base.inc
 %use lxml = lxml.spec
 
-%include packagenamemacros.inc
 
 %define src_name libxml2
 
@@ -33,10 +32,10 @@ SUNW_BaseDir:            %{_prefix}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWzlib_devel}
-Requires:      %{pnm_buildrequires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SFExz_gnu}
-Requires:      %{pnm_buildrequires_SFExz_gnu}
+BuildRequires: SUNWzlib_devel
+Requires:      SUNWzlib
+BuildRequires: SFExz_gnu
+Requires:      SFExz_gnu
 BuildRequires: SFElibiconv
 Requires:      SFElibiconv
 
@@ -45,8 +44,8 @@ Summary:                 Python bindings for libxml2 (32-bit only)
 SUNW_BaseDir:            %{_prefix}
 %include default-depend.inc
 Requires: 		 %{name}
-BuildRequires:           %{pnm_buildrequires_python_default}
-Requires:                %{pnm_requires_python_default}
+BuildRequires:           python_default
+Requires:                python_default
 
 
 %package devel
@@ -54,7 +53,7 @@ Summary:                 %{summary} - development files
 SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 Requires: 		 %{name}
-Requires:                %{pnm_requires_python_default}
+Requires:                python_default
 
 %prep
 rm -rf %{name}-%{version}

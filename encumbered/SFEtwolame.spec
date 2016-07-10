@@ -6,7 +6,6 @@
 # bugdb: http://sourceforge.net/tracker/index.php?func=detail&group_id=136040&atid=735435&aid=
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 Name:		SFEtwolame
@@ -21,11 +20,11 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires:	%{pnm_buildrequires_SFElibsndfile_devel}
-Requires:	%{pnm_requires_SFElibsndfile}
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:	SFElibsndfile_devel
+Requires:	SFElibsndfile
+BuildRequires:	SUNWgnome_common_devel
 
-Requires:	%{pnm_buildrequires_SUNWlibms}
+Requires:	SUNWlibms
 
 %package devel
 Summary:                 %{summary} - development files

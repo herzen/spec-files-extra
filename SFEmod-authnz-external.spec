@@ -3,7 +3,6 @@
 # 
 %include Solaris.inc
 %include base.inc
-%include packagenamemacros.inc
 
 Name:                SFEmod-authnz-external
 IPS_Package_Name:	 web/server/apache-22/module/apache-authnz_external
@@ -17,8 +16,8 @@ SUNW_Copyright:      %{license}.copyright
 Group:		     Applications/Internet
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires:		 %{pnm_buildrequires_apache2_default}
-Requires:			 %{pnm_requires_apache2_default}
+BuildRequires:		 apache2_default
+Requires:			 apache2_default
 
 %description
 Flexible tools for building custom basic authentication systems for the Apache HTTP Daemon.

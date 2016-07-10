@@ -14,7 +14,6 @@
 # http://savannah.nongnu.org/patch/?6858
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:		SFEmcomix
 IPS_Package_Name:	 image/viewer/mcomix
@@ -28,12 +27,12 @@ SUNW_BaseDir:	%_basedir
 BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_python_default}
-BuildRequires: %{pnm_buildrequires_SUNWpython26_setuptools_devel}
-Requires: %{pnm_requires_python_default}
+BuildRequires: python_default
+BuildRequires: SUNWpython26_setuptools_devel
+Requires: python_default
 # pygtk2 needs a packagenamemacros entry
 # Requires: library/python-2/pygtk2-26
-Requires: %{pnm_requires_SUNWpython26_imaging}
+Requires: SUNWpython26_imaging
 
 %description
 MComix is an user-friendly, customizable image viewer. It is specifically designed to handle comic books, but also serves as a generic viewer. It reads images in ZIP, RAR, 7Zip, LHA or tar/gz/bz2 archives as well as plain image files. It is written in Python using GTK+ through the PyGTK bindings, and runs on both Linux and Windows.

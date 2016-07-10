@@ -4,7 +4,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 %define  src_name Manifold
@@ -23,11 +22,11 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires:      %{pnm_requires_python_default}
-BuildRequires: %{pnm_buildrequires_SUNWpython26_setuptools_devel}
-BuildRequires: %{pnm_buildrequires_SUNWgnome_python26_libs_devel}
-Requires:      %{pnm_requires_SUNWgnome_python26_libs}
+BuildRequires: python_default
+Requires:      python_default
+BuildRequires: SUNWpython26_setuptools_devel
+BuildRequires: SUNWgnome_python26_libs_devel
+Requires:      SUNWgnome_python26_libs
 ##TODO## #paused, needed only for very old osdistro# BuildRequires: %{pnm_buildrequires_SUNWlibpigment_python26_devel}
 BuildRequires: SFEpython26-genshi
 Requires:      SFEpython26-genshi

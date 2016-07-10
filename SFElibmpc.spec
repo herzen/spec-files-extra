@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 %include usr-gnu.inc
-%include osdistro.inc
 
 %define _use_internal_dependency_generator 0
 

@@ -8,7 +8,6 @@
 # includes module(s): openvpn
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %define srcname openvpn
 
 Name:		SFEopenvpn
@@ -32,8 +31,8 @@ Requires: SFElzo
 #but, you stuff like /usr/include/net/if_tun.h which comes from SFEtun
 BuildRequires: SFEtun
 Requires: SFEtun
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl
+Requires: SUNWopenssl
 
 %description
 openvpn

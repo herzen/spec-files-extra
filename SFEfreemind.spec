@@ -4,7 +4,6 @@
 # Owner: dkenny
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 
 Name:		SFEfreemind
@@ -20,9 +19,9 @@ URL:		http://freemind.sourceforge.net/wiki/index.php/Main_Page
 SUNW_BaseDir:	%{_basedir}
 SUNW_Copyright: %{name}.copyright
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
-BuildRequires:  %{pnm_buildrequires_SUNWant}
-Requires:       %{pnm_requires_SUNWant}
-Requires:       %{pnm_requires_java_runtime_default}
+BuildRequires:  SUNWant
+Requires:       SUNWant
+Requires:       java_runtime_default
 
 
 %include default-depend.inc

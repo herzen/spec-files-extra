@@ -9,7 +9,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc
@@ -36,18 +35,18 @@ BuildRequires: SFEpangomm-gpp-devel
 Requires: SFEpangomm-gpp
 BuildRequires: SFEsigcpp-gpp-devel
 Requires: SFEsigcpp-gpp
-BuildRequires: %{pnm_buildrequires_SUNWgnome_base_libs_devel}
-Requires: %{pnm_requires_SUNWgnome_base_libs}
+BuildRequires: SUNWgnome_base_libs_devel
+Requires: SUNWgnome_base_libs
 
-Requires: %{pnm_requires_SUNWlibms}
-Requires: %{pnm_requires_SUNWlibC}
+Requires: SUNWlibms
+Requires: SUNWlibC
 
 %package devel
 Summary:	%{summary} - development files
 SUNW_BaseDir:	%{_basedir}
 %include default-depend.inc
 Requires: %name
-Requires: %{pnm_buildrequires_SUNWgnome_base_libs_devel}
+Requires: SUNWgnome_base_libs_devel
 Requires: SFEglibmm-gpp-devel
 Requires: SFEsigcpp-gpp-devel
 Requires: SFEcairomm-gpp-devel

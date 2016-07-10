@@ -8,7 +8,6 @@
 # upgrade to SunStudio 12.2 or SolStudio 12.3 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -40,11 +39,11 @@ URL:		%{orc.url}
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: %{pnm_buildrequires_library_desktop_gtk2}
-Requires:      %{pnm_requires_library_desktop_gtk2}
-BuildRequires: %{pnm_buildrequires_data_docbook}
-BuildRequires: %{pnm_buildrequires_developer_gnome_gettext}
-BuildRequires: %{pnm_buildrequires_developer_documentation_tool_gtk_doc}
+BuildRequires: library_desktop_gtk2
+Requires:      library_desktop_gtk2
+BuildRequires: data_docbook
+BuildRequires: developer_gnome_gettext
+BuildRequires: developer_documentation_tool_gtk_doc
 
 
 %description

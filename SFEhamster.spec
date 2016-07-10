@@ -11,7 +11,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define srcname	hamster-applet
 
@@ -29,12 +28,12 @@ SUNW_BaseDir:            /
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires:     %{pnm_buildrequires_SUNWsqlite3}
-BuildRequires:     %{pnm_buildrequires_SUNWpysqlite}
-BuildRequires:     %{pnm_buildrequires_SUNWlibC}
-Requires:          %{pnm_buildrequires_SUNWsqlite3}
-Requires:          %{pnm_requires_SUNWpysqlite}
-Requires:          %{pnm_requires_SUNWlibC}
+BuildRequires:     SUNWsqlite3
+BuildRequires:     SUNWpysqlite
+BuildRequires:     SUNWlibC
+Requires:          SUNWsqlite3
+Requires:          SUNWpysqlite
+Requires:          SUNWlibC
 
 %prep
 %setup -q -n hamster-applet-%{version}

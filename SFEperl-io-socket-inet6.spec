@@ -13,7 +13,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEperl-%{module_package_name}
 IPS_package_name:        library/perl-5/%{module_package_name}
@@ -22,9 +21,9 @@ Version:                 %{perl_version}.%{module_version}
 Source:                  http://www.cpan.org/modules/by-module/%{module_name_major}/%{module_name}-%{module_version}.tar.gz
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-BuildRequires:           %{pnm_buildrequires_perl_default}
-Requires:                %{pnm_requires_perl_default}
-BuildRequires:           %{pnm_buildrequires_SUNWsfwhea}
+BuildRequires:           perl_default
+Requires:                perl_default
+BuildRequires:           SUNWsfwhea
 
 %ifarch sparc
 %define perl_dir sun4-solaris-64int

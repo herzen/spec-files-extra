@@ -6,7 +6,6 @@
 
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #note: download file version differs from package version (for IPS not accepting "015" / leading zero)
 %define module_version 1.10
@@ -20,9 +19,9 @@ Version:                 %{perl_version}.%{module_version}
 Source:                  http://www.cpan.org/modules/by-module/IO/IO-Zlib-%{module_version_download}.tar.gz
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-BuildRequires:           %{pnm_buildrequires_perl_default}
-Requires:                %{pnm_requires_perl_default}
-BuildRequires:           %{pnm_buildrequires_SUNWsfwhea}
+BuildRequires:           perl_default
+Requires:                perl_default
+BuildRequires:           SUNWsfwhea
 
 %ifarch sparc
 %define perl_dir sun4-solaris-64int

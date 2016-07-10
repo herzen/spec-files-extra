@@ -6,7 +6,6 @@
 %include usr-gnu.inc
 %include base.inc
 
-%include packagenamemacros.inc
 
 ##TODO## make 32/64-bit package
 
@@ -23,10 +22,10 @@ BuildRoot:		%{_tmppath}/%{name}-%{version}-build
 SUNW_BaseDir:		%{_prefix}
 SUNW_Copyright:		%{license}.copyright
 
-BuildRequires: %{pnm_buildrequires_apr_default}
-Requires:      %{pnm_requires_apr_default}
-BuildRequires: %{pnm_buildrequires_apr_util_default}
-Requires:      %{pnm_requires_apr_util_default}
+BuildRequires: apr_default
+Requires:      apr_default
+BuildRequires: apr_util_default
+Requires:      apr_util_default
 
 BuildRequires: SFEscons
 

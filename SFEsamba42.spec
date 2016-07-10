@@ -38,7 +38,6 @@
 #avoid clush with /usr/bin/profiles of SUNWcsu Solaris package
 %include usr-gnu.inc
 
-%include packagenamemacros.inc
 
 %define src_name samba
 %define major_version 4
@@ -76,8 +75,8 @@ BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 ##TODO## better
 #BuildRequires: SUNWgcc
 #Requires:      SUNWgccruntime
-BuildRequires: %{pnm_buildrequires_SUNWbash}
-Requires:      %{pnm_requires_SUNWbash}
+BuildRequires: SUNWbash
+Requires:      SUNWbash
 BuildRequires: SFEopenldap-gnu
 Requires:      SFEopenldap-gnu
 

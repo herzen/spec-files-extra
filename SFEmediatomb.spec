@@ -40,7 +40,6 @@
 %define cc_is_gcc 1
 %include base.inc
 
-%include packagenamemacros.inc
 
 %define _use_internal_dependency_generator 0
 
@@ -100,15 +99,15 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires:     SFEtaglib-gpp-devel
 Requires:          SFEtaglib-gpp
-BuildRequires:     %{pnm_buildrequires_SUNWsqlite3}
-Requires:          %{pnm_requires_SUNWsqlite3}
+BuildRequires:     SUNWsqlite3
+Requires:          SUNWsqlite3
 #get fresh file type assignments/detection
 BuildRequires:     SFEfile
 Requires:          SFEfile
-BuildRequires:     %{pnm_buildrequires_image_library_libexif}
-Requires:          %{pnm_requires_image_library_libexif}
-BuildRequires:     %{pnm_buildrequires_SUNWcurl}
-Requires:          %{pnm_requires_SUNWcurl}
+BuildRequires:     image_library_libexif
+Requires:          image_library_libexif
+BuildRequires:     SUNWcurl
+Requires:          SUNWcurl
 BuildRequires:     SFEspidermonkey
 Requires:          SFEspidermonkey
 BuildRequires:     SFElibmp4v2

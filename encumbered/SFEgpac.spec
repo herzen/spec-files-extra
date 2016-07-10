@@ -14,7 +14,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 # disable jack and pulseaudio support for now
 %define with_jack 0
@@ -37,32 +36,32 @@ SUNW_BaseDir:        %{_basedir}
 BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_x11_library_freeglut}
-Requires:      %{pnm_requires_x11_library_freeglut}
+BuildRequires: x11_library_freeglut
+Requires:      x11_library_freeglut
 BuildRequires: SFElibmad-devel
 Requires: SFElibmad
 BuildRequires: SFEfaad2-devel
 Requires: SFEfaad2
 BuildRequires: SFEliba52-devel
 Requires: SFEliba52
-BuildRequires: %{pnm_buildrequires_SUNWfreetype2}
-Requires:      %{pnm_requires_SUNWfreetype2}
+BuildRequires: SUNWfreetype2
+Requires:      SUNWfreetype2
 %if %with_jack
 BuildRequires: SFEjack-devel
 Requires: SFEjack
 %endif
 #can be SFEpulseaudio or SUNWpulseaudio
 %if %with_pulseaudio
-BuildRequires: %{pnm_buildrequires_SFEpulseaudio_devel}
-Requires: %{pnm_requires_SFEpulseaudio}
+BuildRequires: SFEpulseaudio_devel
+Requires: SFEpulseaudio
 %else
 %endif
 BuildRequires: SFEwxwidgets-gpp
 Requires: SFEwxwidgets-gpp
 BuildRequires: SFExvid-devel
 Requires: SFExvid
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 
 %package devel
 Summary:                 %{summary} - development files

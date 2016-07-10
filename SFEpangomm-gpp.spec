@@ -10,7 +10,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include usr-g++.inc
@@ -28,10 +27,10 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWpango_devel}
-Requires:      %{pnm_requires_SUNWpango}
-BuildRequires: %{pnm_buildrequires_SUNWcairomm_devel}
-Requires:      %{pnm_requires_SUNWcairomm}
+BuildRequires: SUNWpango_devel
+Requires:      SUNWpango
+BuildRequires: SUNWcairomm_devel
+Requires:      SUNWcairomm
 BuildRequires: SFEsigcpp-gpp-devel
 Requires:      SFEsigcpp-gpp
 BuildRequires: SFEglibmm-gpp-devel
@@ -43,7 +42,7 @@ SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
 Requires: %name
 Requires: SFEsigcpp-gpp-devel
-Requires: %{pnm_buildrequires_SUNWpango_devel}
+Requires: SUNWpango_devel
 
 %prep
 rm -rf %name-%version

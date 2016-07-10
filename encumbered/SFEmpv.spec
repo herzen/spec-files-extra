@@ -8,12 +8,10 @@
 # acronym.
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 %define srcname mpv
 
-%include packagenamemacros.inc
 
 # NVDAgraphics is the driver supplied directly by Nvidia
 %define with_system_nvidia %(pkginfo -q NVDAgraphics && echo 0 || echo 1)
@@ -37,16 +35,16 @@ BuildRequires: SFElibdvdnav-devel
 Requires:      SFElibdvdnav
 BuildRequires: SFEpython27-docutils
 Requires:      SFEpython27
-BuildRequires: %{pnm_buildrequires_SUNWgroff}
-BuildRequires: %{pnm_buildrequires_driver_graphics_nvidia}
+BuildRequires: SUNWgroff
+BuildRequires: driver_graphics_nvidia
 BuildRequires: SFElibfribidi-devel
 Requires:      SFElibfribidi
 BuildRequires: SFEliba52-devel
 Requires:      SFEliba52
 BuildRequires: SFElibiconv
 Requires:      SFElibiconv
-BuildRequires: %{pnm_buildrequires_SFEopenjpeg}
-Requires:      %{pnm_requires_SFEopenjpeg}
+BuildRequires: SFEopenjpeg
+Requires:      SFEopenjpeg
 # mpv will not display subtitles without libass
 BuildRequires:	SFElibass-devel
 Requires:	SFElibass

@@ -8,7 +8,6 @@
 # package are under the same license as the package itself.
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 %include base.inc
@@ -22,8 +21,8 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 %include default-depend.inc
-Requires: %{pnm_requires_SUNWgnu_dbm}
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
+Requires: SUNWgnu_dbm
+BuildRequires: SUNWgnu_dbm
 Requires: SUNWsqlite3
 BuildRequires: SUNWsqlite3
 

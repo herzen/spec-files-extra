@@ -4,7 +4,6 @@
 # includes module(s): libquicktime
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %ifarch amd64 sparcv9
 %include arch64.inc
 %use libquicktime64 = libquicktime.spec
@@ -25,19 +24,19 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SFEffmpeg-devel
 Requires: SFEffmpeg
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_base_libs_devel}
+BuildRequires:	SUNWgnome_base_libs_devel
 %ifarch amd64 sparcv9
-BuildRequires:	%{pnm_buildrequires_SUNWogg_vorbis_devel}
-Requires:	%{pnm_buildrequires_SUNWogg_vorbis_devel}
+BuildRequires:	SUNWogg_vorbis_devel
+Requires:	SUNWogg_vorbis_devel
 %endif
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 Requires: SFEfaad2
 BuildRequires: SFEfaad2-devel
 Requires: SFElibx264
 BuildRequires: SFElibx264-devel
-BuildRequires:	%{pnm_buildrequires_SUNWdoxygen}
-BuildRequires:	%{pnm_buildrequires_SUNWgsed}
+BuildRequires:	SUNWdoxygen
+BuildRequires:	SUNWgsed
 BuildRequires: SUNWscpu
 
 %package devel

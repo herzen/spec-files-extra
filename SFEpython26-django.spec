@@ -4,7 +4,6 @@
 # includes module(s): Django
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version  2.6
 %define django_major_version 1.6
@@ -20,8 +19,8 @@ Source:		http://www.djangoproject.com/m/releases/%{django_major_version}/Django-
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires: %{pnm_requires_python_default}
+BuildRequires: python_default
+Requires: python_default
 
 %prep
 %setup -q -n Django-%version

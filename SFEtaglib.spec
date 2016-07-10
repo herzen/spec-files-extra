@@ -5,7 +5,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %include stdcxx.inc
 
 Name:		SFEtaglib
@@ -21,8 +20,8 @@ SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires:	SFEcmake
-BuildRequires: %{pnm_buildrequires_SUNWlibstdcxx4}
-Requires:      %{pnm_requires_SUNWlibstdcxx4}
+BuildRequires: SUNWlibstdcxx4
+Requires:      SUNWlibstdcxx4
 
 %package devel
 Summary:	%{summary} - development files

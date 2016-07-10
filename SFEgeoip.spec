@@ -3,7 +3,6 @@
 #
 #
 %include Solaris.inc
-%include osdistro.inc
 
 Name:		SFEgeoip
 IPS_Package_Name:	library/geoip

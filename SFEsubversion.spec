@@ -7,7 +7,6 @@
 %include usr-gnu.inc
 %include base.inc
 
-%include packagenamemacros.inc
 
 #get multiple dependencies (wrong), so disable it and do it manually
 %define _use_internal_dependency_generator 0
@@ -31,39 +30,39 @@ BuildRequires: SFEserf-gnu
 Requires:      SFEserf-gnu
 
 #  1 database/sqlite-3
-BuildRequires:     %{pnm_buildrequires_SUNWsqlite3}
-Requires:          %{pnm_requires_SUNWsqlite3}
+BuildRequires:     SUNWsqlite3
+Requires:          SUNWsqlite3
 
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
-Requires:      %{pnm_requires_SUNWgnu_dbm}
-BuildRequires: %{pnm_buildrequires_SUNWlibms}
-Requires:      %{pnm_requires_SUNWlibms}
+BuildRequires: SUNWgnu_dbm
+Requires:      SUNWgnu_dbm
+BuildRequires: SUNWlibms
+Requires:      SUNWlibms
 #  7 library/zlib
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
 #paused# S10 SXCE Requires: SUNWpostrun
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl
+Requires:      SUNWopenssl
 #  5 library/expat
-BuildRequires: %{pnm_buildrequires_SUNWlexpt}
-Requires:      %{pnm_requires_SUNWlexpt}
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires:      %{pnm_requires_python_default}
-BuildRequires: %{pnm_buildrequires_SUNWgnu_dbm}
-Requires:      %{pnm_requires_SUNWgnu_dbm}
+BuildRequires: SUNWlexpt
+Requires:      SUNWlexpt
+BuildRequires: python_default
+Requires:      python_default
+BuildRequires: SUNWgnu_dbm
+Requires:      SUNWgnu_dbm
 #  3 library/apr-15
 #  4 library/apr-util-15
-BuildRequires: %{pnm_buildrequires_apr_default}
-Requires:      %{pnm_requires_apr_default}
-BuildRequires: %{pnm_buildrequires_apr_util_default}
-Requires:      %{pnm_requires_apr_util_default}
+BuildRequires: apr_default
+Requires:      apr_default
+BuildRequires: apr_util_default
+Requires:      apr_util_default
 %if %{omnios}
 #no apache here, except you build your own or SFE adds one
 %else
-BuildRequires: %{pnm_buildrequires_apache2_default}
-Requires: %{pnm_requires_apache2_default}
+BuildRequires: apache2_default
+Requires: apache2_default
 %endif
-BuildRequires:  %{pnm_buildrequires_SUNWbash}
+BuildRequires:  SUNWbash
 
 %description
 Subversion source code management system.

@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include osdistro.inc
 %include pkgbuild-features.inc
 
 %if %( expr %{solaris12} '&' %{osdistro_entire_padded_number4}.1 '>=' 0005001200000000000000870000.1 )

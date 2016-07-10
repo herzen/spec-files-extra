@@ -10,7 +10,6 @@
 # Owner: jedy
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:          SFElibtunepimp
 Summary:       Libtunepimp is a library for creating MusicBrainz enabled tagging applications.
@@ -21,8 +20,8 @@ Patch1:        libtunepimp-01-statvfs.diff
 SUNW_BaseDir:  %{_prefix}
 BuildRoot:     %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-Requires:  %{pnm_requires_library_readline}
-BuildRequires:  %{pnm_buildrequires_library_readline}
+Requires:  library_readline
+BuildRequires:  library_readline
 Requires:      SFEtaglib
 BuildRequires: SFEtaglib-devel
 Requires:      SFElibiconv
@@ -30,8 +29,8 @@ BuildRequires: SFElibiconv-devel
 BuildRequires: SFElibmad-devel
 BuildRequires: SUNWogg-vorbis-devel
 BuildRequires: SUNWflac-devel
-BuildRequires: %{pnm_buildrequires_SUNWmusicbrainz_devel}
-Requires:      %{pnm_requires_SUNWmusicbrainz}
+BuildRequires: SUNWmusicbrainz_devel
+Requires:      SUNWmusicbrainz
 Requires:      SUNWlexpt
 Requires:      SUNWcurl
 Requires:      SUNWzlib

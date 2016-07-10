@@ -6,7 +6,6 @@
 ##       dependencies later
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name mpack
 
@@ -29,10 +28,10 @@ BuildRoot:       %{_tmppath}/%{name}-%{version}-build
 
 SUNW_BaseDir:    %{_basedir}
 SUNW_Copyright:  %{name}.copyright
-BuildRequires:	%{pnm_buildrequires_python_default}
-Requires:	%{pnm_requires_python_default}
-BuildRequires:	%{pnm_buildrequires_python_default}-extra
-Requires:	%{pnm_requires_python_default}-extra
+BuildRequires:	python_default
+Requires:	python_default
+BuildRequires:	python_default-extra
+Requires:	python_default-extra
 BuildRequires:	SUNWbash
 
 ##TODO## sort out BuildRequires

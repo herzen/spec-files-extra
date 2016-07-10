@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.6
 
@@ -28,15 +27,15 @@ Source0:	http://download.berlios.de/sonata/sonata-%{version}.tar.bz2
 Patch0:		sonata-01-xfade.diff
 
 %include default-depend.inc
-BuildRequires:	%{pnm_buildrequires_SUNWgnu_gettext_devel}
-BuildRequires:	%{pnm_buildrequires_SUNWgnome_common_devel}
+BuildRequires:	SUNWgnu_gettext_devel
+BuildRequires:	SUNWgnome_common_devel
 BuildRequires:	SUNWxwinc
-BuildRequires:	%{pnm_buildrequires_python_default}
+BuildRequires:	python_default
 #BuildRequires:  SUNWgnome-python26-libs
 #BuildRequires:  SUNWgnome-python26-extras
 #BuildRequires:  SUNWdbus-python26
 BuildRequires:	SFEpython26-mpd
-Requires:	%{pnm_requires_python_default}
+Requires:	python_default
 #Requires:	SUNWgnome-python26-libs
 #Requires:	SUNWgnome-python26-extras
 #Requires:	SUNWdbus-python26

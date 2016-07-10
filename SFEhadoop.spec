@@ -10,7 +10,6 @@
 
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %define srcname hadoop
 %define runuser hadoop
@@ -37,16 +36,16 @@ SUNW_BaseDir:            /usr
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires:      SFEmaven
-BuildRequires:      %{pnm_buildrequires_SUNWant}
+BuildRequires:      SUNWant
 BuildRequires:      SFEcmake
 BuildRequires:      SFEgcc
-BuildRequires:      %{pnm_requires_java_runtime_default}
+BuildRequires:      java_runtime_default
 BuildRequires:      SFEsnappy
 BuildRequires:      SFEprotobuf-devel
 #make package dependency resolver happy (autobuild)
 Requires:           SFEprotobuf
 Requires:           SFEgccruntime
-Requires:           %{pnm_requires_java_runtime_default}
+Requires:           java_runtime_default
 Requires:           SFEsnappy
 
 Requires: %name-root

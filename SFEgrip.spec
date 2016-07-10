@@ -3,7 +3,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEgrip
 IPS_Package_Name:	desktop/audio/grip
@@ -17,12 +16,12 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
 
-BuildRequires: %{pnm_buildrequires_SUNWcurl}
-Requires:      %{pnm_requires_SUNWcurl}
+BuildRequires: SUNWcurl
+Requires:      SUNWcurl
 BuildRequires: SUNWfontconfig
 Requires:      SUNWfontconfig
-BuildRequires: %{pnm_buildrequires_SUNWfreetype2}
-Requires:      %{pnm_requires_SUNWfreetype2}
+BuildRequires: SUNWfreetype2
+Requires:      SUNWfreetype2
 BuildRequires: SUNWgnome-base-libs-devel
 Requires:      SUNWgnome-base-libs
 BuildRequires: SUNWgnome-component-devel
@@ -35,24 +34,24 @@ BuildRequires: SUNWgnome-terminal-devel
 Requires:      SUNWgnome-terminal
 BuildRequires: SUNWgnome-vfs-devel
 Requires:      SUNWgnome-vfs
-BuildRequires: %{pnm_buildrequires_SUNWgnu_idn}
-Requires:      %{pnm_buildrequires_SUNWgnu_idn}
+BuildRequires: SUNWgnu_idn
+Requires:      SUNWgnu_idn
 Requires:      SUNWgss
 Requires:      SUNWlibmsr
-BuildRequires: %{pnm_buildrequires_SUNWlibpopt_devel}
-Requires:      %{pnm_requires_SUNWlibpopt}
-BuildRequires: %{pnm_buildrequires_SUNWmlib}
-Requires:      %{pnm_requires_SUNWmlib}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWlibpopt_devel
+Requires:      SUNWlibpopt
+BuildRequires: SUNWmlib
+Requires:      SUNWmlib
+BuildRequires: SUNWopenssl
+Requires:      SUNWopenssl
 Requires:      SUNWxorg-clientlibs
 Requires:      SUNWxwice
-BuildRequires: %{pnm_buildrequires_SUNWxwplt}
-Requires:      %{pnm_requires_SUNWxwplt}
+BuildRequires: SUNWxwplt
+Requires:      SUNWxwplt
 BuildRequires: SUNWxwxft
 Requires:      SUNWxwxft
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
 
 %include default-depend.inc
 

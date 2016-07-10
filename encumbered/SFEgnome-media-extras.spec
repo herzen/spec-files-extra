@@ -10,7 +10,6 @@
 # Owner: trisk
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define with_hal %(pkginfo -q SUNWhal && echo 1 || echo 0)
 %define with_amrnb %(pkginfo -q SFEamrnb && echo 1 || echo 0)
@@ -36,15 +35,15 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 Requires: SUNWlibms
 Requires: SUNWlxml
 Requires: SUNWzlib
-BuildRequires: %{pnm_buildrequires_SUNWfreetype_devel}
-Requires:      %{pnm_buildrequires_SUNWfreetype}
+BuildRequires: SUNWfreetype_devel
+Requires:      SUNWfreetype
 BuildRequires: SUNWbison
-BuildRequires: %{pnm_buildrequires_python_default}
-Requires:      %{pnm_requires_python_default}
-BuildRequires: %{pnm_buildrequires_python_default}-extra 
-Requires:      %{pnm_requires_python_default}-extra 
+BuildRequires: python_default
+Requires:      python_default
+BuildRequires: python_default-extra 
+Requires:      python_default-extra 
 
-BuildRequires: %{pnm_buildrequires_SUNWgtk_doc}
+BuildRequires: SUNWgtk_doc
 BuildRequires: SUNWgnome-xml-share 
 Requires: SUNWgnome-libs
 BuildRequires: SUNWgnome-libs-devel
@@ -96,8 +95,8 @@ BuildRequires: SFEtwolame-devel
 ##### for gst-plugins-bad #####
 BuildRequires: SFElibvpx-devel
 Requires: SFElibvpx
-BuildRequires: %{pnm_buildrequires_SFElibsndfile_devel}
-Requires:      %{pnm_requires_SFElibsndfile}
+BuildRequires: SFElibsndfile_devel
+Requires:      SFElibsndfile
 # Notes: metadata plugin which uses libexif may be unstable
 #Requires: SUNWlibexif
 #BuildRequires: SUNWlibexif-devel
@@ -133,8 +132,8 @@ Requires: SFEladspa
 BuildRequires: SFEladspa-devel
 Requires: SFEsoundtouch
 BuildRequires: SFEsoundtouch-devel
-BuildRequires: %{pnm_buildrequires_SFElibschroedinger}
-Requires:      %{pnm_requires_SFElibschroedinger}
+BuildRequires: SFElibschroedinger
+Requires:      SFElibschroedinger
 Requires: SFEfaac
 BuildRequires: SFEfaac-devel
 Requires: SFEtimidity

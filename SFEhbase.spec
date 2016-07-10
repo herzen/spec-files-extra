@@ -8,7 +8,6 @@
 
 %include Solaris.inc
 
-%include packagenamemacros.inc
 
 %define srcname hbase
 %define runuser hbase

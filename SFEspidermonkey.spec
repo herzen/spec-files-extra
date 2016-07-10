@@ -4,7 +4,6 @@
 #
 %define cc_is_gcc 1
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEspidermonkey
 IPS_Package_Name:	runtime/javascript/spidermonkey
@@ -46,8 +45,8 @@ BuildRequires: library/security/nss
 #Requires:      %{pnm_requires_tls}
 Requires:      library/security/nss
 
-BuildRequires: %{pnm_buildrequires_SUNWpr}
-Requires:      %{pnm_requires_SUNWpr}
+BuildRequires: SUNWpr
+Requires:      SUNWpr
 BuildRequires: SUNWzip
 
 %package devel

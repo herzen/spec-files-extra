@@ -14,7 +14,6 @@
 %define  _prefix %{_basedir}/apr/%{libapr_major_minor_version}
 %include base.inc
 
-%include packagenamemacros.inc
 
 Name:			SFElibapr
 License:		Apache,LGPL,BSD
@@ -39,7 +38,7 @@ URL:			http://apr.apache.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-build
 SUNW_BaseDir:		%{_basedir}
 #Requires: SFEgawk
-BuildRequires:	%{pnm_buildrequires_SUNWsfwhea}
+BuildRequires:	SUNWsfwhea
 
 #Note: Installs into /usr/gnu directories.
 
@@ -56,7 +55,7 @@ Summary:	%{summary} - development files
 SUNW_BaseDir:	%{_basedir}
 %include default-depend.inc
 Requires:	%{name}
-Requires:	%{pnm_buildrequires_SUNWsfwhea}
+Requires:	SUNWsfwhea
 
 %prep
 %setup -q -n apr-%{version}

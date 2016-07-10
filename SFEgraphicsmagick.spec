@@ -10,7 +10,6 @@
 # includes module(s): graphicsmagick
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                   SFEgraphicsmagick
 Summary:                GraphicsMagick - Image Manipulation Utilities and Libraries
@@ -36,12 +35,12 @@ BuildRequires:		SUNWdcraw
 Requires:		SUNWdcraw
 BuildRequires:		SUNWgnome-img-editor-devel
 Requires:		SUNWgnome-img-editor
-BuildRequires:		%{pnm_buildrequires_SUNWsane_backend_devel}
-Requires:		%{pnm_requires_SUNWsane_backend}
+BuildRequires:		SUNWsane_backend_devel
+Requires:		SUNWsane_backend
 
 # FreeType2 font handling library and rendering engine
-BuildRequires:		%{pnm_buildrequires_SUNWfreetype2_devel}
-Requires:		%{pnm_requires_SUNWfreetype2}
+BuildRequires:		SUNWfreetype2_devel
+Requires:		SUNWfreetype2
 
 # The Zip compression library
 BuildRequires:		SUNWzlib

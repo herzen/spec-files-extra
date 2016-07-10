@@ -14,7 +14,6 @@
 # http://savannah.nongnu.org/patch/?6858
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define srcname weechat
 %define rubyversion 2.1.0
 
@@ -39,10 +38,10 @@ BuildRequires:%{pnm_buildrequires_SUNWgsed}
 BuildRequires:	SFEcmake
 BuildRequires:	SFElibiconv
 BuildRequires:	SFEruby
-BuildRequires:  %{pnm_buildrequires_SUNWlua}
+BuildRequires:  SUNWlua
 Requires:	SFElibiconv
 Requires:	SFEruby
-Requires:	%{pnm_requires_SUNWlua}
+Requires:	SUNWlua
 
 %if %build_l10n
 %package l10n

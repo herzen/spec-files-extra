@@ -4,7 +4,6 @@
 # includes module(s): giflib
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc
@@ -34,7 +33,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 Requires:        x11/library/libice
 Requires:        x11/library/libsm
 Requires:        x11/library/libx11
-Requires:        %{pnm_buildrequires_perl_default}
+Requires:        perl_default
 %endif
 
 %package devel

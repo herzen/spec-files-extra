@@ -5,7 +5,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 %include usr-gnu.inc
 %include base.inc
 
@@ -23,8 +22,8 @@ SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 Requires: SUNWzlib
-BuildRequires: %{pnm_buildrequires_SUNWlibC}
-Requires: %{pnm_buildrequires_SUNWlibC}
+BuildRequires: SUNWlibC
+Requires: SUNWlibC
 Requires: SUNWlibms
 
 %package devel

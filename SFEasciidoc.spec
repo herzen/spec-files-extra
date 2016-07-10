@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 Name:                    SFEasciidoc
 IPS_Package_Name:	developer/documentation-tool/asciidoc
@@ -18,8 +17,8 @@ Source:                  %{sf_download}/asciidoc/asciidoc-%{version}.tar.gz
 SUNW_Copyright:          %{name}.copyright
 SUNW_BaseDir:            %{_basedir}
 %include default-depend.inc
-Requires: 	         %{pnm_requires_python_default}
-BuildRequires: 	         %{pnm_buildrequires_python_default}
+Requires: 	         python_default
+BuildRequires: 	         python_default
 Requires: %{name}-root
 
 %package root

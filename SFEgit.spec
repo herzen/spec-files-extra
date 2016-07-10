@@ -2,7 +2,6 @@
 %define cc_is_gcc 1
 %include usr-gnu.inc
 %include base.inc
-%include packagenamemacros.inc
 
 Name:                SFEgit
 IPS_Package_Name:    sfe/developer/versioning/git
@@ -15,25 +14,25 @@ Source:		     http://www.kernel.org/pub/software/scm/git/git-%version.tar.xz
 SUNW_BaseDir:        %{_basedir}
 
 %include default-depend.inc
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-Requires:      %{pnm_requires_SUNWzlib}
+BuildRequires: SUNWzlib
+Requires:      SUNWzlib
 
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_include}
-Requires: %{pnm_requires_SUNWopenssl_libraries}
+BuildRequires: SUNWopenssl_include
+Requires: SUNWopenssl_libraries
 #not badly needed Requires: %{pnm_requires_SUNWssh}
-BuildRequires: %{pnm_buildrequires_SUNWlexpt_devel}
-Requires:      %{pnm_requires_SUNWlexpt}
-BuildRequires: %{pnm_buildrequires_SUNWcurl_devel}
-Requires:      %{pnm_requires_SUNWcurl}
-BuildRequires: %{pnm_requires_perl_default}
-Requires:      %{pnm_requires_perl_default}
-Requires:      %{pnm_requires_text_gnu_diffutils}
-BuildRequires: %{pnm_buildrequires_SUNWTk_devel}
-Requires:      %{pnm_requires_SUNWTk}
-BuildRequires: %{pnm_buildrequires_SFEasciidoc}
-BuildRequires: %{pnm_buildrequires_developer_documentation_tool_xmlto}
-BuildRequires: %{pnm_buildrequires_SUNWpcre_devel}
-Requires:      %{pnm_requires_SUNWpcre}
+BuildRequires: SUNWlexpt_devel
+Requires:      SUNWlexpt
+BuildRequires: SUNWcurl_devel
+Requires:      SUNWcurl
+BuildRequires: perl_default
+Requires:      perl_default
+Requires:      text_gnu_diffutils
+BuildRequires: SUNWTk_devel
+Requires:      SUNWTk
+BuildRequires: SFEasciidoc
+BuildRequires: developer_documentation_tool_xmlto
+BuildRequires: SUNWpcre_devel
+Requires:      SUNWpcre
 
 %prep
 %setup -q -n git-%version

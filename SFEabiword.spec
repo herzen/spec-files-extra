@@ -10,7 +10,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %use abiword = abiword.spec
 

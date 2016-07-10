@@ -5,7 +5,6 @@
 #
 %include Solaris.inc
 %define cc_is_gcc 1
-%include osdistro.inc
 
 %ifarch amd64 sparcv9
 %include arch64.inc

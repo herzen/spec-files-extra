@@ -2,7 +2,6 @@
 # spec file for package SFEamanda
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define src_name	amanda
 

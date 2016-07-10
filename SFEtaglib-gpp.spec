@@ -7,7 +7,6 @@
 %define cc_is_gcc 1
 %include usr-g++.inc
 %include base.inc
-%include packagenamemacros.inc
 %define srcname taglib
 %define _use_internal_dependency_generator 0
 

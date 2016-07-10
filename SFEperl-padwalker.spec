@@ -7,7 +7,6 @@
 # includes module(s):
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define tarball_version 2.1
 %define tarball_name    PadWalker
@@ -26,8 +25,8 @@ SUNW_Basedir:	%{_basedir}
 SUNW_Copyright: %{license}.copyright
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RO/ROBIN/PadWalker-%{tarball_version}.tar.gz
 
-BuildRequires:	%{pnm_buildrequires_perl_default}
-Requires:	%{pnm_requires_perl_default}
+BuildRequires:	perl_default
+Requires:	perl_default
 
 Meta(info.maintainer):          roboporter by pkglabo.justplayer.com <pkgadmin@justplayer.com>
 Meta(info.upstream):            Robin Houston <robin@cpan.org>

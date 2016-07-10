@@ -4,7 +4,6 @@
 # includes module(s): libmusicbrainz3
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 #replaced by packagenamemacros %define SFEfftw   %(/usr/bin/pkginfo -q SFEfftw && echo 1 || echo 0)
 
@@ -28,8 +27,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 #replaced by packagenamemacros BuildRequires:	SUNWfftw3
 #replaced by packagenamemacros Requires:	SUNWfftw3
 #replaced by packagenamemacros %endif
-BuildRequires:	%{pnm_buildrequires_SUNWfftw3}
-Requires:	%{pnm_requires_SUNWfftw3}
+BuildRequires:	SUNWfftw3
+Requires:	SUNWfftw3
 
 %prep
 %setup -q -n libofa-%version

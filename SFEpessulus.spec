@@ -5,7 +5,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define pythonver 2.6
 
 Name:		SFEpessulus

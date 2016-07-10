@@ -8,7 +8,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define python_version 2.6
 
@@ -27,8 +26,8 @@ SUNW_Basedir:	%{_basedir}
 Source0:	http://pypi.python.org/packages/source/p/python-mpd/python-mpd-%{version}.tar.bz2
 
 %include default-depend.inc
-BuildRequires:	%{pnm_buildrequires_python_default}
-Requires:	%{pnm_requires_python_default}
+BuildRequires:	python_default
+Requires:	python_default
 
 Meta(info.maintainer):          James Lee <jlee@thestaticvoid.com>
 Meta(info.upstream):            J. Alexander Treuman <jat@spatialrift.net>

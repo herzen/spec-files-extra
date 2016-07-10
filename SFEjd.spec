@@ -4,7 +4,6 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
-%include packagenamemacros.inc
 
 %define srcdate 140104
 
@@ -24,8 +23,8 @@ BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 BuildRequires: SFEgcc
 Requires:      SFEgccruntime
-BuildRequires: %{pnm_buildrequires_SUNWopenssl_devel}
-Requires:      %{pnm_requires_SUNWopenssl}
+BuildRequires: SUNWopenssl_devel
+Requires:      SUNWopenssl
 BuildRequires: SFEgtkmm-gpp
 Requires:      SFEgtkmm-gpp
 BuildRequires: SFElibiconv-devel

@@ -7,7 +7,6 @@
 # spec file for package SFElibmikmod
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define oss      %(/usr/bin/pkginfo -q oss && echo 1 || echo 0)
 %define src_version 3.2.2-beta1
@@ -27,8 +26,8 @@ BuildRequires: oss
 %else
 BuildRequires: SUNWaudh
 %endif
-BuildRequires:  %{pnm_buildrequires_SUNWlibmikmod_devel}
-Requires:       %{pnm_requires_SUNWlibmikmod}
+BuildRequires:  SUNWlibmikmod_devel
+Requires:       SUNWlibmikmod
 
 %prep
 %setup -q -n mikmod-%src_version

@@ -6,7 +6,6 @@
 %define cc_is_gcc 1
 %include base.inc
 %define srcname sakura
-%include packagenamemacros.inc
 
 Name:		SFEsakura
 IPS_Package_Name:	terminal/sakura

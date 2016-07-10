@@ -9,7 +9,6 @@
 #
 %include Solaris.inc
 %include usr-g++.inc
-%include packagenamemacros.inc
 
 %define cc_is_gcc 1
 
@@ -37,8 +36,8 @@ SUNW_BaseDir:	%{_basedir}/%{_subdir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
-BuildRequires: %{pnm_buildrequires_SUNWlibm}
-Requires:      %{pnm_buildrequires_SUNWlibm}
+BuildRequires: SUNWlibm
+Requires:      SUNWlibm
 
 %package devel
 Summary:	%{summary} - development files

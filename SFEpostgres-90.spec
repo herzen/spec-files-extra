@@ -6,7 +6,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define _prefix /usr/postgres
 %define _var_prefix /var/postgres
@@ -37,24 +36,24 @@ SUNW_Basedir:            /usr
 SUNW_Copyright:          %{prefix_name}.copyright
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: %{pnm_buildrequires_SUNWlxsl}
-BuildRequires: %{pnm_buildrequires_SUNWlxml}
-BuildRequires: %{pnm_buildrequires_SUNWgss}
-BuildRequires: %{pnm_buildrequires_SUNWopenssl}
-BuildRequires: %{pnm_buildrequires_SUNWzlib}
-BuildRequires: %{pnm_buildrequires_SUNWcsl}
-BuildRequires: %{pnm_buildrequires_SUNWlibms}
-BuildRequires: %{pnm_buildrequires_SUNWgss}
-BuildRequires: %{pnm_buildrequires_SUNWTcl}
+BuildRequires: SUNWlxsl
+BuildRequires: SUNWlxml
+BuildRequires: SUNWgss
+BuildRequires: SUNWopenssl
+BuildRequires: SUNWzlib
+BuildRequires: SUNWcsl
+BuildRequires: SUNWlibms
+BuildRequires: SUNWgss
+BuildRequires: SUNWTcl
 BuildRequires: SFEeditline
 
-Requires: %{pnm_requires_SUNWlxsl}
-Requires: %{pnm_requires_SUNWlxml}
-Requires: %{pnm_requires_SUNWzlib}
-Requires: %{pnm_requires_SUNWcsl}
-Requires: %{pnm_requires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWlibms}
-Requires: %{pnm_requires_SUNWgss}
+Requires: SUNWlxsl
+Requires: SUNWlxml
+Requires: SUNWzlib
+Requires: SUNWcsl
+Requires: SUNWopenssl
+Requires: SUNWlibms
+Requires: SUNWgss
 Requires: SFEeditline
 
 Requires: %{prefix_name}-libs
@@ -72,8 +71,8 @@ PostgreSQL is a powerful, open source object-relational database system. It has 
 
 IPS_package_name: database/postgres-90/library
 Summary: PostgreSQL client libraries
-Requires: %{pnm_requires_SUNWlibms}
-Requires: %{pnm_requires_SUNWcsl}
+Requires: SUNWlibms
+Requires: SUNWcsl
 
 %package -n %{prefix_name}-pl
 IPS_package_name: database/postgres-90/language-bindings
@@ -81,9 +80,9 @@ Summary: PostgreSQL additional Perl, Python & TCL server procedural languages
 
 #Requires: runtime/perl-584
 #Requires: runtime/python-24
-Requires: %{pnm_requires_SUNWlibms}
-Requires: %{pnm_requires_SUNWcsl}
-Requires: %{pnm_requires_SUNWTcl}
+Requires: SUNWlibms
+Requires: SUNWcsl
+Requires: SUNWTcl
 Requires: %{name}
 Requires: %{prefix_name}-libs
 
@@ -91,13 +90,13 @@ Requires: %{prefix_name}-libs
 IPS_package_name: database/postgres-90/developer
 Summary: PostgreSQL development tools and header files
 
-Requires: %{pnm_requires_SUNWlxsl}
-Requires: %{pnm_requires_SUNWlxml}
-Requires: %{pnm_requires_SUNWgss}
-Requires: %{pnm_requires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWcsl}
-Requires: %{pnm_requires_SUNWzlib}
-Requires: %{pnm_requires_SUNWlibms}
+Requires: SUNWlxsl
+Requires: SUNWlxml
+Requires: SUNWgss
+Requires: SUNWopenssl
+Requires: SUNWcsl
+Requires: SUNWzlib
+Requires: SUNWlibms
 Requires: %{name}
 Requires: %{prefix_name}-libs
 
@@ -111,13 +110,13 @@ Summary: PostgreSQL database server
 
 SUNW_Basedir:            /
 
-Requires: %{pnm_requires_SUNWlxsl}
-Requires: %{pnm_requires_SUNWlxml}
-Requires: %{pnm_requires_SUNWgss}
-Requires: %{pnm_requires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWcsl}
-Requires: %{pnm_requires_SUNWzlib}
-Requires: %{pnm_requires_SUNWlibms}
+Requires: SUNWlxsl
+Requires: SUNWlxml
+Requires: SUNWgss
+Requires: SUNWopenssl
+Requires: SUNWcsl
+Requires: SUNWzlib
+Requires: SUNWlibms
 Requires: %{name}
 Requires: %{prefix_name}-libs
 Requires: SFEpostgres-common
@@ -126,13 +125,13 @@ Requires: SFEpostgres-common
 IPS_package_name: database/postgres-90/contrib
 Summary: PostgreSQL community contributed tools not part of core product
 
-Requires: %{pnm_requires_SUNWlxsl}
-Requires: %{pnm_requires_SUNWlxml}
-Requires: %{pnm_requires_SUNWgss}
-Requires: %{pnm_requires_SUNWopenssl}
-Requires: %{pnm_requires_SUNWcsl}
-Requires: %{pnm_requires_SUNWzlib}
-Requires: %{pnm_requires_SUNWlibms}
+Requires: SUNWlxsl
+Requires: SUNWlxml
+Requires: SUNWgss
+Requires: SUNWopenssl
+Requires: SUNWcsl
+Requires: SUNWzlib
+Requires: SUNWlibms
 Requires: %{name}
 Requires: %{prefix_name}-libs
 

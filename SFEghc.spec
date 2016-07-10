@@ -6,7 +6,6 @@
 #
 
 %include Solaris.inc
-%include packagenamemacros.inc
 %define cc_is_gcc 1
 %include base.inc
 
@@ -62,7 +61,7 @@ Haskell home page at http://haskell.org/.
 
 BuildRequires: 	SUNWgcc
 BuildRequires:	SUNWgsed
-BuildRequires:	%{pnm_buildrequires_SFExz_gnu}
+BuildRequires:	SFExz_gnu
 Requires: 	SUNWgcc
 
 %if %SFEgmp
@@ -83,11 +82,11 @@ Requires: SUNWgnu-mpfr
 
 BuildRequires: SUNWesu
 
-BuildRequires:  %{pnm_requires_library_readline}
-Requires:  %{pnm_requires_library_readline}
+BuildRequires:  library_readline
+Requires:  library_readline
 
-BuildRequires: %{pnm_buildrequires_SUNWncurses_devel}
-Requires:      %{pnm_requires_SUNWncurses}
+BuildRequires: SUNWncurses_devel
+Requires:      SUNWncurses
 
 %package prof
 Summary:                 %{summary} - profiling libraries

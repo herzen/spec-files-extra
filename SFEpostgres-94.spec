@@ -6,7 +6,6 @@
 #
 #
 %include Solaris.inc
-%include packagenamemacros.inc
 
 %define _prefix /usr/postgres
 %define _var_prefix /var/postgres
