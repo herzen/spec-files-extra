@@ -1,0 +1,363 @@
+---
+- S11.3
+- OIhipster
+- OmniOS
+---
+- '11.3'
+- illumos-
+- omnios-
+---
+SFEasciidoc: SFEasciidoc
+SFEautomake_115:
+- SFEautomake-115
+- __NOMATCH__
+- __NOMATCH__
+SFEgnugetopt:
+- pkg://solaris/shell/gnu-getopt
+- SFEgnugetopt
+- SFEgnugetopt
+SFElibggz:
+- SFElibggz-devel
+- SUNWgnome-games-devel
+- SUNWgnome-games-devel
+SFElibggz_devel:
+- SFElibggz-devel
+- SUNWgnome-games-devel
+- SUNWgnome-games-devel
+SFElibgpg_error:
+- SUNWlibgpg-error-devel
+- library/security/libgpg-error
+- SUNWlibgpg-error-devel
+SFElibgpg_error_devel:
+- SUNWlibgpg-error-devel
+- library/security/libgpg-error
+- SUNWlibgpg-error-devel
+SFElibschroedinger:
+- SFElibschroedinger
+- library/video/libschroedinger
+- SFElibschroedinger
+SFElibsndfile: SFElibsndfile
+SFElibsndfile_devel: SFElibsndfile
+SFElibyaml:
+- SFElibyaml
+- __NOMATCH__
+- __NOMATCH__
+SFEopenjpeg:
+- SFEopenjpeg
+- image/library/openjpeg
+- SFEopenjpeg
+SFEorc: __NOMATCH__
+SFEorc_devel:
+- SFEorc
+- system/library/orc
+- SFEorc
+SFEperl_extutils_cbuilder:
+- runtime/perl-512
+- runtime/perl-522
+- runtime/perl-64
+SFEpulseaudio:
+- SUNWpulseaudio-devel
+- SFEpulseaudio-devel
+- SFEpulseaudio-devel
+SFEpulseaudio_devel: __NOMATCH__
+SFExz_gnu:
+- SFExz-gnu
+- compress/xz
+- compress/xz
+SFEzlib_pkgconfig:
+- SFEzlib-pkgconfig
+- __NOMATCH__
+- __NOMATCH__
+SUNWGlib: library/glib1
+SUNWGtk: library/desktop/gtk1
+SUNWPython26: runtime/python-26
+SUNWPython26_devel: runtime/python-26
+SUNWTcl: runtime/tcl-8
+SUNWTiff: image/library/libtiff
+SUNWTiff_devel: image/library/libtiff
+SUNWTk: runtime/tk-8
+SUNWTk_devel: runtime/tk-8
+SUNWaalib: library/aalib
+SUNWaalib_devel: library/aalib
+SUNWant: developer/build/ant
+SUNWapch22: web/server/apache-22
+SUNWapch22_devel: web/server/apache-22
+SUNWapch22m_php52: web/server/apache-22/module/apache-php5
+SUNWaudh:
+- system/header
+- system/header/header-audio
+- system/header/header-audio
+SUNWavahi_bridge_dsd: system/network/avahi
+SUNWavahi_bridge_dsd_devel: system/network/avahi
+SUNWbash: shell/bash
+SUNWbindc: network/dns/bind
+SUNWbindc_devel: network/dns/bind
+SUNWbinutils: developer/gnu-binutils
+SUNWbtool: developer/object-file
+SUNWbzip: compress/bzip2
+SUNWcairo: library/desktop/cairo
+SUNWcairo_devel: library/desktop/cairo
+SUNWcairomm: library/desktop/c++/cairomm
+SUNWcairomm_devel: library/desktop/c++/cairomm
+SUNWcsl: system/library
+SUNWcups: print/cups
+SUNWcups_devel: print/cups
+SUNWcurl: web/curl
+SUNWcurl_devel: web/curl
+SUNWdbus: system/library/dbus
+SUNWdbus_devel: system/library/dbus
+SUNWdbus_glib: system/library/libdbus-glib
+SUNWdbus_glib_devel: system/library/libdbus-glib
+SUNWdoc: text/doctools
+SUNWdoxygen: developer/documentation-tool/doxygen
+SUNWfftw3: SUNWfftw3
+SUNWfftw3_devel: library/fftw-3
+SUNWflac: codec/flac
+SUNWflac_devel: codec/flac
+SUNWflexlex_devel: developer/lexer/flex
+SUNWfontconfig: system/library/fontconfig
+SUNWfreetype: __NOMATCH__
+SUNWfreetype2: system/library/freetype-2
+SUNWfreetype2_devel: system/library/freetype-2
+SUNWfreetype_devel: __NOMATCH__
+SUNWgawk: text/gawk
+SUNWgawk_devel: text/gawk
+SUNWgd2: library/gd
+SUNWgd2_devel: library/gd
+SUNWggrp: text/gnu-grep
+SUNWghostscript: print/filter/ghostscript
+SUNWglib2: library/glib2
+SUNWglib2_devel: library/glib2
+SUNWgmake: developer/build/gnu-make
+SUNWgnome_base_libs: library/gnome/base-libs
+SUNWgnome_base_libs_devel: library/gnome/base-libs
+SUNWgnome_common_devel: developer/gnome/gettext
+SUNWgnome_libs: library/gnome/gnome-libs
+SUNWgnome_libs_devel: library/gnome/gnome-libs
+SUNWgnome_media_devel: library/audio/gstreamer
+SUNWgnome_panel: gnome/gnome-panel
+SUNWgnome_panel_devel: gnome/gnome-panel
+SUNWgnome_python26_libs:
+- library/python-2/pygtk2-26
+- library/python-2/python-gnome-libs-26
+- library/python-2/python-gnome-libs-26
+SUNWgnome_python26_libs_devel:
+- library/python-2/pygtk2-26
+- library/python-2/python-gnome-libs-26
+- library/python-2/python-gnome-libs-26
+SUNWgnu_coreutils: file/gnu-coreutils
+SUNWgnu_dbm: library/database/gdbm
+SUNWgnu_gettext: text/gnu-gettext
+SUNWgnu_gettext_devel: text/gnu-gettext
+SUNWgnu_idn: library/libidn
+SUNWgraphviz:
+- image/graphviz
+- image/graphviz
+- SFEgraphviz
+SUNWgroff: text/groff
+SUNWgsed: text/gnu-sed
+SUNWgsed_devel: text/gnu-sed
+SUNWgss: system/library/security/gss
+SUNWgtk2: library/desktop/gtk2
+SUNWgtk2_devel: library/desktop/gtk2
+SUNWgtk_doc: developer/documentation-tool/gtk-doc
+SUNWhea: system/header
+SUNWimagick: image/imagemagick
+SUNWimagick_devel: image/imagemagick
+SUNWjpg: image/library/libjpeg
+SUNWjpg_devel: image/library/libjpeg
+SUNWkrb: system/security/kerberos-5
+SUNWlexpt: library/expat
+SUNWlexpt_devel: library/expat
+SUNWlibC:
+- system/library/c++-runtime
+- system/library/c++/sunpro
+- system/library/c++-runtime
+SUNWlibanthy: system/input-method/library/libanthy
+SUNWlibanthy_devel: system/input-method/library/libanthy
+SUNWlibdiscid: library/musicbrainz/libdiscid
+SUNWlibdiscid_devel: library/musicbrainz/libdiscid
+SUNWlibgcrypt:
+- SUNWlibgcrypt-devel
+- system/library/security/libgcrypt
+- SUNWlibgcrypt-devel
+SUNWlibgcrypt_devel:
+- SUNWlibgcrypt-devel
+- system/library/security/libgcrypt
+- SUNWlibgcrypt-devel
+SUNWlibgpg_error:
+- SUNWlibgpg-error-devel
+- library/security/libgpg-error
+- SUNWlibgpg-error-devel
+SUNWlibgpg_error_devel:
+- SUNWlibgpg-error-devel
+- library/security/libgpg-error
+- SUNWlibgpg-error-devel
+SUNWlibm: system/library/math
+SUNWlibmikmod: SUNWlibmikmod-devel
+SUNWlibmikmod_devel: SUNWlibmikmod-devel
+SUNWlibmng: library/graphics/libmng
+SUNWlibmng_devel: library/graphics/libmng
+SUNWlibms: system/library/math
+SUNWlibmusicbrainz_devel: __NOMATCH__
+SUNWliboil: library/liboil
+SUNWlibpopt:
+- library/popt
+- library/popt
+- SFElibpopt-devel
+SUNWlibpopt_devel:
+- library/popt
+- library/popt
+- SFElibpopt-devel
+SUNWlibrsvg: image/library/librsvg
+SUNWlibsasl: system/library/security/libsasl
+SUNWlibsdl: library/sdl
+SUNWlibsdl_devel: library/sdl
+SUNWlibstdcxx4: library/c++/stdcxx
+SUNWlibtheora: codec/libtheora
+SUNWlibtheora_devel: codec/libtheora
+SUNWlibtool: developer/build/libtool
+SUNWlibtool_devel: developer/build/libtool
+SUNWltdl: library/libtool/libltdl
+SUNWltdl_devel: library/libtool/libltdl
+SUNWlua: runtime/lua
+SUNWlxml: library/libxml2
+SUNWlxml_devel: library/libxml2
+SUNWlxsl: library/libxslt
+SUNWlxsl_devel: library/libxslt
+SUNWmercurial: developer/versioning/mercurial
+SUNWmlib: library/medialib
+SUNWmtx: media/mtx
+SUNWmusicbrainz: library/musicbrainz/libmusicbrainz
+SUNWmusicbrainz_devel: library/musicbrainz/libmusicbrainz
+SUNWncurses: library/ncurses
+SUNWncurses_devel: library/ncurses
+SUNWntp: service/network/ntp
+SUNWntp_devel: service/network/ntp
+SUNWogg_vorbis: codec/ogg-vorbis
+SUNWogg_vorbis_devel: codec/ogg-vorbis
+SUNWonbld: developer/build/onbld
+SUNWopenssl: library/security/openssl
+SUNWopenssl_devel: library/security/openssl
+SUNWopenssl_fips_140: library/security/openssl/openssl-fips-140
+SUNWopenssl_fips_140_devel: library/security/openssl/openssl-fips-140
+SUNWopenssl_include: library/security/openssl
+SUNWopenssl_libraries: library/security/openssl
+SUNWpango: library/desktop/pango
+SUNWpango_devel: library/desktop/pango
+SUNWpcre: library/pcre
+SUNWpcre_devel: library/pcre
+SUNWphp52: web/php-52
+SUNWphp52_mysql: web/php-52/extension/php-mysql
+SUNWpr: library/nspr
+SUNWpysqlite:
+- runtime/python-27
+- runtime/python-27
+- runtime/python-26
+SUNWpython26_imaging: library/python-2/python-imaging-26
+SUNWpython26_setuptools_devel:
+- library/python/setuptools-26
+- library/python-2/setuptools-26
+- library/python-2/setuptools-26
+SUNWsane_backend: image/scanner/xsane/sane-backends
+SUNWsane_backend_devel:
+- image/scanner/xsane/sane-backends
+- SUNWsane-backend-devel
+- SUNWsane-backend-devel
+SUNWsfwhea: SUNWhea
+SUNWslang: library/slang
+SUNWsmba: service/network/samba
+SUNWsmba_devel: service/network/samba
+SUNWsmbau: service/network/samba
+SUNWsndm: service/network/smtp/sendmail
+SUNWsndm_devel: service/network/smtp/sendmail
+SUNWspeex: codec/speex
+SUNWspeex_devel: codec/speex
+SUNWsqlite3: database/sqlite-3
+SUNWtexi: text/texinfo
+SUNWunrar: archiver/unrar
+SUNWwget: web/wget
+SUNWxcu4: system/xopen/xcu4
+SUNWxorg_mesa_devel: x11/library/mesa
+SUNWxwinc: compatibility/packages/SUNWxwinc
+SUNWxwopt: compatibility/packages/SUNWxwopt
+SUNWxwplt: compatibility/packages/SUNWxwplt
+SUNWxwrtl: x11/compatibility/links-svid
+SUNWxwxft: x11/library/libxft
+SUNWxwxft_devel: x11/library/libxft
+SUNWzlib: library/zlib
+SUNWzlib_devel: library/zlib
+apache2_default: web/server/apache-22
+apr_default:
+- pkg://solaris/library/apr-15
+- SFElibapr
+- SFElibapr
+apr_util_default:
+- pkg://solaris/library/apr-util-15
+- SFEapr-util
+- SFEapr-util
+avahi_bridge_dsd: system/network/avahi
+boost_gpp_default: SFEboost-gpp
+compatibility_ucb: compatibility/ucb
+data_docbook: developer/documentation-tool/gtk-doc
+developer_build_autogen: developer/build/autogen
+developer_build_cmake: developer/build/cmake
+developer_build_make: developer/build/make
+developer_cppunit:
+- SFEcppunit-gpp
+- developer/cppunit
+- SFEcppunit-gpp
+developer_documentation_tool_doxygen: developer/documentation-tool/doxygen
+developer_documentation_tool_gtk_doc: developer/documentation-tool/gtk-doc
+developer_documentation_tool_xmlto:
+- developer/documentation-tool/xmlto
+- __NOMATCH__
+- __NOMATCH__
+developer_gnome_gettext: developer/gnome/gettext
+developer_gperf: developer/gperf
+driver_graphics_nvidia:
+- /usr/X11/include/NVIDIA/vdpau/vdpau.h
+- driver/graphics/nvidia
+- driver/graphics/nvidia
+icu_gpp_default: SFEicu-gpp
+image_library_libexif:
+- image/library/libexif
+- image/library/libexif
+- SFElibexif-gnu
+java_runtime_default: runtime/java
+library_desktop_gtk2: library/desktop/gtk2
+library_gnome_gnome_libs: library/gnome/gnome-libs
+library_guile: library/guile
+library_libidn: library/libidn
+library_pcre: library/pcre
+library_readline: library/readline
+library_zlib: library/zlib
+mysql_default: database/mysql-51
+openssl: library/security/openssl
+perl_default:
+- runtime/perl-512
+- runtime/perl-522
+- runtime/perl-64
+perl_xml_parser: library/perl-5/xml-parser
+pulseaudio:
+- SUNWpulseaudio-devel
+- SFEpulseaudio-devel
+- SFEpulseaudio-devel
+python_default:
+- runtime/python-27
+- runtime/python-27
+- runtime/python-26
+service_gnome_desktop_cache: service/gnome/desktop-cache
+system_header_header_audio:
+- system/header
+- system/header/header-audio
+- system/header/header-audio
+system_library_math_header_math: system/library/math
+system_management_snmp_net_snmp: system/management/snmp/net-snmp
+system_network_avahi: system/network/avahi
+text_gnu_diffutils: text/gnu-diffutils
+web_browser_w3m: web/browser/w3m
+x11_library_freeglut:
+- x11/library/freeglut
+- SFEfreeglut
+- SFEfreeglut
