@@ -7,11 +7,33 @@
 - illumos-
 - omnios-
 ---
+solaris11: [1, 0, 0]
+oihipster: [0, 1, 0]
+omnios: [0, 0, 1]
+perl_major_version: [5, 5, 5]
+perl_version: [5.12, 5.22, 5.16]
+perl_path_vendor_perl_version:
+- perl5/vendor_perl/5.12
+- perl5/vendor_perl/5.22
+- perl5/vendor_perl/5.16.1
+perl_dir:
+- i86pc-solaris-64int
+- i86pc-solaris-64int
+- i86pc-solaris-thread-multi-64
+---
 SFEasciidoc: SFEasciidoc
 SFEautomake_115:
 - SFEautomake-115
-- __NOMATCH__
-- __NOMATCH__
+- developer/build/automake-115
+- SFEautomake-115
+SFEgcc:
+- developer/gcc-49
+- developer/gcc-49
+- SFEgcc
+SFEgccruntime:
+- system/library/gcc-c-runtime
+- system/library/gcc-4-runtime
+- SFEgccruntime
 SFEgnugetopt:
 - pkg://solaris/shell/gnu-getopt
 - SFEgnugetopt
@@ -40,8 +62,8 @@ SFElibsndfile: SFElibsndfile
 SFElibsndfile_devel: SFElibsndfile
 SFElibyaml:
 - SFElibyaml
-- __NOMATCH__
-- __NOMATCH__
+- library/libyaml
+- SFElibyaml
 SFEopenjpeg:
 - SFEopenjpeg
 - image/library/openjpeg
@@ -60,10 +82,15 @@ SFEpulseaudio:
 - SFEpulseaudio-devel
 - SFEpulseaudio-devel
 SFEpulseaudio_devel: __NOMATCH__
-SFExz_gnu:
-- SFExz-gnu
-- compress/xz
-- compress/xz
+SFEwxwidgets-gpp-devel:
+- SFEwxwidgets-gpp-devel
+- library/graphics/wxwidgets
+- SFEwxwidgets-gpp-devel
+SFExz_gnu: compress/xz
+SFEyasm:
+- SFEyasm
+- developer/assembler/yasm
+- SFEyasm
 SFEzlib_pkgconfig:
 - SFEzlib-pkgconfig
 - __NOMATCH__
