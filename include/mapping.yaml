@@ -21,7 +21,10 @@ perl_dir:
 - i86pc-solaris-64int
 - i86pc-solaris-thread-multi-64
 ---
-SFEasciidoc: SFEasciidoc
+SFEasciidoc:
+- SFEasciidoc
+- text/asciidoc
+- SFEasciidoc
 SFEautomake_115:
 - SFEautomake-115
 - developer/build/automake-115
@@ -338,7 +341,7 @@ developer_documentation_tool_doxygen: developer/documentation-tool/doxygen
 developer_documentation_tool_gtk_doc: developer/documentation-tool/gtk-doc
 developer_documentation_tool_xmlto:
 - developer/documentation-tool/xmlto
-- __NOMATCH__
+- text/xmlto
 - __NOMATCH__
 developer_gnome_gettext: developer/gnome/gettext
 developer_gperf: developer/gperf
@@ -388,3 +391,91 @@ x11_library_freeglut:
 - x11/library/freeglut
 - SFEfreeglut
 - SFEfreeglut
+SFEpython27-docutils:
+- SFEpython27-docutils
+- library/python-2/docutils
+- SFEpython27-docutils
+SFElibfribidi:
+- SFElibfribidi
+- library/fribidi
+- SFElibfribidi
+SFExvid:
+- SFExvid
+- library/video/xvid
+- SFExvid
+SFEfaac-gpp:
+- SFEfaac-gpp
+- audio/faac
+- SFEfaac-gpp
+SFEfaad2:
+- SFEfaad2
+- audio/faad2
+- SFEfaad2
+SFElame:
+- SFElame
+- audio/lame
+- SFElame
+SFElibcdio:
+- SFElibcdio
+- library/audio/libcdio
+- SFElibcdio
+SFEopencore-amr:
+- SFEopencore-amr
+- codec/opencore-amr
+- SFEopencore-amr
+SFEliba52:
+- SFEliba52
+- library/audio/liba52
+- SFEliba52
+SFElibass:
+- SFElibass
+- library/video/libass
+- SFElibass
+SFElibgsm:
+- SFElibgsm
+- library/audio/libgsm
+- SFElibgsm
+SFElibmad:
+- SFElibmad
+- library/audio/libmad
+- SFElibmad
+SFElibmpcdec:
+- SFElibmpcdec
+- library/audio/libmpcdec
+- SFElibmpcdec
+SFEopenal:
+- SFEopenal
+- library/audio/openal
+- SFEopenal
+SFElibvpx:
+- SFElibvpx
+- library/video/libvpx
+- SFElibvpx
+SFElibdvbpsi:
+- SFElibdvbpsi
+- library/video/libdvbpsi
+- SFElibdvbpsi
+SFElibdvdcss:
+- SFElibdvdcss
+- library/video/libdvdcss
+- SFElibdvdcss
+SFElibdvdnav:
+- SFElibdvdnav
+- library/video/libdvdnav
+- SFElibdvdnav
+SFElibdvdnav:
+- SFElibdvdread
+- library/video/libdvdread
+- SFElibdvdread
+SFElibmms:
+- SFElibmms
+- library/video/libmms
+- SFElibmms
+SFElibmpeg2:
+- SFElibmpeg2
+- library/video/libmpeg2
+- SFElibmpeg2
+SFErtmpdump:
+- SFErtmpdump
+- video/rtmpdump
+- SFErtmpdump
