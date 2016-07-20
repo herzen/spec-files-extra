@@ -27,26 +27,26 @@ Source: http://github.com/mpv-player/mpv/archive/v%version.tar.gz
 Group:			Applications/Sound and Video
 Patch1:			mpv-01-ao-reorder.patch
 
-BuildRequires: SFEffmpeg-devel
+BuildRequires: SFEffmpeg
 Requires:      SFEffmpeg
-BuildRequires: SFElibcdio-devel
+BuildRequires: SFElibcdio
 Requires:      SFElibcdio
-BuildRequires: SFElibdvdnav-devel
+BuildRequires: SFElibdvdnav
 Requires:      SFElibdvdnav
 BuildRequires: SFEpython27-docutils
-Requires:      SFEpython27
+BuildRequires: runtime/python-27
 BuildRequires: SUNWgroff
 BuildRequires: driver_graphics_nvidia
-BuildRequires: SFElibfribidi-devel
+BuildRequires: SFElibfribidi
 Requires:      SFElibfribidi
-BuildRequires: SFEliba52-devel
+BuildRequires: SFEliba52
 Requires:      SFEliba52
-BuildRequires: SFElibiconv
-Requires:      SFElibiconv
+#BuildRequires: SFElibiconv
+#Requires:      SFElibiconv
 BuildRequires: SFEopenjpeg
 Requires:      SFEopenjpeg
 # mpv will not display subtitles without libass
-BuildRequires:	SFElibass-devel
+BuildRequires:	SFElibass
 Requires:	SFElibass
 # Lua is used for the gui
 BuildRequires:	runtime/lua
@@ -73,6 +73,10 @@ files.
 # SFEwaf.spec exists, but the version is too old, whereas recent versions
 # don't install.  Furthermore, the waf FAQ say, "packaging of waf in
 # distributions [is] discouraged".
+# hipster's env returns an older python than solaris's, oddly enough
+%if %oihipster
+gsed -i 's|#!/usr/bin/env python|#!/usr/bin/python2.7|' bootstrap.py
+%endif
 ./bootstrap.py	# download latest tested version of waf (Python build system)
 
 # stream/ai_oss.c produces a warning "implicit declaration of function 'ioctl'"
