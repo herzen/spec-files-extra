@@ -1,79 +1,57 @@
 #
 # spec file for package SFEffmpeg
 #
-# includes module(s): FFmpeg
-#
 
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
 
 #change version number only here.
-#%define ffmpeg_version 2.2
-%define ffmpeg_version 2.8.5
+%define ffmpeg_version 3.0.2
 
 #older ffmpeg version can't use every patch
 %define enable_patch13 1
 
-%if %arch_sse2
-%define arch_opt --cpu=prescott --enable-mmx --enable-sse --enable-ssse3
-#make this empty
-%define extra_gcc_flags
-%include x86_sse2.inc
-%use ffmpeg_sse2 = ffmpeg.spec
-%endif
 
 %ifarch sparc
 %define arch_opt --disable-optimizations
 %endif
 
 %ifarch i386
-#with -msse (gcc) you can have asm XMM_CLOBBERS accepted
-#read line 00079 in http://www.libav.org/doxygen/master/x86__cpu_8h_source.html 
-%define extra_gcc_flags -msse
-%define arch_opt --enable-runtime-cpudetect --enable-mmx --enable-sse --enable-ssse3 
+%define arch_opt --cpu=prescott --enable-runtime-cpudetect --enable-mmx --enable-mmxext --enable-sse --enable-ssse3 --enable-sse4 --enable-sse42 --enable-avx --enable-amd3dnow --enable-amd3dnowext --enable-fma4
 %endif
 
-%include base.inc
+%define extra_gcc_flags
+
 %use ffmpeg = ffmpeg.spec
 
-Name:                    SFEffmpeg
+Name:			SFEffmpeg
 IPS_Package_Name:	video/ffmpeg
-Summary:                 %{ffmpeg.summary}
-Version:                 %{ffmpeg.version}
-License:                 GPLv2+ and LGPLv2.1+
-SUNW_Copyright:          ffmpeg.copyright
-URL:                     %{ffmpeg.url}
-Group:		         System/Multimedia Libraries
+Summary:		%{ffmpeg.summary} (sse2-only)
+Version:		%{ffmpeg.version}
+License:		GPLv2+ and LGPLv2.1+
+SUNW_Copyright:		ffmpeg.copyright
+URL:			%{ffmpeg.url}
+Group:			System/Multimedia Libraries
 
-SUNW_BaseDir:            %{_basedir}
-BuildRoot:               %{_tmppath}/%{name}-%{version}-build
-Autoreqprov:             on
+SUNW_BaseDir:		%{_basedir}
+Autoreqprov:		on
 
 %include default-depend.inc
-BuildRequires: SFEgcc
-Requires:      SFEgccruntime
 BuildRequires: SFEyasm
 BuildRequires: SUNWtexi
-BuildRequires: perl_default
+BuildRequires: %pnm_buildrequires_perl_default
 BuildRequires: SUNWxwinc
 Requires: SUNWxwrtl
-BuildRequires:  SUNWzlib
-Requires:       SUNWzlib
-BuildRequires: SUNWbzip
-Requires:      SUNWbzip
+Requires: SUNWzlib
 BuildRequires: SUNWlibsdl_devel
 Requires:      SUNWlibsdl
-BuildRequires: SUNWopenssl
-Requires: SUNWopenssl
 BuildRequires: SFElibgsm-devel
 Requires: SFElibgsm
 BuildRequires: SFExvid-devel
 Requires: SFExvid
 BuildRequires: SFElibx264-devel
 Requires: SFElibx264
-BuildRequires: SFEfaad2-devel
-Requires: SFEfaad2
 BuildRequires: SFEfaac-gpp-devel
 Requires: SFEfaac-gpp
 BuildRequires: SFElame-devel
@@ -82,15 +60,15 @@ BuildRequires: SUNWogg-vorbis-devel
 Requires: SUNWogg-vorbis
 BuildRequires: SUNWlibtheora-devel
 Requires: SUNWlibtheora
-BuildRequires: SUNWspeex_devel
-Requires:      SUNWspeex
+BuildRequires: SUNWspeex-devel
+Requires: SUNWspeex
 BuildRequires: SFEopencore-amr-devel
 Requires: SFEopencore-amr
 BuildRequires: SUNWgsed
-BuildRequires: SFEopenjpeg
-Requires:      SFEopenjpeg
-BuildRequires: SFElibschroedinger
-Requires:      SFElibschroedinger
+BuildRequires: SFEopenjpeg-devel
+Requires: SFEopenjpeg
+BuildRequires: SFElibschroedinger-devel
+Requires: SFElibschroedinger
 BuildRequires: SFErtmpdump-devel
 Requires: SFErtmpdump
 BuildRequires: SFElibass-devel
@@ -99,6 +77,8 @@ BuildRequires: SFEopenal-devel
 Requires: SFEopenal
 BuildRequires: SFElibvpx-devel
 Requires: SFElibvpx
+BuildRequires: consolidation/nvidia/nvidia-incorporation
+Requires: consolidation/nvidia/nvidia-incorporation
 
 %package devel
 Summary:                 %{summary} - development files
@@ -110,160 +90,91 @@ Requires: %name
 rm -rf %name-%version
 mkdir %name-%version
 
-%if %arch_sse2
-mkdir %name-%version/%sse2_arch
-%ffmpeg_sse2.prep -d %name-%version/%sse2_arch
-%endif
-
 mkdir %name-%version/%base_arch
 %ffmpeg.prep -d %name-%version/%base_arch
 
-
 %build
-%if %arch_sse2
-%ffmpeg_sse2.build -d %name-%version/%sse2_arch
-%endif
-
 %ffmpeg.build -d %name-%version/%base_arch
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%if %arch_sse2
-%ffmpeg_sse2.install -d %name-%version/%sse2_arch
-%endif
-
 %ffmpeg.install -d %name-%version/%base_arch
-mkdir $RPM_BUILD_ROOT%{_bindir}/%{base_isa}
-mv $RPM_BUILD_ROOT%{_bindir}/ffserver $RPM_BUILD_ROOT%{_bindir}/%{base_isa}/
-cd $RPM_BUILD_ROOT%{_bindir} && ln -s ../lib/isaexec ffserver
-mv $RPM_BUILD_ROOT%{_bindir}/ffplay $RPM_BUILD_ROOT%{_bindir}/%{base_isa}/
-cd $RPM_BUILD_ROOT%{_bindir} && ln -s ../lib/isaexec ffplay
-mv $RPM_BUILD_ROOT%{_bindir}/ffmpeg $RPM_BUILD_ROOT%{_bindir}/%{base_isa}/
-cd $RPM_BUILD_ROOT%{_bindir} && ln -s ../lib/isaexec ffmpeg
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
 
 %files
 %define _pkg_docdir %_docdir/ffmpeg
 %defattr (-, root, bin)
 %dir %attr (0755, root, bin) %{_bindir}
-%if %can_isaexec
-%{_bindir}/%{base_isa}/*
-%if %arch_sse2
-%{_bindir}/%{sse2_arch}/*
-%endif
-%hard %{_bindir}/ffserver
-%hard %{_bindir}/ffplay
-%hard %{_bindir}/ffmpeg
-%hard %{_bindir}/ffprobe
-#%hard %{_bindir}/avconv
-%else
 %{_bindir}/*
-%endif
 %dir %attr (0755, root, bin) %{_libdir}
 %{_libdir}/lib*.so*
-%if %arch_sse2
-%dir %attr (0755, root, bin) %{_libdir}/%{sse2_arch}
-%{_libdir}/%{sse2_arch}/lib*.so*
-%endif
-%dir %attr (0755, root, sys) %{_datadir}
-%{_datadir}/ffmpeg
-%{_mandir}
+%dir %attr (0755, root, sys) %dir %{_datadir}
+%dir %attr(0755, root, bin) %{_datadir}/ffmpeg
+%{_datadir}/ffmpeg/*.ffpreset
+%{_datadir}/ffmpeg/ffprobe.xsd
+%dir %attr(0755, root, bin) %{_mandir}/man1
+%{_mandir}/man1/*
 
 %files devel
 %defattr (-, root, bin)
 %dir %attr (0755, root, bin) %{_libdir}
 %dir %attr (0755, root, other) %{_libdir}/pkgconfig
 %{_libdir}/pkgconfig/*
-%if %arch_sse2
-%dir %attr (0755, root, other) %{_libdir}/%{sse2_arch}/pkgconfig
-%{_libdir}/%{sse2_arch}/pkgconfig/*.pc
-%endif
 %{_libdir}/ffmpeg
-%if %arch_sse2
-%{_libdir}/%{sse2_arch}/ffmpeg
-%endif
-%{_includedir}
+%dir %attr (0755, root, bin) %{_includedir}
+%{_includedir}/libavutil
+%{_includedir}/libavcodec
+%{_includedir}/libavfilter
+%{_includedir}/libavformat
+%{_includedir}/libavdevice
+%{_includedir}/libpostproc
+%{_includedir}/libswscale
+%{_includedir}/libswresample
+%_includedir/libavresample
+%dir %attr(0755, root, bin) %{_datadir}/ffmpeg
+%{_datadir}/ffmpeg/examples
+%dir %attr(0755, root, bin) %{_mandir}/man3
+%{_mandir}/man3/*
 
 
 %changelog
-* Fri Feb 26 2016 - Thomas Wagner
-- add standard $PKG_CONFIG_PATH to make it find SFElibass
-* Sat Jan 16 2016 - Thomas Wagner
-- bump to 2.8.5
-* Sun Nov 29 2015 - Thomas Wagner
-- change to (Build)Requires %{pnm_buildrequires_SUNWzlib}, SUNWspeex
-- change (Build)Requires to pnm_buildrequires_SFEopenjpeg SFElibschroedinger to use (OIH) openjpeg and libschroedinger
-- bump to 2.8.3 (try getting openjpeg 2 in)
-- add patche ffmpeg-51-openjpeg2.diff - imported from OI userland/encumbered to get openjpeg2
-* Fri Mar 28 2014 - Thomas Wagner
-- bump to 2.2
-- add (Build)Requires to %{pnm_buildrequires_SUNWopenssl}, %{pnm_buildrequires_SUNWbzip}
-* Tue Dec 24 2013 - Thomas Wagner
+* Fri May 27 2016 - Alex Viskovatoff <herzen@imap.cc>
+- update to 3.0.2 (openjpeg2 patch no longer required)
+* Sun Jan 26 2014 - Alex Viskovatoff
+- bump to 2.1.3
+* Mon Jan 13 2014 - Thomas Wagner
+- change (Build)Requires to %{pnm_buildrequires_NVDAgraphics_devel}, %{pnm_buildrequires_SUNWlibsdl_devel}
 - change (Build)Requires to SFEfaac-gpp(-devel)
 - follow /usr/g++ directory layout, add to CFLAGS / LDFLAGS include /usr/g++/include and -R|-L/usr/g++/lib/%{arch}
 * Thu Nov 28 2013 - Thomas Wagner
-- make version controllable from calling spec, else keep default version
-* Thu Jul 11 2013 - Thomas Wagner
-- change BuildRequires to %{pnm_buildrequires_SUNWgsed} (S12)
-* Sun Sep 30 2012 - Milan Jurik
-- bump to 1.0
-* Sun Jun 24 2012 - Thomas Wagner
-- change (Build)Requires to %{pnm_buildrequires_SUNWlibsdl_devel}
-* Sun May 27 2012 - Milan Jurik
-- bump to 0.11
-* Sun Apr 29 2012 - Pavel Heimlich
-- really add vpx dependency
+- make version controllable from calling spec
+* Fri Oct 11 2013 - Alex Viskovatoff
+- Update to work with ffmpeg 2.0.2; Do not give special treatment to Intel
+  processors: this is unnecessary, since runtime cpu detection is used
+* Wed Sep 11 2013 - Alex Viskovatoff
+- Update to work with ffmpeg 1.2.3
+- Change cpu from pentiumpro to prescott
+- Remove dependency on alsa-lib, which is of no use on Solaris
 * Tue Jan 24 2012 - James Choi
-- update files for 0.10
-* Mon Dec 12 2011 - Milan Jurik
-- bump to 0.9
-* Sun Nov 13 2011 - Michael Kosarev
-- add libvpx dependency
-* Sun Oct 23 2011 - Milan Jurik
-- add IPS package name
-- add rtmp dep
-* Wed Aug 17 2011 - Thomas Wagner
-- %arch_sse2 change minimum-CPU i686 to prescott, add --enable-sse --enable-ssse2
-- for arch i86 by default --enable-runtime-cpudetect, add extra_gcc_flags -msse
-  to have asm being lucky with XMM_CLOBBERS, remove --disable-asm (asm active again)
-- remove build-time pkgtool commandline option --with-runtime_cpudetect (now 
-  always enabled for i86)
-- Implementation note: Programs using pentium_pro+mmx must request these libs 
-  with isaexec (see what ffmpeg binary does via /usr/lib/isaexec) or in other
-  progams tell the linker to select the library for you, via 
-  export LD_OPTIONS='-f libavcodec.so.53:libavdevice.so.53:libavfilter.so.2:
-  libavformat.so.53:libavutil.so.51:libswscale.so.2:libpostproc.so.51'
-  and -R this early in LD_FLAGS="-R%{_libdir}/\$ISALIST %_ldflags"
-  At least put ISALIST before any other -R/usr/lib !
-  For debug use       LD_DEBUG=libs program_to_test
-* Sat Aug 13 2011 - Thomas Wagner
-- bump to 0.8.2
-- change in include/x86_sse2.inc to not set -xarch=sse2 in arch_ldadd 
-  for case cc_is_gcc == 1 - this avoids gcc errors in configure
-  "gcc: error: language arch=sse2 not recognized"
-- add switch with_runtime_cpudetect, by default set to off 
-  (Distro builders may switch this to on with pkgtool --with-runtime_cpudetect )
-##TODO## might need some testing if acceleration works on CPUs
-- comment %doc, manpages - files not present in 0.8.2
-- re-add patches removed with r3618, reworked,
-  patch9: configure gnuism, re-add manpages by pod2man if texi2html not available,
-  (reworked ffmpeg-02-configure.diff and ffmpeg-03-gnuisms.diff)
-  patch10: *new* get texi2html work again - fix probably incomplete or needs updated
-  texi2html, re-add %doc and manpages
-- allow parallel build gmake -j$CPUS
-- add patch11: ffmpeg-11-add-sys_videodev2_h.diff (reworked ffmpeg-03-v4l2.diff)
-##TODO## v4l2 patch11 incomplete, maybe needs more from ffmpeg-03-v4l2.diff, ffmpeg-07-new-v4l2.diff
-- for pod2man add in %install export PATH=/usr/perl5/bin:$PATH
-- fix perms for %{_datadir}/doc
-- replace %doc with manual install
-- make all /bin/sh script in source tree use /usr/bin/bash
-##TODO## patch11 incomplete, maybe needs more from ffmpeg-03-v4l2.diff, ffmpeg-07-new-v4l2.diff
-##TODO## verify build-time dependencies (texi2html, pod2man, others)
-##TODO## check if v4l patches still apply on Solaris
+- Add libass, openal dependency
+* Tue Nov  1 2011 - Alex Viskovatoff
+- Add dependency on libvpx and conditional dependency on alsa-lib
+* Wed Oct 19 2011 - Alex Viskovatoff
+- Remove dependency on SFEfaad2, which ffmpeg does not use
+- Set cpu to pentiumpro and enable amd3dnow and amd3dnowext
+* Wed Oct 12 2011 - Alex Viskovatoff
+- Add dependency on SFErtmpdump, since librtmp is now enabled
+* Tue Aug  9 2011 - Alex Viskovatoff
+- Require driver/graphics/nvidia; correct attributes of %_docdir
+* Mon Jul 18 2011 - Alex Viskovatoff
+- Do not use x86_sse2.inc: it adds Sun Studio-specific flags
+* Sat Jul 16 2011 - Alex Viskovatoff
+- Fork new spec off SFEffmpeg.spec with multiarch support (CPU < SSE2) removed
 * Sat Jul 16 2011 - Alex Viskovatoff
 - Add SFEyasm as a dependency; package documentation files
 - Add --disable-asm as option for i386 so that newer versions build
