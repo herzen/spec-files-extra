@@ -10,7 +10,7 @@
 #  x264_build MUST CORRESPOND to libx264.so.<number> as produced by the build  #
 ################################################################################
 %define x264_build       148
-%define snap             20160529
+%define snap             20160720
 
 %define snaph            2245-stable
 %define src_name         x264-snapshot
@@ -21,7 +21,6 @@ Summary:	H.264 encoder library
 Version:	0.%x264_build.0.%snap
 Source:		%src_url/%src_name-%snap-%snaph.tar.bz2
 URL:		http://www.videolan.org/developers/x264.html
-BuildRoot:	%_tmppath/%name-%version-build
 
 
 %prep
