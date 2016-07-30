@@ -21,7 +21,6 @@ Source:		%sf_download/%srcname/%srcname-%version.tar.bz2
 Source1:	qgit.desktop
 Source2:	qgit.png
 Patch1:		qgit-01-git_config.patch
-%include	default-depend.inc
 
 BuildRequires:	SFEqt-gpp
 
@@ -38,7 +37,11 @@ export CFLAGS="%optflags"
 export CXXFLAGS="%cxx_optflags -pthreads"
 export LDFLAGS="%_ldflags -pthreads"
 
+%if %oihipster
+qmake -spec solaris-g++ qgit.pro
+%else
 /usr/g++/bin/qmake
+%endif
 make -j$CPUS
 
 %install

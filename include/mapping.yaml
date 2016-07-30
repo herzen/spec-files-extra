@@ -391,6 +391,10 @@ x11_library_freeglut:
 - x11/library/freeglut
 - SFEfreeglut
 - SFEfreeglut
+SFEqt-gpp:
+- SFEqt-gpp
+- library/qt4
+- SFEqt-gpp
 SFEpython27-docutils:
 - SFEpython27-docutils
 - library/python-2/docutils
