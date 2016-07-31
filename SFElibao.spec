@@ -9,13 +9,12 @@ Name:		SFElibao
 IPS_Package_Name:	library/audio/libao
 Summary:	Cross-platform audio library
 Group:		System/Multimedia Libraries
-Version:	1.1.0
+Version:	1.2.0
 Source:		http://downloads.xiph.org/releases/ao/libao-%{version}.tar.gz
 URL:		http://xiph.org/
 License:	GPLv2+
 SUNW_Copyright:	libao.copyright
 SUNW_BaseDir:	%{_basedir}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
 
 %package devel
@@ -59,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %attr (0755, root, bin) %{_libdir}
 %{_libdir}/lib*.so*
 %{_libdir}/ao
+%_libdir/ckport
 %dir %attr (0755, root, sys) %{_datadir}
 %dir %attr (0755, root, bin) %{_mandir}
 %dir %attr (0755, root, bin) %{_mandir}/man5
