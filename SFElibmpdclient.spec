@@ -20,9 +20,9 @@ Group:		System/Multimedia Libraries
 SUNW_Copyright:	libmpdclient.copyright
 Source:		http://www.musicpd.org/download/%srcname/2/%srcname-%version.tar.xz
 SUNW_BaseDir:	%_basedir
-BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 
+BuildRequires:	developer/documentation-tool/doxygen
 
 %package devel
 Summary:        %summary - development files

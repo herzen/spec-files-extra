@@ -22,7 +22,7 @@ SUNW_BaseDir:	%_basedir
 BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 
-BuildRequires:	SFEqt-gpp-devel
+BuildRequires:	SFEqt-gpp
 Requires:	SFEqt-gpp
 
 %if %build_l10n
@@ -54,7 +54,7 @@ mv %srcname.pro.new %srcname.pro
 sed 's|Qt;Network;Music;|AudioVideo;|' %srcname.desktop > %srcname.desktop.new
 mv %srcname.desktop.new %srcname.desktop
 
-qmake
+qmake -spec solaris-g++
 make -j$CPUS
 
 

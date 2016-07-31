@@ -36,30 +36,30 @@ SUNW_BaseDir:        %{_basedir}
 BuildRequires: system_header_header_audio
 BuildRequires: SFExz_gnu
 BuildRequires: SFElibao-devel
-BuildRequires: SFElibsamplerate-devel
+BuildRequires: SFElibsamplerate
 BuildRequires: SUNWogg-vorbis-devel
-BuildRequires: SUNWgnome-audio-devel
-BuildRequires: SUNWflac-devel
-BuildRequires: SFEopus-devel
+BuildRequires: gnome/gnome-audio
+BuildRequires: codec/flac
+BuildRequires: SFEopus
 BuildRequires: SFEwavpack-devel
-BuildRequires: SFElibmms-devel
+BuildRequires: SFElibmms
 BuildRequires: SFElibshout
 BuildRequires: SFElibcdio
-BuildRequires: SFElibmpdclient-devel
+BuildRequires: SFElibmpdclient
 BuildRequires: SUNWsqlite3
-BuildRequires: SFElibsndfile_devel
+BuildRequires: SFElibsndfile
 BuildRequires: SUNWglib2
 BuildRequires: SUNWcurl_devel
-BuildRequires: SUNWlibsoup-devel
+BuildRequires: library/libsoup
 #TODO# BuildRequires: SFElibpulse-devel
-BuildRequires: SUNWavahi-bridge-dsd-devel
+BuildRequires: system/network/avahi
 ## MPD INSTALL file says AO "should be used only if there is no native plugin
 ## available or if the native plugin doesn't work."
 Requires: SFElibao
 Requires: SFElibsamplerate
 Requires: SUNWogg-vorbis
-Requires: SUNWgnome-audio
-Requires: SUNWflac
+Requires: gnome/gnome-audio
+Requires: codec/flac
 Requires: SFEopus
 Requires: SFEwavpack
 Requires: SFElibmms
@@ -70,18 +70,18 @@ Requires: SUNWsqlite3
 Requires: SFElibsndfile
 Requires: SUNWglib2
 Requires: SUNWcurl
-Requires: SUNWlibsoup
+Requires: library/libsoup
 #TODO# Requires: SFElibpulse
-Requires: SUNWavahi-bridge-dsd
+Requires: system/network/avahi
 %if %build_encumbered
-BuildRequires: SFEffmpeg-devel
-BuildRequires: SFElibmpcdec-devel
-BuildRequires: SFEmpg123-devel
-BuildRequires: SFEfaad2-devel
-BuildRequires: SFElame-devel
-BuildRequires: SFEtwolame-devel
+BuildRequires: SFEffmpeg
+BuildRequires: SFElibmpcdec
+BuildRequires: SFEmpg123
+BuildRequires: SFEfaad2
+BuildRequires: SFElame
+BuildRequires: SFEtwolame
 # libid3tag is not encumbered, but it is not used by flac or ogg
-BuildRequires: SFElibid3tag-devel
+BuildRequires: SFElibid3tag
 Requires: SFEffmpeg
 Requires: SFElibmpcdec
 Requires: SFEfaad2
@@ -106,15 +106,13 @@ Requires:       SFExvid
 
 BuildRequires:  boost_gpp_default
 Requires:       boost_gpp_default
-BuildRequires:  SFEicu-gpp
+BuildRequires:  SFEicu-gpp-devel
 Requires:       SFEicu-gpp
 
 
 BuildRequires:  SFEwildmidi
 Requires:       SFEwildmidi
 
-BuildRequires:  SFExz-gnu
-Requires:       SFExz-gnu
 BuildRequires:  SFEorc
 Requires:       SFEorc
 BuildRequires:  SFElibschroedinger

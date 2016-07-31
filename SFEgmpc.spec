@@ -9,10 +9,6 @@
 %include base.inc
 %define srcname gmpc
 
-# This package no longer exists
-#%define SFEgtkmm   %(/usr/bin/pkginfo -q SFEgtkmm && echo 1 || echo 0)
-%define SFEgtkmm 0
-
 Name:                    SFEgmpc
 IPS_package_name:	 audio/mpd/gmpc
 Summary:                 Gnome Music Player Daemon client
@@ -24,22 +20,15 @@ Source:                  http://download.sarine.nl/Programs/%srcname/%{version}/
 SUNW_BaseDir:            %{_basedir}
 BuildRoot:               %{_tmppath}/%{name}-%{version}-build
 BuildRequires:		 SFEgob
-#			Solaris 11.2 system vala is too old to build this
 BuildRequires:		 SFEvala
-BuildRequires:		 SUNWperl-xml-parser
-Requires:		 SUNWperl-xml-parser
+BuildRequires:		 library/perl-5/xml-parser
+Requires:		 library/perl-5/xml-parser
 BuildRequires:		 SFElibmpd-devel
-#test#BuildRequires:           SFEavahi-devel
 Requires:		SFElibmpd
 Requires:		SUNWzlib
 
-%if %SFEgtkmm
-BuildRequires:		SFEgtkmm-devel
-Requires:		SFEgtkmm
-%else
-BuildRequires:		SUNWgtkmm-devel
-Requires:		SUNWgtkmm
-%endif
+BuildRequires:		library/desktop/c++/gtkmm
+Requires:		library/desktop/c++/gtkmm
 
 #test#Requires:		       SFEavahi
 %if %option_with_gnu_iconv
@@ -71,7 +60,11 @@ Requires:                %{name}
 %build
 CPUS=$(psrinfo | gawk '$2=="on-line"{cpus++}END{print (cpus==0)?1:cpus}')
 
+%if %oihipster
+export LDFLAGS="%_ldflags %{gnu_lib_path} -lX11 -lxnet -lz -lm"
+%else
 export LDFLAGS="%_ldflags %{gnu_lib_path} -lX11 -lxnet -lz"
+%endif
 export CFLAGS="%{optflags} -I/usr/gnu/include %{gnu_lib_path}"
 
 export CC=gcc

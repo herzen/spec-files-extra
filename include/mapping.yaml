@@ -8,8 +8,10 @@
 - omnios-
 ---
 solaris11: [1, 0, 0]
+solaris12: [0, 0, 0]
 oihipster: [0, 1, 0]
-omnios: [0, 0, 1]
+omnios:    [0, 0, 1]
+cc_is_gcc: [0, 1, 0]
 perl_major_version: [5, 5, 5]
 perl_version: [5.12, 5.22, 5.16]
 perl_path_vendor_perl_version:
@@ -57,12 +59,22 @@ SFElibgpg_error_devel:
 - SUNWlibgpg-error-devel
 - library/security/libgpg-error
 - SUNWlibgpg-error-devel
+SFEopus:
+- SFEopus
+- library/opus
+- SFEopus
+SFElibsamplerate:
+- SFElibsamplerate
+- library/libsamplerate
+- SFElibsamplerate
 SFElibschroedinger:
 - SFElibschroedinger
 - library/video/libschroedinger
 - SFElibschroedinger
-SFElibsndfile: SFElibsndfile
-SFElibsndfile_devel: SFElibsndfile
+SFElibsndfile:
+- SFElibsndfile
+- library/libsndfile
+- SFElibsndfile
 SFElibyaml:
 - SFElibyaml
 - library/libyaml
@@ -71,8 +83,7 @@ SFEopenjpeg:
 - SFEopenjpeg
 - image/library/openjpeg
 - SFEopenjpeg
-SFEorc: __NOMATCH__
-SFEorc_devel:
+SFEorc:
 - SFEorc
 - system/library/orc
 - SFEorc
@@ -327,7 +338,10 @@ apr_util_default:
 - SFEapr-util
 - SFEapr-util
 avahi_bridge_dsd: system/network/avahi
-boost_gpp_default: SFEboost-gpp
+boost_gpp_default:
+- SFEboost-gpp
+- system/library/boost
+- SFEboost-gpp
 compatibility_ucb: compatibility/ucb
 data_docbook: developer/documentation-tool/gtk-doc
 developer_build_autogen: developer/build/autogen
@@ -391,6 +405,14 @@ x11_library_freeglut:
 - x11/library/freeglut
 - SFEfreeglut
 - SFEfreeglut
+SFEicu-gpp:
+- SFEicu-gpp
+- library/icu
+- SFEicu-gpp
+SFEicu-gpp-devel:
+- SFEicu-gpp-devel
+- developer/icu
+- SFEicu-gpp-devel
 SFEqt-gpp:
 - SFEqt-gpp
 - library/qt4
@@ -419,6 +441,14 @@ SFElame:
 - SFElame
 - audio/lame
 - SFElame
+SFEtwolame:
+- SFEtwolame
+- audio/twolame
+- SFEtwolame
+SFElibid3tag:
+- SFElibid3tag
+- library/audio/libid3tag
+- SFElibid3tag
 SFElibcdio:
 - SFElibcdio
 - library/audio/libcdio
