@@ -21,7 +21,7 @@ SUNW_BaseDir:	%_basedir
 BuildRoot:	%_tmppath/%name-%version-build
 %include default-depend.inc
 
-BuildRequires: SFEqt-gpp-devel
+BuildRequires: SFEqt-gpp
 BuildRequires: SFEchmlib
 BuildRequires: SFElibzip
 
@@ -40,7 +40,6 @@ echo "INCLUDEPATH += /usr/lib/libzip/include" >> lib/libebook/libebook.pro
 gsed -i 's/linux-g++\*:/solaris-g++\*:/' src/src.pro
 export PATH=/usr/g++/bin:$PATH
 export QMAKESPEC=solaris-g++
-export QTDIR=/usr/g++
 qmake
 # Parallelism breaks with 16 cpus, so don't use more than 4
 gmake -j$(test $CPUS -ge 4 && echo 4 || echo $CPUS) PREFIX=%_basedir

@@ -39,6 +39,14 @@ SFEgccruntime:
 - system/library/gcc-c-runtime
 - system/library/gcc-4-runtime
 - SFEgccruntime
+SFEgob:
+- SFEgob
+- developer/gob2
+- SFEgob
+SFEvala:
+- SFEvala
+- developer/vala
+- SFEvala
 SFEgnugetopt:
 - pkg://solaris/shell/gnu-getopt
 - SFEgnugetopt
@@ -346,6 +354,10 @@ compatibility_ucb: compatibility/ucb
 data_docbook: developer/documentation-tool/gtk-doc
 developer_build_autogen: developer/build/autogen
 developer_build_cmake: developer/build/cmake
+SFEcmake:
+- SFEcmake
+- developer/build/cmake
+- SFEcmake
 developer_build_make: developer/build/make
 developer_cppunit:
 - SFEcppunit-gpp
@@ -356,7 +368,7 @@ developer_documentation_tool_gtk_doc: developer/documentation-tool/gtk-doc
 developer_documentation_tool_xmlto:
 - developer/documentation-tool/xmlto
 - text/xmlto
-- __NOMATCH__
+- SFExmlto
 developer_gnome_gettext: developer/gnome/gettext
 developer_gperf: developer/gperf
 driver_graphics_nvidia:
@@ -417,6 +429,10 @@ SFEqt-gpp:
 - SFEqt-gpp
 - library/qt4
 - SFEqt-gpp
+SFEchmlib:
+- SFEchmlib
+- library/desktop/chmlib
+- SFEchmlib
 SFEpython27-docutils:
 - SFEpython27-docutils
 - library/python-2/docutils

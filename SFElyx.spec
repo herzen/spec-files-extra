@@ -19,14 +19,12 @@ SUNW_Copyright:	lyx.copyright
 Version:	2.1.4
 Source:		ftp://ftp.lyx.org/pub/lyx/stable/2.1.x/%srcname-%version.tar.xz
 Source1:	%srcname.desktop
-SUNW_BaseDir:	%_basedir
-%include default-depend.inc
 
 BuildRequires:	SFEqt-gpp
-BuildRequires:	SFEboost-gpp-devel
-BuildRequires:	SUNWgnome-spell
-BuildRequires:	python-26
-Requires:	python-26
+BuildRequires:	boost_gpp_default
+BuildRequires:	library/spell-checking/enchant
+BuildRequires:	runtime/python-26
+Requires:	runtime/python-26
 
 %if %build_l10n
 %package l10n

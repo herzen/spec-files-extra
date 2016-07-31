@@ -18,8 +18,8 @@ SUNW_BaseDir:        %{_basedir}
 %include default-depend.inc
 
 Requires: SFEqt-gpp
-BuildRequires: SFEqt-gpp-devel
-BuildRequires: developer/documentation-tool/xmlto
+BuildRequires: SFEqt-gpp
+BuildRequires: developer_documentation_tool_xmlto
 
 %prep
 %setup -q -n kdiff3-%version
@@ -41,7 +41,8 @@ export LDFLAGS="%_ldflags"
 
 cd src-QT4
 
-/usr/g++/bin/qmake kdiff3.pro -o Makefile.qt
+export PATH=/usr/g++/bin:$PATH
+qmake -spec solaris-g++ kdiff3.pro -o Makefile.qt
 make -f Makefile.qt
 
 %install

@@ -19,15 +19,11 @@ SUNW_Copyright:	xournal.copyright
 Source:		http://downloads.sourceforge.net/%{srcname}/%{srcname}-%{version}.tar.gz
 Patch:		xournal-01-inline.diff
 
-SUNW_BaseDir:	%{_basedir}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
-%include default-depend.inc
-BuildRequires: SUNWgnome-pdf-viewer-devel
-BuildRequires: SUNWgnome-common-devel
-Requires: SUNWgtk2
-Requires: SUNWlibgnomecanvas
-Requires: SUNWglib2
-Requires: SUNWgnome-pdf-viewer
+BuildRequires: library/desktop/libgnomecanvas
+BuildRequires: desktop/pdf-viewer/evince
+BuildRequires: developer/gnome/gettext
+Requires:      library/desktop/libgnomecanvas
+Requires:      desktop/pdf-viewer/evince
 
 %description
 Xournal is an application for notetaking, sketching, keeping a journal using a
