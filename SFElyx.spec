@@ -16,8 +16,8 @@ URL:		http://www.lyx.org
 License:	GPLv2
 Group:		Applications/Office
 SUNW_Copyright:	lyx.copyright
-Version:	2.1.4
-Source:		ftp://ftp.lyx.org/pub/lyx/stable/2.1.x/%srcname-%version.tar.xz
+Version:	2.2.1
+Source:		ftp://ftp.lyx.org/pub/lyx/stable/2.2.x/%srcname-%version.tar.xz
 Source1:	%srcname.desktop
 
 BuildRequires:	SFEqt-gpp

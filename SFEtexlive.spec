@@ -13,6 +13,8 @@
 %include Solaris.inc
 %define cc_is_gcc 1
 %include base.inc
+# Packaging fails, at least on OIH, due to "an internal error in pkg(5)"
+%define _use_internal_dependency_generator 0
 
 %define texlive_ver	20160523b
 %define texlive_src_ver 20160523
@@ -32,20 +34,17 @@ Source1:	ftp://tug.org/texlive/tlnet/install-tl-unx.tar.gz
 Source2:	ftp://tug.org/historic/systems/texlive/%texlive_year/texlive-%texlive_ver-texmf.tar.xz
 Source3:	texmf-exclude.list
 Source4:	texmf.cnf
-SUNW_BaseDir:	%_basedir
 
-BuildRequires:	SUNWflexlex
+BuildRequires:	developer/lexer/flex
 BuildRequires:	library/ncurses
 BuildRequires:	library/zlib
 BuildRequires:	image/library/libpng
-BuildRequires:  library/gd
-Buildrequires:  system/library/freetype-2
-%if %oihipster
-BuildRequires:  developer/icu
-%else
+BuildRequires:	library/gd
+BuildRequires:	system/library/freetype-2
+BuildRequires:	SFEicu-gpp-devel
+%if %solaris11
 BuildRequires:	library/motif
 BuildRequires:	SFEcairo-gpp
-BuildRequires:	SFEicu-gpp
 %endif
 
 
@@ -99,9 +98,7 @@ cd build
 	--prefix=%_prefix \
 	--enable-shared \
 	--disable-static \
-%if %oihipster
-	--disable-xdvik \
-%else
+%if %solaris11
 	--with-xdvi-x-toolkit=motif \
 %endif
 	--with-x \
