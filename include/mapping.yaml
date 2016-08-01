@@ -429,6 +429,10 @@ SFEqt-gpp:
 - SFEqt-gpp
 - library/qt4
 - SFEqt-gpp
+SFEgnugetopt:
+- shell/gnu-getopt
+- shell/gnu-getopt
+- SFEgnugetopt
 SFEchmlib:
 - SFEchmlib
 - library/desktop/chmlib

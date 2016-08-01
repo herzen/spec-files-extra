@@ -3,15 +3,19 @@
 %include usr-gnu.inc
 %include base.inc
 
+# On hipster, pkgsend produces an internal error
+%if %oihipster
+%define _use_internal_dependency_generator 0
+%endif
+
 Name:                SFEgit
 IPS_Package_Name:    sfe/developer/versioning/git
 Summary:             A fast version control system
-Version:             2.8.3
+Version:             2.9.1
 License:             GPLv2
 SUNW_Copyright:      git.copyright
 URL:                 http://git-scm.com/
 Source:		     http://www.kernel.org/pub/software/scm/git/git-%version.tar.xz
-SUNW_BaseDir:        %{_basedir}
 
 %include default-depend.inc
 BuildRequires: SUNWzlib
@@ -53,6 +57,14 @@ make configure
 	--with-editor=emacsclient \
 	--with-perl=/usr/perl5/bin/perl \
 	--with-python=/usr/bin/python3
+
+# Avoid this error:
+# xmlto: /export/home/av/packages/BUILD/git-2.9.1/Documentation/git-rerere.xml does not validate (status 3)
+# xmlto: Fix document syntax or use --skip-validation option
+%if %oihipster
+gsed -i 's/^XMLTO = xmlto/XMLTO = xmlto --skip-validation/' Documentation/Makefile
+%endif
+
 make -j$CPUS all doc
 # Making info files requires docbook2X, which requires a little effor to get working
 #make -j$CPUS all man info
