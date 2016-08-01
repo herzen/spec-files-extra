@@ -100,10 +100,9 @@ SFEperl_extutils_cbuilder:
 - runtime/perl-522
 - runtime/perl-64
 SFEpulseaudio:
-- SUNWpulseaudio-devel
-- SFEpulseaudio-devel
-- SFEpulseaudio-devel
-SFEpulseaudio_devel: __NOMATCH__
+- library/audio/pulseaudio
+- library/audio/pulseaudio
+- SFEpulseaudio
 SFEwxwidgets-gpp-devel:
 - SFEwxwidgets-gpp-devel
 - library/graphics/wxwidgets
@@ -113,10 +112,6 @@ SFEyasm:
 - SFEyasm
 - developer/assembler/yasm
 - SFEyasm
-SFEzlib_pkgconfig:
-- SFEzlib-pkgconfig
-- __NOMATCH__
-- __NOMATCH__
 SUNWGlib: library/glib1
 SUNWGtk: library/desktop/gtk1
 SUNWPython26: runtime/python-26
@@ -165,10 +160,8 @@ SUNWflac: codec/flac
 SUNWflac_devel: codec/flac
 SUNWflexlex_devel: developer/lexer/flex
 SUNWfontconfig: system/library/fontconfig
-SUNWfreetype: __NOMATCH__
 SUNWfreetype2: system/library/freetype-2
 SUNWfreetype2_devel: system/library/freetype-2
-SUNWfreetype_devel: __NOMATCH__
 SUNWgawk: text/gawk
 SUNWgawk_devel: text/gawk
 SUNWgd2: library/gd
@@ -248,7 +241,6 @@ SUNWlibmikmod_devel: SUNWlibmikmod-devel
 SUNWlibmng: library/graphics/libmng
 SUNWlibmng_devel: library/graphics/libmng
 SUNWlibms: system/library/math
-SUNWlibmusicbrainz_devel: __NOMATCH__
 SUNWliboil: library/liboil
 SUNWlibpopt:
 - library/popt

@@ -22,7 +22,7 @@ SUNW_BaseDir:            %{_basedir}
 Requires: %name
 Requires: SUNWopenssl-libraries
 Requires: SFExmms1
-BuildRequires: SUNWlibmusicbrainz_devel
+BuildRequires: SUNWmusicbrainz_devel
 Requires:      SUNWmusicbrainz
 Requires: SFEtaglib
 BuildRequires: SFEtaglib-devel

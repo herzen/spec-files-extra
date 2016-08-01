@@ -52,7 +52,7 @@ Requires: SFEjack
 %endif
 #can be SFEpulseaudio or SUNWpulseaudio
 %if %with_pulseaudio
-BuildRequires: SFEpulseaudio_devel
+BuildRequires: SFEpulseaudio
 Requires: SFEpulseaudio
 %else
 %endif

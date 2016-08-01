@@ -35,8 +35,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 Requires: SUNWlibms
 Requires: SUNWlxml
 Requires: SUNWzlib
-BuildRequires: SUNWfreetype_devel
-Requires:      SUNWfreetype
+BuildRequires: SUNWfreetype2_devel
+Requires:      SUNWfreetype2
 BuildRequires: SUNWbison
 BuildRequires: python_default
 Requires:      python_default

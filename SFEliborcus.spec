@@ -66,7 +66,6 @@ Requires:       SUNWzlib
 #S11 S12 openindiana need zlib.pc (should not bother oihipster, which probably already has a propper zlib.pc)
 BuildRequires:  SFEzlib_pkgconfig 
 #for pkgtool's dependency resoultion
-Requires:       SFEzlib_pkgconfig 
 %endif
 
 BuildRequires:  SFExz_gnu
