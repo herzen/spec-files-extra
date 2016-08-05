@@ -1,12 +1,12 @@
----
+--- # Distributions
 - S11.3
 - OIhipster
 - OmniOS
----
+--- # regex to identify distribution from `uname -v`
 - '11.3'
 - illumos-
 - omnios-
----
+--- # Macros for use within spec files
 solaris11: [1, 0, 0]
 solaris12: [0, 0, 0]
 oihipster: [0, 1, 0]
@@ -22,7 +22,8 @@ perl_dir:
 - i86pc-solaris-64int
 - i86pc-solaris-64int
 - i86pc-solaris-thread-multi-64
----
+###
+--- # Package name mappings
 SFEasciidoc:
 - SFEasciidoc
 - text/asciidoc
