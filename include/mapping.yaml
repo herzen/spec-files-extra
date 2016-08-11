@@ -37,7 +37,7 @@ SFEgcc:
 - developer/gcc-49
 - SFEgcc
 SFEgccruntime:
-- system/library/gcc-c-runtime
+- system/library/gcc-c-runtime-49
 - system/library/gcc-4-runtime
 - SFEgccruntime
 SFEgob:

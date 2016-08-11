@@ -10,7 +10,7 @@
 #  x264_build MUST CORRESPOND to libx264.so.<number> as produced by the build  #
 ################################################################################
 %define x264_build       148
-%define snap             20160720
+%define snap             20160810
 
 %define snaph            2245-stable
 %define src_name         x264-snapshot
