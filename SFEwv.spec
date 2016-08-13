@@ -24,19 +24,18 @@ Patch2:              wv-02-w3m-dump.diff
 License:	     GPLv3
 SUNW_Copyright:	     wv.copyright
 SUNW_BaseDir:        %{_basedir}
-BuildRoot:           %{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-Requires:            SUNWgnome-base-libs
+#Requires:            SUNWgnome-base-libs
 Requires:            SUNWlxml
 Requires:            SUNWzlib
 Requires:            SUNWlibmsr
 Requires:            SUNWbzip
 Requires:            SUNWcslr
-Requires:            SUNWlibgsf
-BuildRequires:       SUNWgnome-base-libs-devel
-BuildRequires:       SUNWgnome-common-devel
-BuildRequires:       SUNWlxml-devel
-BuildRequires:       SUNWlibgsf-devel
+Requires:            library/desktop/libgsf
+#BuildRequires:       SUNWgnome-base-libs-devel
+#BuildRequires:       SUNWgnome-common-devel
+BuildRequires:       SUNWlxml
+BuildRequires:       library/desktop/libgsf
 
 %package devel
 Summary:                 %{summary} - development files

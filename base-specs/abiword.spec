@@ -6,7 +6,7 @@
 #
 
 Name:        abiword
-Version:     2.8.6
+Version:     2.9.4
 Release:     1
 Summary:     Lean and fast full-featured word processor
 Copyright:   GPL
@@ -58,9 +58,7 @@ Windows and most Unix Systems. Features include:
 %prep
 %setup -q
 %patch1 -p1
-%patch2 -p1
 %patch3 -p1
-%patch4 -p1
 cd src
 sed 's/--no-undefined //g' Makefile.in > Makefile.in.new
 mv Makefile.in.new Makefile.in
@@ -78,12 +76,10 @@ if test "x$CPUS" = "x" -o $CPUS = 0; then
 fi
 
 ./configure --prefix=%{_prefix}			\
-			--libdir=%{_cxx_libdir}			\
-			--bindir=%{_bindir}			\
-			--includedir=%{_includedir}	\
-			--sysconfdir=%{_sysconfdir}	\
-			--datadir=%{_datadir}		\
-			--mandir=%{_mandir}			\
+%if %oihipster
+%else
+			--with-boost=/usr/g++
+%endif
 
 make -j $CPUS
 
