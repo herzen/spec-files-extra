@@ -41,9 +41,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: library_desktop_gtk2
 Requires:      library_desktop_gtk2
-BuildRequires: data_docbook
 BuildRequires: developer_gnome_gettext
-BuildRequires: developer_documentation_tool_gtk_doc
+BuildRequires: SUNWgtk-doc
 
 
 %description

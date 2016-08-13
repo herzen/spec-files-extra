@@ -203,7 +203,7 @@ SUNWgsed_devel: text/gnu-sed
 SUNWgss: system/library/security/gss
 SUNWgtk2: library/desktop/gtk2
 SUNWgtk2_devel: library/desktop/gtk2
-SUNWgtk_doc: developer/documentation-tool/gtk-doc
+SUNWgtk-doc: developer/documentation-tool/gtk-doc
 SUNWhea: system/header
 SUNWimagick: image/imagemagick
 SUNWimagick_devel: image/imagemagick
@@ -344,7 +344,6 @@ boost_gpp_default:
 - system/library/boost
 - SFEboost-gpp
 compatibility_ucb: compatibility/ucb
-data_docbook: developer/documentation-tool/gtk-doc
 developer_build_autogen: developer/build/autogen
 developer_build_cmake: developer/build/cmake
 SFEcmake:
@@ -357,7 +356,6 @@ developer_cppunit:
 - developer/cppunit
 - SFEcppunit-gpp
 developer_documentation_tool_doxygen: developer/documentation-tool/doxygen
-developer_documentation_tool_gtk_doc: developer/documentation-tool/gtk-doc
 developer_documentation_tool_xmlto:
 - developer/documentation-tool/xmlto
 - text/xmlto

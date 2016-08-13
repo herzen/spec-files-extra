@@ -43,7 +43,7 @@ Requires:      python_default
 BuildRequires: python_default-extra 
 Requires:      python_default-extra 
 
-BuildRequires: SUNWgtk_doc
+BuildRequires: SUNWgtk-doc
 BuildRequires: SUNWgnome-xml-share 
 Requires: SUNWgnome-libs
 BuildRequires: SUNWgnome-libs-devel

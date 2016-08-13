@@ -27,7 +27,7 @@ Requires:           SUNWgnome-libs
 Requires:           SUNWgnome-vfs
 Requires:           SUNWlxml
 BuildRequires:      SUNWgnome-common-devel
-BuildRequires:      SUNWgtk_doc
+BuildRequires:      SUNWgtk-doc
 BuildRequires:      SUNWgnome-doc-utils
 
 %package devel

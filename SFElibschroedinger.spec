@@ -39,7 +39,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-build
 
 BuildRequires:  SFEorc_devel
 Requires:       SFEorc
-BuildRequires:  SUNWgtk_doc
+BuildRequires:  SUNWgtk-doc
 BuildRequires:  SUNWliboil
 BuildRequires:  SUNWgnome_media_devel
 

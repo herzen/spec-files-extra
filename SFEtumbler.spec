@@ -26,7 +26,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:	SUNWgnome-base-libs-devel
 Requires:	SUNWgnome-base-libs
 BuildRequires: 	SUNWdbus
-BuildRequires: SUNWgtk_doc
+BuildRequires: SUNWgtk-doc
 BuildRequires:	SUNWgnome-xml-share
 %if %{with_ffmpeg}
 BuildRequires:	SFEffmpeg-devel

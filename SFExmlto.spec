@@ -38,8 +38,8 @@ Requires:      SUNWlxml_devel
 ##Requires: SUNWgnome-xml-share
 ##Requires: SUNWgnome-xml-root
 ##%endif
-BuildRequires: data_docbook
-Requires:      data_docbook
+BuildRequires: SUNWgtk-doc
+Requires:      SUNWgtk-doc
 Requires:      web_browser_w3m
 BuildRequires: SFEgnugetopt
 Requires:      SFEgnugetopt
