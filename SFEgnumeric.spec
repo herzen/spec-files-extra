@@ -16,23 +16,18 @@ Patch1:		gnumeric-01-numtheory.diff
 SUNW_BaseDir:	%{_basedir}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 %include default-depend.inc
-Requires: SUNWgnome-base-libs
-BuildRequires: SUNWgnome-base-libs-devel
-Requires: SUNWgnome-libs
-BuildRequires: SUNWgnome-libs-devel
-Requires: SUNWlibgoffice
-BuildRequires: SUNWlibgoffice-devel
+Requires: library/desktop/goffice
+BuildRequires: library/desktop/goffice
 %if %option_with_gnu_iconv
 Requires: SUNWgnu-libiconv
 Requires: SUNWgnu-gettext
 %else
 Requires: SUNWuiu8
 %endif
-Requires:	SUNWlibgsf
-BuildRequires:	SUNWlibgsf-devel
-BuildRequires:	SUNWgnome-common-devel
+Requires:	library/desktop/libgsf
+BuildRequires:	library/desktop/libgsf
 BuildRequires:	SUNWgtk-doc
-BuildRequires:	SUNWperl-xml-parser
+BuildRequires:	library/perl-5/xml-parser
 BuildRequires:	file/gnu-findutils
 
 %package devel
