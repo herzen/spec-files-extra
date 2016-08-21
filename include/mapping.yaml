@@ -8,11 +8,12 @@
 - omnios-
 --- # Macros for use within spec files
 solaris11: [1, 0, 0]
-solaris12: [0, 0, 0]
 oihipster: [0, 1, 0]
 omnios:    [0, 0, 1]
 cc_is_gcc: [0, 1, 0]
-perl_major_version: [5, 5, 5]
+solaris12: 0
+os2nnn:    1
+perl_major_version: 5
 perl_version: [5.12, 5.22, 5.16]
 perl_path_vendor_perl_version:
 - perl5/vendor_perl/5.12
@@ -22,7 +23,6 @@ perl_dir:
 - i86pc-solaris-64int
 - i86pc-solaris-64int
 - i86pc-solaris-thread-multi-64
-###
 --- # Package name mappings
 SFEasciidoc:
 - SFEasciidoc
