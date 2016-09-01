@@ -21,7 +21,7 @@ IPS_Package_Name:	media/mpv
 Summary:		Video player based on MPlayer/mplayer2
 License:		GPLv2
 SUNW_Copyright:		mpv.copyright
-Version:		0.18.1
+Version:		0.20.0
 URL:			http://mpv.io/
 Source: http://github.com/mpv-player/mpv/archive/v%version.tar.gz
 Group:			Applications/Sound and Video

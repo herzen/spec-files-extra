@@ -7,7 +7,7 @@
 %include base.inc
 
 #change version number only here.
-%define ffmpeg_version 3.1.2
+%define ffmpeg_version 3.1.3
 
 #older ffmpeg version can't use every patch
 %define enable_patch13 1

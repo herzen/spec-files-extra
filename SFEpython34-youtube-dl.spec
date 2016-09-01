@@ -9,8 +9,8 @@ Name:		SFEpython34-%srcname
 IPS_Package_Name:	video/youtube-dl
 Summary:	A small command-line program to download videos from YouTube.com and a few more sites
 URL:		http://rg3.github.io/%srcname/
-Version:	2016.8.10
-%define srcver	2016.08.10
+Version:	2016.8.31
+%define srcver	2016.08.31
 Source:		http://github.com/rg3/%srcname/releases/download/%srcver/%srcname-%srcver.tar.gz
 
 BuildRequires:	runtime/python-34
