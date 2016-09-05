@@ -3,15 +3,13 @@
 %include usr-gnu.inc
 %include base.inc
 
-# On hipster, pkgsend produces an internal error
-%if %oihipster
+# On hipster and S11.3, pkgsend produces an internal error
 %define _use_internal_dependency_generator 0
-%endif
 
 Name:                SFEgit
 IPS_Package_Name:    sfe/developer/versioning/git
 Summary:             A fast version control system
-Version:             2.9.1
+Version:             2.10.0
 License:             GPLv2
 SUNW_Copyright:      git.copyright
 URL:                 http://git-scm.com/
